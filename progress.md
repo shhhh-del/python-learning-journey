@@ -8,14 +8,22 @@
 
 - [ ] Module 1: Python Foundations
 
-## First Topics
+## Completed Lessons
 
-- [ ] `print()`
-- [ ] Variables
-- [ ] `input()`
-- [ ] Basic data types
+- [x] Module 1 — Lesson 01: Foundations Assessment
 
-No new lessons in this restarted learning plan have been completed yet.
+## Verified Skills
+
+- [x] `print()`
+- [x] Variables
+- [x] `input()`
+- [x] Strings
+- [x] Integers
+- [x] Floats
+- [x] Basic multiplication
+- [x] Converting input using `int()` and `float()`
+
+The student personally wrote and manually tested the Lesson 01 program.
 
 ## Historical Previous Work
 
@@ -27,6 +35,6 @@ No new lessons in this restarted learning plan have been completed yet.
 - Move forward without unnecessary repetition after an assessment is passed.
 - Do not import or move old Python files.
 
-## Next Task
+## Next Milestone
 
-- [ ] Complete the first Python foundations assessment lesson.
+- [ ] Module 1 — Lesson 02: Comparison operators and `if`/`else` assessment

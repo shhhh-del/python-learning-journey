@@ -19,3 +19,46 @@
 ### Next Task
 
 - Complete the first foundations assessment lesson.
+
+## 2026-07-17 — Module 1, Lesson 01: Foundations Assessment
+
+### Result
+
+- Lesson 01 successfully completed and passed.
+- The student personally wrote and manually tested the program.
+
+### Verified Skills
+
+- `print()`
+- Variables
+- `input()`
+- Strings
+- Integers
+- Floats
+- Basic multiplication
+- Converting input using `int()` and `float()`
+
+### Exercise Completed
+
+- Created a checkout summary that accepts customer and product details.
+- Accepted a decimal price and a whole-number quantity.
+- Calculated and displayed the total cost.
+
+### Mistake Made
+
+- `input()` originally returned strings.
+- Multiplying two strings caused a `TypeError`.
+
+### Correction Understood
+
+- Changed the price to a float using `float()`.
+- Changed the quantity to an integer using `int()`.
+- Understood that numerical input must be converted before arithmetic.
+
+### Topics Requiring Review
+
+- None required from Lesson 01 at this time.
+
+### Next Recommended Task
+
+- Module 1 — Lesson 02: Comparison operators and `if`/`else` assessment.
