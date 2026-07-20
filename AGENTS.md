@@ -64,6 +64,104 @@ Historical previous work:
 No new lessons in the restarted learning plan have been completed yet.
 Project 02 is not the current starting point.
 
+## Current Roadmap Status
+
+- Historical Project 01: GitHub API Status Checker — completed historical work
+- Legacy Project 02: GitHub User Finder Pro — paused and archived
+- Legacy Project 03: GitHub Repo Explorer — paused and archived
+- Current main route: Accelerated Python Foundations combined with early Shopee and TikTok business applications
+
+Do not automatically restart Legacy Projects 02 or 03.
+
+## Business Application Priority
+
+- Every core Python module should connect to a realistic Shopee or TikTok use case when appropriate.
+- Do not wait until the full Python curriculum is completed before starting practical business tools.
+- Begin with command-line tools.
+- Progress to CSV and JSON automation.
+- Then build data-analysis tools.
+- Then build Streamlit dashboards.
+- Then learn FastAPI, databases, and SaaS architecture.
+- The student must personally write and understand the core learning logic.
+- Do not sacrifice essential foundational understanding only to build faster.
+- Avoid unauthorized scraping or methods that violate platform rules.
+- Prefer manual input, exported CSV files, JSON files, and officially available APIs.
+
+## Weekly Schedule Control
+
+### Monday
+
+Core Python Learning Day
+
+### Tuesday
+
+Core Python Learning Day
+
+### Wednesday
+
+Core Python Learning Day
+
+### Thursday
+
+Core Python Learning Day
+
+### Friday
+
+Review, Debugging, or Knowledge-Check Day
+
+### Saturday
+
+Shopee or TikTok Business Application Day
+
+### Sunday
+
+Weekly Review, GitHub Organization, Catch-Up, or Rest Day
+
+At the start of every session, state:
+
+- Date
+- Day of week
+- Session type
+- Available time
+- Today’s single objective
+
+Do not assign an unrelated normal syntax lesson on Saturday.
+
+On Saturday:
+
+- Select one small Shopee or TikTok business feature.
+- Match the task to the student’s latest verified Python skills.
+- Avoid building an entire SaaS in one session.
+- Define the business problem, inputs, outputs, and acceptance criteria.
+- Allow at most one directly necessary new Python concept.
+- Require the student to personally write the core logic.
+- Require manual testing, Codex review, learning-log update, Git commit, and push.
+
+If the student misses a scheduled day, do not treat the roadmap as failed.
+Continue from the latest verified progress.
+
+## Session Evidence and Record Rules
+
+At the end of each completed session, `progress.md` and `learning_log.md` must record:
+
+- Date
+- Day of week
+- Session type
+- Lesson or business feature
+- Final status
+- Verified skills
+- Code personally written
+- Errors encountered
+- Corrections understood
+- Tests performed
+- Codex review result
+- Files created or modified
+- Next confirmed task
+
+Do not invent evidence.
+
+Do not mark a lesson or feature as passed unless supported by test results and student understanding.
+
 ## 4. Teaching Method
 
 Use project-based learning.
@@ -205,6 +303,11 @@ At the end of a successful session:
 3. Ask for confirmation before committing or pushing.
 4. Never commit API keys, passwords, tokens, cookies, or private data.
 5. Keep commits focused on the work completed in that session.
+6. Show changed files before committing.
+7. Use a focused commit message.
+8. Confirm that no secrets or private data are included.
+9. Ask before committing or pushing.
+10. Verify that the working tree is clean after pushing.
 
 ## 11. Session Start Procedure
 
@@ -215,9 +318,13 @@ At the beginning of a learning session:
 3. Read the latest entry in `learning_log.md`.
 4. Inspect the relevant exercise or project files.
 5. Briefly state:
+   - date
+   - day of week
+   - session type
+   - available time
+   - today’s single objective
    - current progress
-   - today's single learning objective
-   - the first task for me
+   - first task
 6. Continue from the existing progress instead of restarting unnecessarily.
 
 ## 12. Core Principle
