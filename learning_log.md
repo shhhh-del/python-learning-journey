@@ -143,3 +143,30 @@
 - Python checks `if`, `elif`, and `else` branches in order.
 - Earlier conditions can exclude values so the final `else` safely handles the remaining range.
 - Boundary values should be tested directly.
+
+## 2026-07-21 — Module 1, Lesson 03: Shopee Free Shipping Eligibility Checker
+
+### Session Evidence
+
+- Date: 2026-07-21
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Available time: 60 minutes
+- Lesson or business feature: Module 1 — Lesson 03: Shopee Free Shipping Eligibility Checker
+- Final status: Passed
+- Verified skills: `and`, `or`, `not`, comparisons, conditional branches, numeric conversion, combined business rules, and boundary testing
+- Code personally written: Yes; the student personally wrote the core eligibility logic
+- Errors encountered: The first version printed both the Part A result and the final VIP-aware result; an additional East-region test result was initially reported incorrectly
+- Corrections understood: The earlier duplicate decision was removed; the student understood that `or` grants free shipping when VIP is `yes`, and that a non-VIP East-region order does not qualify regardless of amount
+- Tests performed: RM39 West VIP=no → Standard Shipping; RM40 West VIP=no → Free Shipping; RM100 East VIP=no → Standard Shipping; RM20 West VIP=yes → Free Shipping; RM100 East VIP=yes → Free Shipping; RM9999 East VIP=no → Standard Shipping
+- Codex review result: Passed; logical operators, comparisons, indentation, readability, boundary behavior, and branch reachability were verified
+- Files created or modified: `exercises/module_01/lesson_03_shopee_free_shipping_eligibility_checker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- `and` requires both connected conditions to be true.
+- `or` requires at least one connected condition to be true.
+- `not` reverses a Boolean value.
+- Logical operators can combine multiple business rules into one decision.
+- Boundary and exception cases must be tested directly.

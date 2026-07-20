@@ -12,6 +12,7 @@
 
 - [x] Module 1 — Lesson 01: Foundations Assessment
 - [x] Module 1 — Lesson 02: TikTok Video Performance Classifier
+- [x] Module 1 — Lesson 03: Shopee Free Shipping Eligibility Checker
 
 ## Verified Skills
 
@@ -27,12 +28,16 @@
 - [x] `if` / `elif` / `else`
 - [x] Ordered conditional branches
 - [x] Boundary-value testing
+- [x] Logical operator `and`
+- [x] Logical operator `or`
+- [x] Logical operator `not`
+- [x] Combining comparisons with logical operators
 
 The student personally wrote and manually tested the Lesson 01 program.
 
 ## Current Technical Milestone
 
-- [x] Module 1 — Lesson 02: Comparison operators and `if` / `elif` / `else` assessment
+- [x] Module 1 — Lesson 03: Logical operators (`and`, `or`, `not`) assessment
 
 ## Next Concept
 
