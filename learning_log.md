@@ -117,3 +117,29 @@
 - Shopee Profit Decision Calculator v0.1.
 - Planned skills: numeric input, basic calculation, comparison operators, and `if` / `elif` / `else`.
 - Status: Not started.
+
+## 2026-07-20 — Module 1, Lesson 02: TikTok Video Performance Classifier
+
+### Session Evidence
+
+- Date: 2026-07-20
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: Module 1 — Lesson 02: TikTok Video Performance Classifier
+- Final status: Passed
+- Verified skills: Comparison operators, `if`, `elif`, `else`, integer conversion, ordered branches, and boundary-value testing
+- Code personally written: Yes; the student personally wrote the classifier’s core logic
+- Errors encountered: None recorded in the submitted implementation
+- Corrections understood: The student explained that `else` handles 300–499 because earlier branches already handle values below 300 and values at or above 500
+- Tests performed: `299` → Low Performance; `300` → Normal Performance; `499` → Normal Performance; `500` → High Performance; `9999` → High Performance
+- Codex review result: Passed; conditions, indentation, branch reachability, and boundaries were correct
+- Files created or modified: `exercises/module_01/lesson_02_tiktok_video_performance_classifier.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Shopee Profit Decision Calculator v0.1 on the next Saturday Business Application Day
+
+### Concepts Demonstrated
+
+- Comparisons produce `True` or `False`.
+- Python checks `if`, `elif`, and `else` branches in order.
+- Earlier conditions can exclude values so the final `else` safely handles the remaining range.
+- Boundary values should be tested directly.

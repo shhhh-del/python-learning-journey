@@ -11,6 +11,7 @@
 ## Completed Lessons
 
 - [x] Module 1 — Lesson 01: Foundations Assessment
+- [x] Module 1 — Lesson 02: TikTok Video Performance Classifier
 
 ## Verified Skills
 
@@ -22,19 +23,23 @@
 - [x] Floats
 - [x] Basic multiplication
 - [x] Converting input using `int()` and `float()`
+- [x] Comparison operators
+- [x] `if` / `elif` / `else`
+- [x] Ordered conditional branches
+- [x] Boundary-value testing
 
 The student personally wrote and manually tested the Lesson 01 program.
 
 ## Current Technical Milestone
 
-- [ ] Module 1 — Lesson 02: Comparison operators and `if` / `elif` / `else` assessment
+- [x] Module 1 — Lesson 02: Comparison operators and `if` / `elif` / `else` assessment
 
 ## Next Concept
 
-- [ ] Comparison operators
-- [ ] `if`
-- [ ] `elif`
-- [ ] `else`
+- [x] Comparison operators
+- [x] `if`
+- [x] `elif`
+- [x] `else`
 
 ## Next Saturday Business Application
 
