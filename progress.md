@@ -13,6 +13,7 @@
 - [x] Module 1 — Lesson 01: Foundations Assessment
 - [x] Module 1 — Lesson 02: TikTok Video Performance Classifier
 - [x] Module 1 — Lesson 03: Shopee Free Shipping Eligibility Checker
+- [x] Module 1 — Lesson 04: Shopee Seller Discount Eligibility Checker
 
 ## Verified Skills
 
@@ -32,12 +33,14 @@
 - [x] Logical operator `or`
 - [x] Logical operator `not`
 - [x] Combining comparisons with logical operators
+- [x] Nested `if` statements
+- [x] Conditional input placement
 
 The student personally wrote and manually tested the Lesson 01 program.
 
 ## Current Technical Milestone
 
-- [x] Module 1 — Lesson 03: Logical operators (`and`, `or`, `not`) assessment
+- [x] Module 1 — Lesson 04: Nested `if` statements assessment
 
 ## Next Concept
 

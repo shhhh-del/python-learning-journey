@@ -170,3 +170,29 @@
 - `not` reverses a Boolean value.
 - Logical operators can combine multiple business rules into one decision.
 - Boundary and exception cases must be tested directly.
+
+## 2026-07-22 — Module 1, Lesson 04: Shopee Seller Discount Eligibility Checker
+
+### Session Evidence
+
+- Date: 2026-07-22
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Available time: 60 minutes
+- Lesson or business feature: Module 1 — Lesson 04: Shopee Seller Discount Eligibility Checker
+- Final status: Passed
+- Verified skills: Nested `if` statements, indentation, conditional input placement, numeric conversion, and RM100 boundary handling
+- Code personally written: Yes; the student personally wrote the nested discount decision logic
+- Errors encountered: The order amount was initially requested before checking VIP status; its first move caused an indentation error; required output capitalization, colons, and spacing needed correction
+- Corrections understood: The order amount belongs inside the outer VIP branch and before the nested amount comparison because only VIP customers require that input
+- Tests performed: VIP=no → No Discount; VIP=yes and RM99 → VIP Discount: 10%; VIP=yes and RM100 → VIP Discount: 20%; VIP=yes and RM500 → VIP Discount: 20%; student-chosen VIP=yes and RM99999 → VIP Discount: 20%
+- Codex review result: Passed; indentation, nested structure, input placement, absence of duplicated logic, readability, boundary behavior, and required manual tests were verified
+- Files created or modified: `exercises/module_01/lesson_04_shopee_seller_discount_eligibility_checker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- An inner `if` is evaluated only after its outer `if` branch is entered.
+- Conditional input can prevent irrelevant questions from being asked.
+- Indentation determines which statements belong to each conditional branch.
+- `>= 100` correctly includes the RM100 boundary.
