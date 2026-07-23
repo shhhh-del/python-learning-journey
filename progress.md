@@ -14,6 +14,7 @@
 - [x] Module 1 — Lesson 02: TikTok Video Performance Classifier
 - [x] Module 1 — Lesson 03: Shopee Free Shipping Eligibility Checker
 - [x] Module 1 — Lesson 04: Shopee Seller Discount Eligibility Checker
+- [x] Module 1 — Lesson 05: Shopee Product Stock Status Checker
 
 ## Verified Skills
 
@@ -38,9 +39,11 @@
 
 The student personally wrote and manually tested the Lesson 01 program.
 
+The student personally wrote and manually tested the Lesson 05 stock status checker.
+
 ## Current Technical Milestone
 
-- [x] Module 1 — Lesson 04: Nested `if` statements assessment
+- [x] Module 1 — Lesson 05: Multiple conditions using `elif`
 
 ## Next Concept
 

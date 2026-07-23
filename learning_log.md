@@ -196,3 +196,30 @@
 - Conditional input can prevent irrelevant questions from being asked.
 - Indentation determines which statements belong to each conditional branch.
 - `>= 100` correctly includes the RM100 boundary.
+
+## 2026-07-23 — Module 1, Lesson 05: Shopee Product Stock Status Checker
+
+### Session Evidence
+
+- Date: 2026-07-23
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: Module 1 — Lesson 05: Multiple Conditions using `elif`
+- Final status: Passed
+- Verified skills: Ordered `if` / `elif` / `else` branches, integer conversion, comparisons, indentation, mutually exclusive classification, and boundary-value testing
+- Code personally written: Yes; the student personally wrote the stock classification logic
+- Errors encountered: In knowledge-check question 4, the student initially expected a later `elif` branch to execute after the first `if` condition was true
+- Corrections understood: The student corrected the prediction to only `Positive`, demonstrating that Python skips later branches after the first true branch in one `if` / `elif` / `else` chain
+- Tests performed: `0` → Out of Stock; `1` → Low Stock; `5` → Low Stock; `6` → Normal Stock; `20` → Normal Stock; `21` → High Stock; student-chosen `9999` → High Stock
+- Codex review result: Passed; branch ordering, comparisons, indentation, readability, unnecessary conditions, and boundary values were correct
+- Files created or modified: `exercises/module_01/lesson_05_shopee_product_stock_status_checker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- Separate `if` statements are evaluated independently.
+- An `if` / `elif` / `else` chain stops after its first true branch.
+- Conditions must be ordered from the special or narrower case toward wider ranges.
+- Earlier branches make repeated lower-bound conditions unnecessary.
+- Boundary values should be tested directly.
