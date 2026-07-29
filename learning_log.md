@@ -276,3 +276,30 @@
 - One `if` / `elif` / `else` chain produces exactly one classification.
 - Earlier branches make repeated lower-bound comparisons unnecessary.
 - Exact output labels and boundary values are part of the program requirements.
+
+## 2026-07-30 — Module 1, Lesson 08: Business Rule Priority Review
+
+### Session Evidence
+
+- Date: 2026-07-30
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: Shopee Order Acceptance Checker
+- Final status: Passed
+- Verified skills: Business-rule priority, specific-before-general condition ordering, overlapping-condition reasoning, first-true-branch execution, integer input conversion, mutually exclusive output, indentation, readability, and boundary-value testing
+- Code personally written: Yes; the student personally wrote the order acceptance checker's core logic
+- Errors encountered: Knowledge-check Question 2 was initially omitted, and Question 5 initially predicted the later zero branch instead of the earlier matching branch
+- Corrections understood: The student corrected both predictions and explained that zero satisfies `<= 3`, so placing that broader condition before `== 0` would capture zero and prevent the specific zero result
+- Tests performed: `-1` → Invalid Stock Data; `0` → Reject Order; `1` → Accept Order - Low Stock Warning; `3` → Accept Order - Low Stock Warning; `4` → Accept Order; student-selected `-3` → Invalid Stock Data
+- Codex review result: Passed through code inspection, six reported manual tests, boundary verification, and the student's explanation of overlapping conditions and execution order
+- Files created or modified: `exercises/module_01/lesson_08_shopee_order_acceptance_checker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- Specific business rules must be checked before broader overlapping rules.
+- Python executes only the first true branch in one `if` / `elif` / `else` chain.
+- Zero satisfies `<= 3`, making condition order essential for the correct business decision.
+- A classification program should produce exactly one final result.
+- Boundary values should be tested directly.

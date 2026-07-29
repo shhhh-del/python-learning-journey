@@ -16,7 +16,8 @@
 - [x] Module 1 — Lesson 04: Shopee Seller Discount Eligibility Checker
 - [x] Module 1 — Lesson 05: Shopee Product Stock Status Checker
 - [x] Module 1 – Lesson 06: Shopee Stock Input Validator
-- [x] Module 1 – Lesson 07: Shopee Inventory Action Checker
+- [x] Module 1 — Lesson 07: Shopee Inventory Action Checker
+- [x] Module 1 — Lesson 08: Business Rule Priority Review
 
 ## Verified Skills
 
@@ -53,22 +54,22 @@ The student personally wrote and manually tested the Lesson 07 inventory action 
 
 ## Current Technical Milestone
 
-- [x] Module 1 – Lesson 07: Combining business rules with `if` / `elif` / `else`
+- [x] Module 1 — Lesson 08: Business Rule Priority Review
 
 ## Latest Session Evidence
 
-- Date: 2026-07-29
-- Day of week: Wednesday
+- Date: 2026-07-30
+- Day of week: Thursday
 - Session type: Core Python Learning Day
-- Lesson or business feature completed: Module 1 – Lesson 07: Shopee Inventory Action Checker
+- Lesson or business feature completed: Module 1 — Lesson 08: Business Rule Priority Review — Shopee Order Acceptance Checker
 - Final status: Passed
-- Verified skills: Integer input conversion, ordered business rules, narrower-before-wider condition ordering, comparison operators, mutually exclusive classification, exact output labels, consistent indentation, and boundary reasoning
-- Code personally written: Yes; the student personally wrote the inventory checker's core logic
-- Errors encountered: The `stock_quantity <= 5` branch initially printed an incomplete classification label
-- Corrections understood: The required label was corrected; the student explained that placing `<= 20` before `<= 5` would capture values such as 5 too early because only the first true branch executes
-- Tests performed: `-1` → Invalid Stock; `0` → Restock Immediately; `3` → Low Stock - Reorder Soon; `10` → Stock Level Normal; `50` → Stock Sufficient; student-selected `9999` → Stock Sufficient; boundary reasoning confirmed for `5` and `20`
-- Codex review result: Passed through code inspection, reported manual-test evidence, and the student's explanation of overlapping conditions and boundary behavior
-- Files created or modified: `exercises/module_01/lesson_07_shopee_inventory_action_checker.py`, `progress.md`, and `learning_log.md`
+- Verified skills: Business-rule priority, specific-before-general condition ordering, overlapping-condition reasoning, first-true-branch execution, integer input conversion, mutually exclusive output, indentation, readability, and boundary-value testing
+- Code personally written: Yes; the student personally wrote the order acceptance checker's core logic
+- Errors encountered: Knowledge-check Question 2 was initially omitted, and Question 5 initially predicted the later zero branch instead of the earlier matching branch
+- Corrections understood: The student corrected both predictions and explained that zero satisfies `<= 3`, so placing that broader condition before `== 0` would capture zero and prevent the specific zero result
+- Tests performed: `-1` → Invalid Stock Data; `0` → Reject Order; `1` → Accept Order - Low Stock Warning; `3` → Accept Order - Low Stock Warning; `4` → Accept Order; student-selected `-3` → Invalid Stock Data
+- Codex review result: Passed through code inspection, six reported manual tests, boundary verification, and the student's explanation of overlapping conditions and execution order
+- Files created or modified: `exercises/module_01/lesson_08_shopee_order_acceptance_checker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
 
 ## Next Concept
