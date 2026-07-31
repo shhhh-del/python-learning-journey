@@ -303,3 +303,30 @@
 - Zero satisfies `<= 3`, making condition order essential for the correct business decision.
 - A classification program should produce exactly one final result.
 - Boundary values should be tested directly.
+
+## 2026-07-31 — Friday Review: Shopee Inventory Decision System
+
+### Session Evidence
+
+- Date: 2026-07-31
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge Check Day
+- Available time: 30 minutes
+- Lesson or business feature: Shopee Inventory Decision System review exercise
+- Final status: Passed
+- Verified skills: Comparison operators, ordered `if` / `elif` / `else`, nested `if`, execution order, overlapping-condition priority, boundary testing, negative-stock validation, indentation, readability, and mutually exclusive output
+- Code personally written: Yes; the student personally wrote the core inventory and VIP decision logic
+- Errors encountered: Several knowledge-check answers needed correction; the first implementation did not apply the required fallback to every VIP value other than `yes`; the first understanding explanation used `< 3` instead of `<= 3` and initially omitted the first-true-branch execution rule
+- Corrections understood: The student corrected the test boundaries, prioritized `stock == 0` before `stock <= 3`, replaced the incomplete nested VIP classification with the required fallback, and explained that later branches are skipped after the first true branch executes
+- Tests performed: Stock `-1`, VIP `yes` → Invalid Stock Data; stock `0`, VIP `no` → Reject Order; stock `2`, VIP `yes` → Accept Order - Low Stock Warning; stock `4`, VIP `yes` → Priority Packing; stock `4`, VIP `no` → Normal Packing; student-selected stock `347`, VIP `maybe` → Normal Packing
+- Codex review result: Passed through code inspection, six reported manual tests, boundary verification, and the student's explanation of nested execution order
+- Files created or modified: `exercises/module_01/friday_review_shopee_inventory_decision_system.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- Specific stock rules must appear before broader overlapping ranges.
+- A nested decision applies the VIP rule only after the outer stock rules reach it.
+- Python skips later branches after the first true branch in one conditional chain.
+- A final `else` provides the required fallback and preserves exactly one result.
+- The values `-1`, `0`, `3`, and `4` verify the important stock boundaries.
