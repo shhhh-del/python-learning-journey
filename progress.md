@@ -85,7 +85,7 @@ The student personally wrote and manually tested the Lesson 07 inventory action 
 
 ## Next Saturday Business Application
 
-- [ ] Shopee Profit Decision Calculator v0.1
+- [x] PurrNest Shopee Order Profit Calculator Stage 1A: Single Order Net Profit Decision
 
 Planned skills:
 
@@ -94,7 +94,23 @@ Planned skills:
 - Comparison operators
 - `if` / `elif` / `else`
 
-This feature has not been completed yet.
+This feature was completed and manually verified on 2026-08-01.
+
+## Latest Saturday Business Application Evidence
+
+- Date: 2026-08-01
+- Day of week: Saturday
+- Session type: Shopee Business Application Day
+- Lesson or business feature completed: PurrNest Shopee Order Profit Calculator, Stage 1A - Single Order Net Profit Decision
+- Final status: Passed
+- Verified skills: Decimal input using `float()`, validation of six non-negative values, addition and subtraction for profit calculation, ordered `if` / `elif` / `else`, exactly one order status, and two-decimal f-string money formatting
+- Code personally written: Yes; the student personally wrote the six inputs, validation, calculations, status logic, and output formatting
+- Errors encountered: Selling price was initially included in total cost; the status decision and final outputs were initially outside the valid-input branch; statuses were initially printed directly; final output initially used literal placeholders and commas; the packaging prompt contained a spelling error
+- Corrections understood: Revenue is not part of total cost; calculations and output must occur only after validation; net profit must exist before status comparison; an `if` / `elif` / `else` chain stops after its first matching branch and therefore produces one status; f-strings insert values and `.2f` formats money to two decimal places
+- Tests performed: Six required manual tests covering profitable, break-even, loss, zero additional costs, negative selling price, and negative packaging cost; all produced the expected output
+- Codex review result: Passed through static code inspection, six student-reported manual tests, scope review, secrets scan, and the student's explanation of calculation and condition order. Automated execution was unavailable because no Python runtime was discoverable in the Codex shell
+- Files created or modified: `shopee_order_profit_calculator/profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Git commit and push after student confirmation
 
 ## Roadmap Milestones
 

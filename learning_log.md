@@ -330,3 +330,30 @@
 - Python skips later branches after the first true branch in one conditional chain.
 - A final `else` provides the required fallback and preserves exactly one result.
 - The values `-1`, `0`, `3`, and `4` verify the important stock boundaries.
+
+## 2026-08-01 - PurrNest Shopee Order Profit Calculator, Stage 1A
+
+### Session Evidence
+
+- Date: 2026-08-01
+- Day of week: Saturday
+- Session type: Shopee Business Application Day
+- Available time: Not specified
+- Lesson or business feature: Single Order Net Profit Decision
+- Final status: Passed
+- Verified skills: Six decimal inputs using `float()`, non-negative input validation, total-cost and net-profit calculations, ordered profit classification, exactly one final status, and f-string money formatting with two decimal places
+- Code personally written: Yes; the student personally wrote and corrected the complete Stage 1A core logic
+- Errors encountered: Selling price was initially counted as a cost; valid-result logic initially escaped the validation branch; status labels were initially printed separately; output initially contained literal placeholders and incorrect punctuation; `packaging` was misspelled in one prompt
+- Corrections understood: Total cost contains only costs; invalid data must stop financial calculation and output; `net_profit` must be calculated before it is compared; the first matching branch in `if` / `elif` / `else` executes and later branches are skipped; f-strings insert variable values and `.2f` displays two decimal places
+- Tests performed: (1) profitable order produced RM7.40 and PROFITABLE; (2) break-even produced RM0.00 and BREAK-EVEN; (3) loss produced RM-2.50 and LOSS; (4) zero additional costs produced RM11.90 and PROFITABLE; (5) negative selling price produced only INVALID INPUT; (6) negative packaging cost produced only INVALID INPUT
+- Codex review result: Passed through final static inspection, all six student-reported manual test results, understanding checks, scope review, and a secrets scan with no matches. Automated execution was unavailable because no Python runtime was discoverable in the Codex shell
+- Files created or modified: `shopee_order_profit_calculator/profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Review changed files, then commit and push after student confirmation
+
+### Concepts Demonstrated
+
+- `float(input(...))` converts typed text into a decimal value suitable for prices and costs.
+- Revenue is kept separate from the five costs when calculating net profit.
+- Validation occurs before calculations so negative business data produces only `INVALID INPUT`.
+- A nested `if` / `elif` / `else` decision assigns exactly one order status.
+- An f-string inserts calculated values, while `.2f` displays money to two decimal places.
