@@ -159,6 +159,34 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_09_purrnest_product_profit_preview.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
 
+## Module 1 Lesson 10 Status
+
+- [x] Module 1 - Lesson 10: Multiple Business Inputs and Combined Calculations
+
+Verified skills:
+
+- [x] Converting multiple money inputs using `float()`
+- [x] Adding product cost and packaging cost into an intermediate total
+- [x] Using total cost in a second profit calculation
+- [x] Formatting multiple money outputs to exactly two decimal places
+- [x] Producing exactly one final profit status
+
+### Lesson 10 Evidence
+
+- Date: 2026-08-04
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Product Margin Calculator
+- Final status: Passed
+- Verified skills: Three decimal inputs using `float()`, addition for total cost, subtraction for profit, readable intermediate variables, two-decimal money formatting, and exactly one final status
+- Code personally written: Yes; the student personally wrote the three inputs, combined calculations, formatted outputs, and profit classification
+- Errors encountered: Knowledge Check Question 4 initially contained an addition error; the first manual-test reports omitted the displayed two-decimal formatting and required several attempts to report the decimal values
+- Corrections understood: Product cost and packaging cost are added into `total_cost`; selling price minus `total_cost` calculates profit; storing total cost makes the second calculation clearer; and `.2f` displays every money result with two decimal places
+- Tests performed: `20.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM8.00`, `PROFIT`; `12.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM0.00`, `BREAK-EVEN`; `10.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM-2.00`, `LOSS`; `0.00 / 0.00 / 0.00` -> total cost `RM0.00`, profit `RM0.00`, `BREAK-EVEN`; student-selected `9.00 / 7.00 / 2.00` -> total cost `RM9.00`, profit `RM0.00`, `BREAK-EVEN`
+- Codex review result: Passed through static code inspection, five student-reported manual tests, formatting verification against the submitted f-strings, and the student's explanation of both calculation steps
+- Files created or modified: `exercises/module_01/lesson_10_purrnest_product_margin_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

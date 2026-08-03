@@ -383,3 +383,30 @@
 - Subtracting product cost from selling price calculates profit.
 - `.2f` formats positive, zero, and negative money results to exactly two decimal places.
 - One `if` / `elif` / `else` chain classifies a result into exactly one of three profit groups.
+
+## 2026-08-04 - Module 1, Lesson 10: Multiple Business Inputs and Combined Calculations
+
+### Session Evidence
+
+- Date: 2026-08-04
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Product Margin Calculator
+- Final status: Passed
+- Verified skills: Three decimal inputs using `float()`, addition for total cost, subtraction for profit, readable intermediate variables, two-decimal money formatting, and exactly one final status
+- Code personally written: Yes; the student personally wrote the title, three money inputs, total-cost calculation, profit calculation, formatted outputs, and classification logic
+- Errors encountered: Knowledge Check Question 4 initially contained an addition error; the first manual-test reports omitted the displayed two-decimal formatting and required several attempts to report the decimal values
+- Corrections understood: Product cost and packaging cost are added into `total_cost`; selling price minus `total_cost` calculates profit; the intermediate total improves readability and can be reused; and `.2f` displays each money result with two decimal places
+- Tests performed: `20.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM8.00`, `PROFIT`; `12.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM0.00`, `BREAK-EVEN`; `10.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM-2.00`, `LOSS`; `0.00 / 0.00 / 0.00` -> total cost `RM0.00`, profit `RM0.00`, `BREAK-EVEN`; student-selected `9.00 / 7.00 / 2.00` -> total cost `RM9.00`, profit `RM0.00`, `BREAK-EVEN`
+- Codex review result: Passed through static code inspection, five student-reported manual tests, formatting verification against the submitted f-strings, and the student's explanation of both calculation steps
+- Files created or modified: `exercises/module_01/lesson_10_purrnest_product_margin_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- Multiple business inputs can be combined into one clearly named intermediate value.
+- `total_cost` is calculated before profit so the program follows the business calculation in small steps.
+- Profit is calculated by subtracting total cost from selling price.
+- Multiple f-strings can format business money outputs consistently with `.2f`.
+- One conditional chain produces exactly one positive, zero, or negative profit status.
