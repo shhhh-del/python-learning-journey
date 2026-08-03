@@ -131,6 +131,34 @@ This feature was completed and manually verified on 2026-08-01.
 
 Legacy Projects 02 and 03 are not part of the current main route and must not be restarted automatically.
 
+## Module 1 Lesson 09 Status
+
+- [x] Module 1 - Lesson 09: Using `float()` for Business Calculations
+
+Verified skills:
+
+- [x] Using `float()` for decimal price and cost input
+- [x] Subtracting decimal business values to calculate profit
+- [x] Comparing profit as positive, zero, or negative
+- [x] Producing exactly one final status
+- [x] Formatting money to exactly two decimal places
+
+### Lesson 09 Evidence
+
+- Date: 2026-08-03
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Product Profit Preview
+- Final status: Passed
+- Verified skills: Decimal input using `float()`, subtraction for profit calculation, positive/zero/negative comparison, exactly one final status, and two-decimal money formatting
+- Code personally written: Yes; the student personally wrote the complete product profit preview implementation and corrected its formatting syntax
+- Errors encountered: The knowledge check initially treated `int("17.90")` as a value or Boolean result; the first implementation used invalid punctuation in the f-string format specifier and misspelled the Product Cost prompt
+- Corrections understood: Text containing a decimal point cannot be converted directly with `int()`; `float()` preserves decimal price values; `.2f` formats money to two decimal places; and one `if` / `elif` / `else` chain separates positive, zero, and negative profit into exactly one status
+- Tests performed: `17.90 / 10.00` -> `Profit: RM7.90`, `PROFIT`; `20.00 / 20.00` -> `Profit: RM0.00`, `BREAK-EVEN`; `15.00 / 20.00` -> `Profit: RM-5.00`, `LOSS`; `0.00 / 0.00` -> `Profit: RM0.00`, `BREAK-EVEN`; student-selected `360 / 79` -> `Profit: RM281.00`, `PROFIT`
+- Codex review result: Passed through static code inspection, five student-reported manual tests, and the student's explanation of decimal input and mutually exclusive profit groups
+- Files created or modified: `exercises/module_01/lesson_09_purrnest_product_profit_preview.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

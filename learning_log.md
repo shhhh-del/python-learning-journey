@@ -357,3 +357,29 @@
 - Validation occurs before calculations so negative business data produces only `INVALID INPUT`.
 - A nested `if` / `elif` / `else` decision assigns exactly one order status.
 - An f-string inserts calculated values, while `.2f` displays money to two decimal places.
+
+## 2026-08-03 - Module 1, Lesson 09: Using `float()` for Business Calculations
+
+### Session Evidence
+
+- Date: 2026-08-03
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Product Profit Preview
+- Final status: Passed
+- Verified skills: Decimal input using `float()`, subtraction for profit calculation, positive/zero/negative comparison, exactly one final status, and two-decimal money formatting
+- Code personally written: Yes; the student personally wrote the title, two decimal inputs, profit calculation, formatted profit output, and classification logic
+- Errors encountered: The knowledge check initially treated `int("17.90")` as a value or Boolean result; the first implementation used a semicolon instead of a colon in the f-string format specifier and misspelled the Product Cost prompt
+- Corrections understood: `int("17.90")` raises a conversion error because the text contains a decimal point; `float()` preserves decimal values; `.2f` displays money with exactly two decimal places; and the conditional chain divides profit into positive, zero, and negative groups while printing exactly one status
+- Tests performed: `17.90 / 10.00` -> `Profit: RM7.90`, `PROFIT`; `20.00 / 20.00` -> `Profit: RM0.00`, `BREAK-EVEN`; `15.00 / 20.00` -> `Profit: RM-5.00`, `LOSS`; `0.00 / 0.00` -> `Profit: RM0.00`, `BREAK-EVEN`; student-selected `360 / 79` -> `Profit: RM281.00`, `PROFIT`
+- Codex review result: Passed through static code inspection, all five student-reported manual tests, and the student's explanation of why decimal inputs use `float()` and why one conditional chain produces one status
+- Files created or modified: `exercises/module_01/lesson_09_purrnest_product_profit_preview.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- `float()` converts decimal price and cost input into values that can be used in arithmetic.
+- Subtracting product cost from selling price calculates profit.
+- `.2f` formats positive, zero, and negative money results to exactly two decimal places.
+- One `if` / `elif` / `else` chain classifies a result into exactly one of three profit groups.
