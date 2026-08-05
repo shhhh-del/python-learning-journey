@@ -187,6 +187,35 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_10_purrnest_product_margin_calculator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
 
+## Module 1 Lesson 11 Status
+
+- [x] Module 1 - Lesson 11: Multiple Business Outputs and Percentage Calculation
+
+Verified skills:
+
+- [x] Converting multiple money inputs using `float()`
+- [x] Adding costs and subtracting total cost from selling price
+- [x] Calculating profit margin as a percentage
+- [x] Protecting a percentage calculation from division by zero
+- [x] Formatting money and percentages to exactly two decimal places
+- [x] Producing exactly one final profit status
+
+### Lesson 11 Evidence
+
+- Date: 2026-08-05
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Profit Margin Calculator
+- Final status: Passed
+- Verified skills: Three money inputs using `float()`, total-cost and profit arithmetic, division and percentage calculation, zero-division protection, multiple formatted business outputs, and exactly one final status
+- Code personally written: Yes; the student personally wrote the title, inputs, calculations, zero-price branch, formatted outputs, and profit classification
+- Errors encountered: The knowledge check initially omitted the exact `float` type name and reported division as a fraction; output labels initially lacked required spaces; total-cost and profit outputs were temporarily placed inside the nonzero-price branch; and the calculated margin was temporarily printed outside its safe branch
+- Corrections understood: `/` produces a decimal result for these float values; zero cannot be a divisor; the calculated margin belongs only in the nonzero-price branch; total cost and profit must print for both zero and nonzero selling prices; and exact label spacing is part of output formatting
+- Tests performed: `20.00 / 10.00 / 2.00` -> margin `40.00%`, total cost `RM12.00`, profit `RM8.00`, `PROFIT`; `12.00 / 10.00 / 2.00` -> margin `0.00%`, total cost `RM12.00`, profit `RM0.00`, `BREAK-EVEN`; `10.00 / 10.00 / 2.00` -> margin `-20.00%`, total cost `RM12.00`, profit `RM-2.00`, `LOSS`; `0.00 / 0.00 / 0.00` -> margin `N/A`, total cost `RM0.00`, profit `RM0.00`, `BREAK-EVEN`; student-selected `36.00 / 27.00 / 2.00` -> margin `19.44%`, total cost `RM29.00`, profit `RM7.00`, `PROFIT`
+- Codex review result: Passed through static code inspection, five student-reported manual tests, exact-format verification, zero-division review, and the student's explanation of the zero-price branch
+- Files created or modified: `exercises/module_01/lesson_11_purrnest_profit_margin_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

@@ -410,3 +410,30 @@
 - Profit is calculated by subtracting total cost from selling price.
 - Multiple f-strings can format business money outputs consistently with `.2f`.
 - One conditional chain produces exactly one positive, zero, or negative profit status.
+
+## 2026-08-05 - Module 1, Lesson 11: Multiple Business Outputs and Percentage Calculation
+
+### Session Evidence
+
+- Date: 2026-08-05
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Profit Margin Calculator
+- Final status: Passed
+- Verified skills: Three money inputs using `float()`, addition and subtraction, division and percentage calculation, zero-division protection, multiple formatted business outputs, and exactly one final profit status
+- Code personally written: Yes; the student personally wrote the title, inputs, total-cost and profit calculations, protected profit-margin calculation, formatted outputs, and status classification
+- Errors encountered: The knowledge check initially omitted the exact `float` type and gave the division result as a fraction; output labels initially missed required spaces; output indentation temporarily prevented total cost and profit from printing for a zero selling price; and one revision referenced `profit_margin` outside the branch where it was created
+- Corrections understood: Float division produces a decimal result; zero cannot be used as a divisor; `Profit Margin: N/A` safely represents the zero-price case; margin calculation and output belong in the nonzero branch; total cost and profit belong outside that decision so they always display; and exact spaces and `.2f` formatting produce consistent output
+- Tests performed: `20.00 / 10.00 / 2.00` -> `40.00%`, `RM12.00`, `RM8.00`, `PROFIT`; `12.00 / 10.00 / 2.00` -> `0.00%`, `RM12.00`, `RM0.00`, `BREAK-EVEN`; `10.00 / 10.00 / 2.00` -> `-20.00%`, `RM12.00`, `RM-2.00`, `LOSS`; `0.00 / 0.00 / 0.00` -> `N/A`, `RM0.00`, `RM0.00`, `BREAK-EVEN`; student-selected `36.00 / 27.00 / 2.00` -> `19.44%`, `RM29.00`, `RM7.00`, `PROFIT`. Every run displayed exactly one final status
+- Codex review result: Passed through static inspection, five correct student-reported manual tests, exact output-format review, zero-division review, and a final understanding check
+- Files created or modified: `exercises/module_01/lesson_11_purrnest_profit_margin_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- Profit margin expresses profit as a percentage of selling price.
+- A selling price of zero must be handled before division to prevent an error.
+- Branch placement controls whether outputs appear in both zero and nonzero cases.
+- `.2f` formats money and percentage results to exactly two decimal places.
+- One `if` / `elif` / `else` chain produces exactly one profit classification.
