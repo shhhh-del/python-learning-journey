@@ -216,6 +216,36 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_11_purrnest_profit_margin_calculator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
 
+## Module 1 Lesson 12 Status
+
+- [x] Module 1 - Lesson 12: Business Input Validation with Multiple Money Fields
+
+Verified skills:
+
+- [x] Converting multiple money inputs using `float()`
+- [x] Detecting any negative input using comparisons and `or`
+- [x] Validating inputs before performing calculations
+- [x] Stopping calculation and business-result output for invalid data
+- [x] Protecting profit-margin calculation from division by zero
+- [x] Formatting money and percentages to exactly two decimal places
+- [x] Producing exactly one final status for valid input
+
+### Lesson 12 Evidence
+
+- Date: 2026-08-06
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Safe Profit Calculator
+- Final status: Passed
+- Verified skills: Three money inputs using `float()`, multi-field negative validation with comparisons and `or`, validation-before-calculation order, conditional execution, zero-division protection, arithmetic, two-decimal formatting, and exactly one status for valid input
+- Code personally written: Yes; the student personally wrote the title, three inputs, combined validation condition, valid-input calculations, protected margin logic, formatted outputs, and profit classification
+- Errors encountered: The knowledge check initially treated a negative decimal string as a conversion error and misclassified negative comparisons; the first implementation left margin and status logic outside the validation branch; a later revision moved margin logic but initially left the status chain outside; and the calculated margin initially lacked a required space after its label
+- Corrections understood: `float()` accepts negative decimal text; negative values satisfy `< 0`; `or` makes validation true when any field is negative; invalid business data could create misleading results; and all calculation, output, and status logic must remain in the valid-input branch so invalid input prints only `INVALID INPUT`
+- Tests performed: `20.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM8.00`, margin `40.00%`, `PROFIT`; `12.00 / 10.00 / 2.00` -> `RM12.00`, `RM0.00`, `0.00%`, `BREAK-EVEN`; `10.00 / 10.00 / 2.00` -> `RM12.00`, `RM-2.00`, `-20.00%`, `LOSS`; `0.00 / 0.00 / 0.00` -> `RM0.00`, `RM0.00`, `N/A`, `BREAK-EVEN`; `-1.00 / 10.00 / 2.00` -> only `INVALID INPUT`; student-selected `-20 / 10 / 2` -> only `INVALID INPUT`
+- Codex review result: Passed through static code inspection, six student-reported manual tests, invalid-path verification, exact-format review, and the student's explanation of why invalid data must stop result processing
+- Files created or modified: `exercises/module_01/lesson_12_purrnest_safe_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

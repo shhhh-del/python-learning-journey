@@ -437,3 +437,30 @@
 - Branch placement controls whether outputs appear in both zero and nonzero cases.
 - `.2f` formats money and percentage results to exactly two decimal places.
 - One `if` / `elif` / `else` chain produces exactly one profit classification.
+
+## 2026-08-06 - Module 1, Lesson 12: Business Input Validation with Multiple Money Fields
+
+### Session Evidence
+
+- Date: 2026-08-06
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Safe Profit Calculator
+- Final status: Passed
+- Verified skills: Three money inputs using `float()`, comparisons, multi-field validation using `or`, validation-before-calculation order, conditional execution, zero-division protection, arithmetic, two-decimal formatting, and exactly one final status for valid input
+- Code personally written: Yes; the student personally wrote the complete validation condition and all valid-input calculation, output, margin, and classification logic
+- Errors encountered: The knowledge check initially treated `float("-4.50")` as an error and predicted negative comparisons incorrectly; margin and status logic initially escaped the valid-input branch; the status chain required further indentation correction; and one profit-margin label initially missed a space
+- Corrections understood: `float()` accepts a minus sign and decimal point; a negative value is less than zero; an `or` validation condition becomes true when any field is negative; negative prices or costs are invalid business data that could create misleading results; and nesting all result logic inside `else` ensures invalid input produces only `INVALID INPUT`
+- Tests performed: `20.00 / 10.00 / 2.00` -> `RM12.00`, `RM8.00`, `40.00%`, `PROFIT`; `12.00 / 10.00 / 2.00` -> `RM12.00`, `RM0.00`, `0.00%`, `BREAK-EVEN`; `10.00 / 10.00 / 2.00` -> `RM12.00`, `RM-2.00`, `-20.00%`, `LOSS`; `0.00 / 0.00 / 0.00` -> `RM0.00`, `RM0.00`, `N/A`, `BREAK-EVEN`; `-1.00 / 10.00 / 2.00` -> only `INVALID INPUT`; student-selected `-20 / 10 / 2` -> only `INVALID INPUT`. Every valid run displayed exactly one final status
+- Codex review result: Passed through static inspection, six correct student-reported manual tests, validation-order and invalid-path review, exact output-format verification, and a final understanding check
+- Files created or modified: `exercises/module_01/lesson_12_purrnest_safe_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- Business input validation should occur before calculations and result output.
+- `or` can reject a record when any required money field is negative.
+- Invalid input must not continue into calculations, margin output, or classification.
+- A zero selling price is valid but requires an `N/A` margin to avoid division by zero.
+- Valid input produces formatted business outputs and exactly one final status.
