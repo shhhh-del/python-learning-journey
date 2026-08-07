@@ -59,6 +59,7 @@ The student personally wrote and manually tested the Lesson 07 inventory action 
 ## Completed Reviews
 
 - [x] 2026-07-31 Friday Review: Shopee Inventory Decision System
+- [x] 2026-08-07 Friday Review #2: PurrNest Financial Decision System
 
 ## Latest Session Evidence
 
@@ -244,6 +245,36 @@ Verified skills:
 - Tests performed: `20.00 / 10.00 / 2.00` -> total cost `RM12.00`, profit `RM8.00`, margin `40.00%`, `PROFIT`; `12.00 / 10.00 / 2.00` -> `RM12.00`, `RM0.00`, `0.00%`, `BREAK-EVEN`; `10.00 / 10.00 / 2.00` -> `RM12.00`, `RM-2.00`, `-20.00%`, `LOSS`; `0.00 / 0.00 / 0.00` -> `RM0.00`, `RM0.00`, `N/A`, `BREAK-EVEN`; `-1.00 / 10.00 / 2.00` -> only `INVALID INPUT`; student-selected `-20 / 10 / 2` -> only `INVALID INPUT`
 - Codex review result: Passed through static code inspection, six student-reported manual tests, invalid-path verification, exact-format review, and the student's explanation of why invalid data must stop result processing
 - Files created or modified: `exercises/module_01/lesson_12_purrnest_safe_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+## Friday Review #2 Status
+
+- [x] Friday Review #2: PurrNest Financial Decision System
+
+Verified skills:
+
+- [x] Converting multiple money inputs using `float()`
+- [x] Validating multiple fields with comparisons and `or`
+- [x] Performing validation before calculations and result output
+- [x] Calculating total cost, profit, and profit margin
+- [x] Protecting division from a zero selling price
+- [x] Formatting money and percentages to exactly two decimal places
+- [x] Producing exactly one final status for every valid input
+
+### Friday Review #2 Evidence
+
+- Date: 2026-08-07
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Lesson or business feature completed: PurrNest Financial Decision System
+- Final status: Passed
+- Verified skills: `float()`, comparison operators, `if` / `elif` / `else`, `or`, validation order, addition, subtraction, percentage calculation, zero-division protection, two-decimal formatting, and exactly one valid-input status
+- Code personally written: Yes; the student personally wrote the inputs, multi-field validation, calculations, protected profit-margin logic, formatted outputs, and status classification
+- Errors encountered: Knowledge-check Question 6 initially calculated the percentage incorrectly; Question 7 initially described a zero selling price as a business problem instead of identifying division by zero; Question 8 initially gave the status label rather than the number of statuses; the first implementation placed the status chain inside the nonzero-margin branch; one revision changed negative validation from `< 0` to `<= 0`; and the status chain required further indentation correction
+- Corrections understood: Percentage calculation divides before multiplying by 100; dividing by zero causes an error; one conditional chain prints one status; validation uses `< 0` because zero is valid; the status chain must follow both margin paths while remaining inside the valid-input branch; and `or` rejects the record when any one money field is negative
+- Tests performed: `20 / 10 / 2` -> `RM12.00`, `RM8.00`, `40.00%`, `PROFIT`; `12 / 10 / 2` -> `RM12.00`, `RM0.00`, `0.00%`, `BREAK-EVEN`; `10 / 10 / 2` -> `RM12.00`, `RM-2.00`, `-20.00%`, `LOSS`; `0 / 0 / 0` -> `RM0.00`, `RM0.00`, `N/A`, `BREAK-EVEN`; `-1 / 10 / 2` -> only `INVALID INPUT`; `10 / -5 / 2` -> only `INVALID INPUT`; student-designed `-3 / 9 / 2` -> only `INVALID INPUT`
+- Codex review result: Passed through the corrected ten-question knowledge check, static code inspection, seven student-reported manual tests, invalid-path review, exact-format verification, and the student's explanation of validation boundaries, branch placement, and `or` logic
+- Files created or modified: `exercises/module_01/friday_review_02_purrnest_financial_decision_system.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
 
 ## Review Approach

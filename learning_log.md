@@ -464,3 +464,30 @@
 - Invalid input must not continue into calculations, margin output, or classification.
 - A zero selling price is valid but requires an `N/A` margin to avoid division by zero.
 - Valid input produces formatted business outputs and exactly one final status.
+
+## 2026-08-07 - Friday Review #2: PurrNest Financial Decision System
+
+### Session Evidence
+
+- Date: 2026-08-07
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Financial Decision System
+- Final status: Passed
+- Verified skills: `float()`, comparisons, `if` / `elif` / `else`, `or`, validation order, arithmetic, profit-margin percentage calculation, zero-division protection, two-decimal formatting, business-rule execution, and exactly one status for valid input
+- Code personally written: Yes; the student personally wrote the complete financial decision system core logic
+- Errors encountered: Knowledge-check answers initially miscalculated a percentage, gave the wrong reason for protecting a zero selling price, and answered with a label instead of the requested status count; the first exercise implementation nested status classification inside the nonzero-margin branch; a revision temporarily rejected zero by using `<= 0`; and the status chain needed repeated indentation correction
+- Corrections understood: Profit margin is calculated by division followed by multiplication by 100; zero cannot be a divisor; one `if` / `elif` / `else` chain prints one status; `< 0` rejects only negative values while allowing zero; the status chain must execute after either margin branch but only for validated input; and `or` makes the validation condition true when any field is negative
+- Tests performed: `20 / 10 / 2` -> `RM12.00`, `RM8.00`, `40.00%`, `PROFIT`; `12 / 10 / 2` -> `RM12.00`, `RM0.00`, `0.00%`, `BREAK-EVEN`; `10 / 10 / 2` -> `RM12.00`, `RM-2.00`, `-20.00%`, `LOSS`; `0 / 0 / 0` -> `RM0.00`, `RM0.00`, `N/A`, `BREAK-EVEN`; `-1 / 10 / 2` and `10 / -5 / 2` -> only `INVALID INPUT`; student-designed `-3 / 9 / 2` -> only `INVALID INPUT`. Every valid run displayed exactly one final status
+- Codex review result: Passed through the corrected ten-question knowledge check, final static inspection, seven correct student-reported manual tests, exact output and validation-path review, and an understanding check covering boundary choice, indentation, and `or` behavior
+- Files created or modified: `exercises/module_01/friday_review_02_purrnest_financial_decision_system.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
+
+### Concepts Demonstrated
+
+- Validation must reject negative data before any calculations or business outputs.
+- Zero is a valid boundary and requires separate protection only when used as a divisor.
+- `or` combines field checks so one negative value invalidates the complete input set.
+- Margin decisions and status decisions serve different purposes and require the correct indentation.
+- Valid input produces one formatted financial result and exactly one classification.
