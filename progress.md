@@ -277,6 +277,37 @@ Verified skills:
 - Files created or modified: `exercises/module_01/friday_review_02_purrnest_financial_decision_system.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Wait for the Daily Learning Supervisor to generate the Daily Learning Report
 
+## PurrNest Shopee Order Profit Calculator Stage 1B Status
+
+- [x] Version 1 - Stage 1B: Quantity and Multiple-Unit Order Calculation
+
+Verified skills:
+
+- [x] Converting quantity with `int()` and money inputs with `float()`
+- [x] Rejecting zero or negative quantity before calculations
+- [x] Rejecting any negative money input before calculations
+- [x] Calculating total sales revenue and total product cost using quantity
+- [x] Combining per-order costs into total order cost
+- [x] Calculating net profit for a multiple-unit order
+- [x] Formatting four money outputs to exactly two decimal places
+- [x] Producing exactly one order status for valid input
+
+### Stage 1B Evidence
+
+- Date: 2026-08-08
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Lesson or business feature completed: PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B, Quantity and Multiple-Unit Order Calculation
+- Final status: Passed
+- Verified skills: `int()` quantity input, `float()` money inputs, quantity and money validation, validation-before-calculation order, multiple-unit revenue and product-cost calculations, total order cost, net profit, two-decimal formatting, and exactly one order status
+- Code personally written: Yes; the student personally wrote all Stage 1B inputs, validation, calculations, formatted outputs, and status classification
+- Errors encountered: The first student-designed loss test produced a profitable result; the first understanding answer referred to total profit instead of distinguishing total sales revenue from profit
+- Corrections understood: A loss test requires total order cost to exceed total sales revenue; selling price per unit multiplied by quantity gives total sales revenue; product cost per unit multiplied by quantity gives total product cost; order-level costs are added once; and zero or negative quantity must be rejected before calculation
+- Tests performed: Multiple-unit profitable order -> revenue `RM45.00`, product cost `RM18.00`, order cost `RM23.00`, net profit `RM22.00`, `PROFITABLE`; quantity-one order -> `RM10.00`, `RM6.00`, `RM8.00`, `RM2.00`, `PROFITABLE`; break-even order -> `RM20.00`, `RM16.00`, `RM20.00`, `RM0.00`, `BREAK-EVEN`; student-designed loss order using `25 / 2 / 18 / 6 / 5 / 0 / 5` -> `RM50.00`, `RM36.00`, `RM52.00`, `RM-2.00`, `LOSS`; quantity zero, quantity `-1`, and negative packaging cost each produced only `INVALID INPUT`
+- Codex review result: Passed through static code inspection, seven student-reported manual tests, scope review, output-format verification, and the student's corrected explanation of quantity-based totals and order-level costs
+- Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Stage 1C; wait for the Daily Learning Supervisor / SaaS Product Builder to generate the final progress report
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

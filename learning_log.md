@@ -491,3 +491,30 @@
 - `or` combines field checks so one negative value invalidates the complete input set.
 - Margin decisions and status decisions serve different purposes and require the correct indentation.
 - Valid input produces one formatted financial result and exactly one classification.
+
+## 2026-08-08 - PurrNest Shopee Order Profit Calculator, Stage 1B
+
+### Session Evidence
+
+- Date: 2026-08-08
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Available time: 30 minutes
+- Lesson or business feature: Quantity and Multiple-Unit Order Calculation
+- Final status: Passed
+- Verified skills: Quantity input using `int()`, money inputs using `float()`, zero/negative quantity validation, negative money validation, validation-before-calculation order, total sales revenue, total product cost, total order cost, net profit, two-decimal formatting, and exactly one order status
+- Code personally written: Yes; the student personally wrote the complete Stage 1B core implementation
+- Errors encountered: The first student-designed Test 4 data produced `RM17.00` profit and `PROFITABLE` instead of the required loss; the first explanation called selling price multiplied by quantity total profit instead of total sales revenue
+- Corrections understood: Total order cost must exceed total sales revenue to create a loss; selling price per unit multiplied by quantity calculates total sales revenue; product cost per unit multiplied by quantity calculates total product cost; packaging cost, Shopee fee, seller discount, and other cost apply once to the order in Stage 1B; and invalid quantity must be rejected before financial processing
+- Tests performed: Test 1 -> `RM45.00`, `RM18.00`, `RM23.00`, `RM22.00`, `PROFITABLE`; Test 2 -> `RM10.00`, `RM6.00`, `RM8.00`, `RM2.00`, `PROFITABLE`; Test 3 -> `RM20.00`, `RM16.00`, `RM20.00`, `RM0.00`, `BREAK-EVEN`; corrected student-designed Test 4 using `25 / 2 / 18 / 6 / 5 / 0 / 5` -> `RM50.00`, `RM36.00`, `RM52.00`, `RM-2.00`, `LOSS`; Tests 5-7 for zero quantity, negative quantity, and negative packaging cost each produced only `INVALID INPUT`
+- Codex review result: Passed through final static inspection, seven student-reported manual tests, validation-path and scope review, exact output-format verification, and an understanding check
+- Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Stage 1C; wait for the Daily Learning Supervisor / SaaS Product Builder to generate the final progress report
+
+### Concepts Demonstrated
+
+- Whole-unit quantity is converted with `int()`, while monetary inputs use `float()`.
+- Per-unit selling price and product cost are multiplied by quantity to produce order totals.
+- Per-order costs are added once when calculating total order cost.
+- Validation prevents impossible quantity and negative money data from reaching financial output.
+- One conditional chain produces exactly one profitable, break-even, or loss status.
