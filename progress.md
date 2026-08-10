@@ -308,6 +308,36 @@ Verified skills:
 - Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Stage 1C; wait for the Daily Learning Supervisor / SaaS Product Builder to generate the final progress report
 
+## Module 1 Lesson 13 Status
+
+- [x] Module 1 - Lesson 13: Introduction to `while` Loops
+
+Verified skills:
+
+- [x] Using a basic `while` loop with a comparison condition
+- [x] Understanding that Python checks the condition before each repetition
+- [x] Updating loop state with subtraction
+- [x] Stopping a loop when its condition becomes false
+- [x] Recognizing how a missing state update causes an infinite loop
+- [x] Keeping negative and zero stock outside the countdown loop
+- [x] Preserving the required countdown output order
+
+### Lesson 13 Evidence
+
+- Date: 2026-08-10
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Low Stock Countdown
+- Final status: Passed
+- Verified skills: Basic `while` condition, pre-repetition condition checking, stock state update, countdown arithmetic, loop termination, infinite-loop understanding, negative-input handling, zero-stock handling, indentation, and output order
+- Code personally written: Yes; the student personally wrote the stock input, conditional paths, `while` loop, stock decrement, and final output
+- Errors encountered: The first report for input `1` omitted the `Stock Remaining: 1` line; the first answer about a missing decrement stated only that stock would not decrease and initially omitted the infinite-loop consequence
+- Corrections understood: Input `1` must display its remaining stock before reaching zero; `stock_quantity -= 1` subtracts one on every repetition; the loop stops when `stock_quantity > 0` becomes false; and without the decrement a positive stock remains positive, repeatedly displays the same value, and creates an infinite loop
+- Tests performed: Input `-1` -> `Invalid Stock`; input `0` -> `Out of Stock`; input `1` -> `Stock Remaining: 1`, then `Out of Stock`; input `3` -> remaining stock `3`, `2`, `1`, then `Out of Stock`; student-selected input `5` -> remaining stock `5`, `4`, `3`, `2`, `1`, then `Out of Stock`
+- Codex review result: Passed through static inspection, five student-reported manual tests, loop-condition and termination review, scope review, output-order verification, and the student's explanation of condition failure and infinite-loop behavior
+- Files created or modified: `exercises/module_01/lesson_13_purrnest_low_stock_countdown.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce another lesson; wait for the Daily Learning Supervisor
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

@@ -518,3 +518,30 @@
 - Per-order costs are added once when calculating total order cost.
 - Validation prevents impossible quantity and negative money data from reaching financial output.
 - One conditional chain produces exactly one profitable, break-even, or loss status.
+
+## 2026-08-10 - Module 1, Lesson 13: Introduction to `while` Loops
+
+### Session Evidence
+
+- Date: 2026-08-10
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Low Stock Countdown
+- Final status: Passed
+- Verified skills: Basic `while` condition, condition checking before each repetition, stock decrement, loop-state change, loop termination, infinite-loop recognition, negative-stock validation, zero-stock handling, indentation, and required output order
+- Code personally written: Yes; the student personally wrote the complete exercise implementation using only the allowed Python concepts
+- Errors encountered: The first Test 3 report for input `1` listed only `Out of Stock`; the first explanation of removing the stock decrement did not explicitly identify that the repeated true condition creates an infinite loop
+- Corrections understood: A positive stock is printed before being decreased; `stock_quantity -= 1` is equivalent to assigning the current stock minus one; reaching zero makes `stock_quantity > 0` false; and without a state change the same positive stock would be printed continuously in an infinite loop
+- Tests performed: `-1` -> `Invalid Stock`; `0` -> `Out of Stock`; `1` -> `Stock Remaining: 1`, `Out of Stock`; `3` -> `Stock Remaining: 3`, `2`, `1`, `Out of Stock`; student-selected `5` -> `Stock Remaining: 5`, `4`, `3`, `2`, `1`, `Out of Stock`
+- Codex review result: Passed through final static inspection, five correct student-reported manual tests, while-condition and decrement review, indentation and output-order verification, scope compliance review, and a two-question understanding check
+- Files created or modified: `exercises/module_01/lesson_13_purrnest_low_stock_countdown.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start another lesson; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A `while` loop checks its condition before every repetition.
+- Positive stock enters the countdown, while negative and zero stock follow separate paths.
+- Changing the stock variable causes the condition to eventually become false.
+- Code after the loop runs once after the countdown finishes.
+- A condition that remains true forever creates an infinite loop.
