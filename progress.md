@@ -338,6 +338,36 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_13_purrnest_low_stock_countdown.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce another lesson; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 14 Status
+
+- [x] Module 1 - Lesson 14: Using `while` Loops for Input Validation
+
+Verified skills:
+
+- [x] Describing invalid input in a `while` condition
+- [x] Reading the first value before the validation loop
+- [x] Requesting and storing a new value inside the loop
+- [x] Repeating after one or multiple invalid values
+- [x] Stopping when the value becomes valid
+- [x] Recognizing the infinite-loop risk when invalid state is not updated
+- [x] Producing one final accepted-value output
+
+### Lesson 14 Evidence
+
+- Date: 2026-08-12
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Stock Input Retry
+- Final status: Passed
+- Verified skills: `while`-based input validation, invalid-state condition, input placement, controlling-variable update, repeated retry, loop termination, infinite-loop awareness, indentation, and final valid output
+- Code personally written: Yes; the student personally wrote the title, initial integer input, validation loop, invalid message, repeated input update, and final output
+- Errors encountered: In the knowledge check, the first answer used the age example instead of stating the general true-condition rule, and the first answer about a false condition mixed up repeating with exiting; no implementation errors were found
+- Corrections understood: A `while` body runs while its condition is true; a false condition exits the loop and continues with the following code; a negative stock keeps the validation condition true; and failing to request a new value leaves the old negative value unchanged and causes an infinite loop
+- Tests performed: Initial `0` -> `Valid Stock: 0`; initial `5` -> `Valid Stock: 5`; sequence `-1, 3` -> one `Invalid Stock`, then `Valid Stock: 3`; sequence `-5, -2, -1, 10` -> three `Invalid Stock` messages, then `Valid Stock: 10`; student-selected sequence `-3, -5, 0` -> two `Invalid Stock` messages, then `Valid Stock: 0`
+- Codex review result: Passed through the corrected five-question knowledge check, static implementation inspection, five student-reported manual tests, loop-condition and input-update review, termination and scope verification, and a three-question understanding check
+- Files created or modified: `exercises/module_01/lesson_14_purrnest_stock_input_retry.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

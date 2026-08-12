@@ -545,3 +545,30 @@
 - Changing the stock variable causes the condition to eventually become false.
 - Code after the loop runs once after the countdown finishes.
 - A condition that remains true forever creates an infinite loop.
+
+## 2026-08-12 - Module 1, Lesson 14: Using `while` Loops for Input Validation
+
+### Session Evidence
+
+- Date: 2026-08-12
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Stock Input Retry
+- Final status: Passed
+- Verified skills: Input validation with `while`, invalid-state conditions, first input before the loop, new input inside the loop, controlling-variable update, repeated retries, loop termination, infinite-loop recognition, indentation, and final accepted-value output
+- Code personally written: Yes; the student personally wrote the complete exercise implementation using only the allowed Python concepts
+- Errors encountered: The initial knowledge-check answer described only the example-specific condition instead of the general while rule, and the initial false-condition answer confused repeating with leaving the loop; the submitted implementation required no correction
+- Corrections understood: Python repeats the loop body while its condition is true; negative stock is invalid and keeps the loop active; `0` and positive stock make the condition false; reading into the same variable allows the next condition check to use fresh input; and omitting that new input would preserve the negative value and repeat forever
+- Tests performed: `0` -> `Valid Stock: 0`; `5` -> `Valid Stock: 5`; `-1, 3` -> `Invalid Stock`, `Valid Stock: 3`; `-5, -2, -1, 10` -> three invalid messages followed by `Valid Stock: 10`; student-selected `-3, -5, 0` -> two invalid messages followed by `Valid Stock: 0`
+- Codex review result: Passed through a corrected five-question knowledge check, final static code inspection, five correct student-reported manual tests, input-placement and variable-update review, loop-termination and scope checks, and a three-question understanding check
+- Files created or modified: `exercises/module_01/lesson_14_purrnest_stock_input_retry.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 15; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A validation loop can describe the invalid state directly in its condition.
+- The first value must exist before Python can check the loop condition.
+- Requesting a new value inside the loop allows invalid input to be corrected.
+- The loop stops naturally when the new value makes its condition false.
+- Keeping the same invalid value would cause an infinite loop.
