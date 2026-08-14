@@ -375,3 +375,25 @@ Verified skills:
 - Connect core modules to realistic Shopee or TikTok uses when appropriate.
 - Begin practical business tools before completing the entire Python curriculum.
 - Do not import or move old Python files.
+
+## Friday Review #3 Status
+
+- [x] Friday Review #3: PurrNest Restock Quantity Validator
+
+### Friday Review #3 Evidence
+
+- Date: 2026-08-14
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Lesson or business feature completed: PurrNest Restock Quantity Validator
+- Final status: Passed
+- Verified skills: Translating a business validity rule into an invalid-state `while` condition, rejecting zero and negative quantities, updating the controlling input, repeated validation, natural loop termination, infinite-loop recognition, boundary-condition debugging, indentation, and output order
+- Code personally written: Yes; the student personally wrote the title, integer input, validation loop, invalid message, repeated input update, and final accepted-value output
+- Errors encountered: Initial knowledge-check answers confused the general loop condition and the invalid range; the first implementation indented the final accepted output inside the loop
+- Corrections understood: A `while` loop repeats while its condition is true; quantities less than or equal to zero are invalid under the restock rule; the controlling value must be replaced to avoid an infinite loop; and the accepted output belongs after the loop so it runs once only for a valid value
+- Tests performed: Initial `1` -> `Restock Quantity Accepted: 1`; `0, 1` -> one invalid message, then accepted `1`; `-1, 5` -> one invalid message, then accepted `5`; `0, -2, 0, 10` -> three invalid messages, then accepted `10`; student-designed `-1, -2, -3, 0, 5` -> four invalid messages, then accepted `5`
+- Debugging challenge: Passed; the student identified that `< 0` incorrectly accepts zero and corrected the boundary to include zero
+- Understanding check: Passed; the student explained the different business meaning of zero stock versus zero reorder quantity, the invalid repeat range, the need to update input, and false-condition termination
+- Codex review result: Passed through the corrected six-question knowledge check, static code inspection, five student-reported manual tests, debugging challenge, understanding check, scope review, and secrets/private-data review
+- Files created or modified: `exercises/module_01/friday_review_03_purrnest_restock_quantity_validator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor

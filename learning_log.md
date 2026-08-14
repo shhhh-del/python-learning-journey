@@ -572,3 +572,31 @@
 - Requesting a new value inside the loop allows invalid input to be corrected.
 - The loop stops naturally when the new value makes its condition false.
 - Keeping the same invalid value would cause an infinite loop.
+
+## 2026-08-14 - Friday Review #3: PurrNest Restock Quantity Validator
+
+### Session Evidence
+
+- Date: 2026-08-14
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Restock Quantity Validator
+- Final status: Passed
+- Verified skills: Translating a business validity rule into an invalid-state `while` condition, rejecting zero and negative quantities, updating the controlling input, repeated validation, natural loop termination, infinite-loop recognition, boundary-condition debugging, indentation, and output order
+- Code personally written: Yes; the student personally wrote the complete validator implementation
+- Errors encountered: Several initial knowledge-check answers needed correction; the first implementation placed the accepted output inside the loop
+- Corrections understood: The loop repeats while its condition is true; the invalid restock range includes zero and negative quantities; replacing the controlling input prevents an infinite loop; and the final output must be outside the loop so it runs once after validation
+- Tests performed: `1` -> accepted `1`; `0, 1` -> one invalid message then accepted `1`; `-1, 5` -> one invalid message then accepted `5`; `0, -2, 0, 10` -> three invalid messages then accepted `10`; student-designed `-1, -2, -3, 0, 5` -> four invalid messages then accepted `5`
+- Debugging challenge: Passed; the student identified that `< 0` incorrectly accepts zero and explained the correction
+- Understanding check: Passed; the student explained the business boundary, invalid repeat range, controlling-variable update, and false-condition termination
+- Codex review result: Passed through knowledge check, static inspection, five student-reported manual tests, debugging challenge, understanding check, scope review, and secrets/private-data review
+- Files created or modified: `exercises/module_01/friday_review_03_purrnest_restock_quantity_validator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A business validity rule can be reversed to describe the invalid values that keep a validation loop running.
+- Zero can be valid in one business context and invalid in another.
+- Updating the controlling variable allows the loop condition to be checked against fresh input.
+- A valid value makes the loop condition false, allowing execution to continue after the loop.
