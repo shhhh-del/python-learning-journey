@@ -600,3 +600,30 @@
 - Zero can be valid in one business context and invalid in another.
 - Updating the controlling variable allows the loop condition to be checked against fresh input.
 - A valid value makes the loop condition false, allowing execution to continue after the loop.
+
+## 2026-08-15 - PurrNest Shopee Order Profit Calculator, Stage 1B.1
+
+### Session Evidence
+
+- Date: 2026-08-15
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Available time: 30 minutes
+- Lesson or business feature: Repeated Input Until Valid
+- Final status: Passed
+- Verified skills: Separate `while` validation for each input, `int()` quantity validation, `float()` money validation, correct zero boundaries, controlling-variable updates, natural termination, preserving valid earlier fields, using corrected values in calculations, infinite-loop recognition, unchanged Stage 1B calculations, two-decimal formatting, and exactly one order status
+- Code personally written: Yes; the student personally implemented the seven core retry loops. Codex modified only the version and scope documentation at the student's request
+- Errors encountered: Selling Price initially used the wrong zero boundary; the first Packaging Cost test retried Product Cost instead; the first loss-test values produced profit; and the first infinite-loop explanation focused on the boundary rather than a missing variable update
+- Corrections understood: Money values repeat only while negative, quantity repeats while zero or negative, every loop must replace its invalid controlling value, valid earlier input remains stored, and loss requires order cost greater than revenue
+- Tests performed: Test 1 immediate valid input; Test 2 quantity `0, 2`; Test 3 quantity `-3, -1, 2`; Test 4 Packaging Cost `-2, 2`; Test 5 Packaging Cost `-5, -1, 0`; Test 6 four valid zero order-level money fields; Test 7 Packaging Cost `-2, 4` followed by a loss calculation
+- Test results: All seven student-run manual tests passed. Test 7 produced `RM15.00` revenue, `RM8.00` product cost, `RM19.00` order cost, `RM-4.00` net profit, and `LOSS`
+- Codex review result: Passed through static inspection, all required student-reported manual tests, boundary and retry-path review, formula and output review, understanding check, scope verification, and sensitive-information review
+- Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start another feature or Stage 1C; wait for the SaaS Product Builder
+
+### Concepts Demonstrated
+
+- Each input can have its own validation loop so one mistake does not restart the complete order entry.
+- Quantity and money fields use different zero boundaries because their business rules differ.
+- Updating the same variable inside its loop allows fresh input to replace an invalid value.
+- Corrected inputs flow into the unchanged Stage 1B calculations and one final order status.

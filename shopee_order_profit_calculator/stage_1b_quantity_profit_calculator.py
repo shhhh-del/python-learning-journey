@@ -1,6 +1,6 @@
 """
 PurrNest Shopee Order Profit Calculator
-Version 1 - Stage 1B: Quantity and Multiple-Unit Order Calculation
+Version 1 - Stage 1B.1: Repeated Input Until Valid
 
 Business problem:
 A Shopee order may contain multiple units of the same product.
@@ -42,8 +42,9 @@ Your task:
 All money output must use two decimal places.
 
 Scope:
-Do not use functions, loops, lists, dictionaries, CSV, JSON, databases,
-APIs, GUIs, Streamlit, profit margin, or multiple different products.
+Use while loops only for repeated input validation. Do not use functions,
+for loops, lists, dictionaries, CSV, JSON, databases, APIs, GUIs, Streamlit,
+profit margin, or multiple different products.
 
 You must personally write and understand the core implementation.
 """
@@ -51,12 +52,33 @@ You must personally write and understand the core implementation.
 # Write your Stage 1B implementation below this line.
 
 selling_price=float(input("Enter selling price per unit:"))
+while selling_price<0:
+    print("Invalid Selling Price")
+    selling_price=float(input("Enter selling price per unit:"))
 quantity=int(input("Enter quantity:"))
+while quantity<=0:
+    print("invalid Quantity")
+    quantity=int(input("Enter quantity:"))
 product_cost=float(input("Enter product cost per unit:"))
+while product_cost<0:
+    print("Invalid Product Cost")
+    product_cost=float(input("Enter product cost per unit:"))
 packaging_cost=float(input("Enter packaging cost:"))
+while packaging_cost<0:
+    print("Invalid Packaging Cost")
+    packaging_cost=float(input("Enter packaging cost:"))
 shopee_fee=float(input("Enter shopee fee:"))
+while shopee_fee<0:
+    print("Invalid Shopee Fee")
+    shopee_fee=float(input("Enter shopee fee:"))
 seller_discount=float(input("Enter seller discount:"))
+while seller_discount<0:
+    print("Invalid Seller Discount")
+    seller_discount=float(input("Enter seller discount:"))
 other_cost=float(input("Enter other cost:"))
+while other_cost<0:
+    print("Invalid Other Cost")
+    other_cost=float(input("Enter other cost:"))
 
 if selling_price<0 or quantity<=0 or product_cost<0 or packaging_cost<0 or shopee_fee<0 or seller_discount<0 or other_cost<0:
     print("INVALID INPUT")

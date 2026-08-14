@@ -368,6 +368,27 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_14_purrnest_stock_input_retry.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
 
+## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
+
+- [x] Stage 1B.1: Repeated Input Until Valid
+
+### Stage 1B.1 Evidence
+
+- Date: 2026-08-15
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Lesson or business feature completed: Repeated Input Until Valid for every Stage 1B input
+- Final status: Passed
+- Verified skills: Individual `while` validation loops, integer quantity validation, money-field validation, controlling-variable updates, natural loop termination, preserving earlier valid input, using corrected values in calculations, infinite-loop recognition, unchanged multi-unit profit formulas, two-decimal output, and exactly one order status
+- Code personally written: Yes; the student personally wrote the seven core retry loops. Codex changed only two documentation lines after the student requested it
+- Errors encountered: Selling Price initially rejected zero with `<= 0`; the first required Packaging Cost test used Product Cost instead; the first proposed loss test produced a profit; and the first understanding answer did not identify a missing controlling-variable update as an infinite-loop cause
+- Corrections understood: Every money field accepts zero and repeats only for negative values; quantity repeats for zero or negative values; each loop must update its own variable; previous valid fields should not restart; and a loss requires total order cost to exceed total sales revenue
+- Tests performed: Seven required student-run manual tests covering immediate valid input, zero quantity retry, repeated negative quantity retry, Packaging Cost retry, repeated negative money retry ending at zero, valid zero money fields, and a corrected-value loss order
+- Test results: All seven passed. The final loss test used final valid values `15 / 1 / 8 / 4 / 4 / 0 / 3` after rejecting Packaging Cost `-2`, producing revenue `RM15.00`, product cost `RM8.00`, order cost `RM19.00`, net profit `RM-4.00`, and `LOSS`
+- Codex review result: Passed through static code inspection, seven student-reported manual tests, loop-boundary and variable-update review, formula and status review, scope review, understanding check, and sensitive-information review
+- Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start another feature or Stage 1C; wait for the SaaS Product Builder
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.
