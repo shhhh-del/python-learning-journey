@@ -627,3 +627,31 @@
 - Quantity and money fields use different zero boundaries because their business rules differ.
 - Updating the same variable inside its loop allows fresh input to replace an invalid value.
 - Corrected inputs flow into the unchanged Stage 1B calculations and one final order status.
+
+## 2026-08-17 - Module 1, Lesson 15: `while` Loop with an Accumulator
+
+### Session Evidence
+
+- Date: 2026-08-17
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Daily Sales Accumulator
+- Final status: Passed
+- Verified skills: Initializing an accumulator before a loop, adding each positive order to an existing total, distinguishing replacement from accumulation, repeated input placement, zero-sentinel termination, negative-input exclusion, infinite-loop recognition, and two-decimal money formatting
+- Code personally written: Yes; the student personally wrote the complete accumulator implementation. Codex created only the instruction scaffold
+- Errors encountered: One knowledge-check answer incorrectly retained earlier values after resetting the accumulator; the first negative check was inside the loop and missed initially negative input; and the first answer about omitting new input said the loop would not execute
+- Corrections understood: An accumulator reset inside the loop forgets prior values; zero makes the positive loop condition false; a negative check after positive accumulation covers both initial and later negative input; and an unchanged positive order amount causes an infinite loop that repeatedly adds the same value
+- Tests performed: `10, 0` -> `RM10.00`; `10, 20, 5, 0` -> `RM35.00`; initial `0` -> `RM0.00`; `5.50, 4.50, 10, 0` -> `RM20.00`; initial `-5` -> invalid message and `RM0.00`; student-designed `5, 6, 7, 0` -> `RM18.00`
+- Negative-input test: Passed; `-5` displayed `Invalid Order Amount`, was not added, and left Total Sales at `RM0.00`
+- Understanding check: Passed after correction; the student explained initialization, accumulation versus replacement, reset behavior, zero termination, and missing-input infinite-loop risk
+- Codex review result: Passed through knowledge check, static inspection, six student-reported manual tests, negative-input verification, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_15_purrnest_daily_sales_accumulator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 16; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- An accumulator preserves a running total by adding each new value to what is already stored.
+- Initializing before the loop prevents earlier accumulated values from being erased.
+- Zero can stop a positive-value loop naturally without being added to the total.
+- Updating the input inside the loop prevents an unchanged positive value from creating an infinite loop.

@@ -368,6 +368,37 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_14_purrnest_stock_input_retry.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 15 Status
+
+- [x] Module 1 - Lesson 15: `while` Loop with an Accumulator
+
+Verified skills:
+
+- [x] Initializing an accumulator before a loop
+- [x] Adding each new value to an existing running total
+- [x] Distinguishing replacement from accumulation
+- [x] Updating repeated input inside a `while` loop
+- [x] Using zero as a natural loop sentinel
+- [x] Excluding negative values from the accumulator
+- [x] Recognizing infinite-loop risk from missing input updates
+- [x] Formatting an accumulated money total to two decimal places
+
+### Lesson 15 Evidence
+
+- Date: 2026-08-17
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Daily Sales Accumulator
+- Final status: Passed
+- Verified skills: Accumulator initialization, running-total updates, replacement versus accumulation, positive-value loop condition, repeated input placement, zero sentinel behavior, negative-value rejection, natural termination, infinite-loop recognition, and two-decimal money formatting
+- Code personally written: Yes; the student personally wrote the complete accumulator implementation. Codex created only the exercise instructions
+- Errors encountered: The knowledge check initially predicted that a repeatedly reset accumulator would retain earlier values; the student initially asked how zero should stop the loop despite already having the correct condition; the first negative check did not handle an initially negative value; and the first infinite-loop explanation predicted that the loop would not execute
+- Corrections understood: Resetting an accumulator erases earlier values; `order_amount > 0` naturally becomes false at zero; negative checking must also cover initial input; and failing to request a new amount leaves a positive condition true and repeatedly adds the same value forever
+- Tests performed: `10, 0` -> `RM10.00`; `10, 20, 5, 0` -> `RM35.00`; initial `0` -> `RM0.00`; `5.50, 4.50, 10, 0` -> `RM20.00`; initial `-5` -> `Invalid Order Amount` and `RM0.00`; student-designed `5, 6, 7, 0` -> `RM18.00`
+- Codex review result: Passed through the corrected five-question knowledge check, static code inspection, six student-reported manual tests, negative-input verification, understanding check, scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_15_purrnest_daily_sales_accumulator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 16; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid
