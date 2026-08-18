@@ -399,6 +399,38 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_15_purrnest_daily_sales_accumulator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 16; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 16 Status
+
+- [x] Module 1 - Lesson 16: Counter Pattern with `while`
+
+Verified skills:
+
+- [x] Initializing a counter before a loop
+- [x] Increasing a counter by exactly one per valid event
+- [x] Distinguishing a counter from an accumulator
+- [x] Using a zero sentinel with `!=`
+- [x] Excluding invalid events from the count
+- [x] Continuing input after a negative value
+- [x] Preserving the counter across iterations
+- [x] Recognizing reset and infinite-loop risks
+
+### Lesson 16 Evidence
+
+- Date: 2026-08-18
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Daily Order Counter
+- Final status: Passed
+- Verified skills: Counter initialization, increment-by-one behavior, valid-event counting, counter versus accumulator distinction, zero-sentinel termination, negative-input exclusion, continued input after invalid data, repeated input updates, and counter preservation across iterations
+- Code personally written: Yes; the student personally wrote the complete counter implementation. Codex created only the exercise instructions and provided progressive guidance
+- Errors encountered: Knowledge Check Question 3 initially excluded a later valid event; early implementations ended the loop at a negative value, retried a negative value only once, contained `order amount` with a space, and misused `while ... else`; the student-designed test initially omitted the final zero; the first understanding answers did not explain zero initialization and incorrectly connected resetting the counter with an infinite loop
+- Corrections understood: `order_amount != 0` keeps both positive and negative inputs inside the session while reserving zero as the only sentinel; only the positive branch increments the counter; negative input displays an invalid message and continues; resetting the counter erases earlier counts but does not itself cause an infinite loop; and the input variable must keep updating
+- Teaching adjustment: The sentinel use of `!=` was explicitly taught after the student correctly noted that this application had not been explained before implementation was requested
+- Tests performed: Initial `0` -> `Total Orders: 0`; `10, 0` -> `1`; `10, 20, 5, 0` -> `3`; `5.50, 4.50, 10, 8, 0` -> `4`; `10, -5, 20, 0` -> invalid message and `2`; student-designed `1, 2, 3, 4, -5, 0` -> invalid message and `4`
+- Codex review result: Passed through the corrected five-question knowledge check, static code inspection, six student-reported manual tests, negative-input verification, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_16_purrnest_daily_order_counter.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 17; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

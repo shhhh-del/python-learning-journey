@@ -655,3 +655,32 @@
 - Initializing before the loop prevents earlier accumulated values from being erased.
 - Zero can stop a positive-value loop naturally without being added to the total.
 - Updating the input inside the loop prevents an unchanged positive value from creating an infinite loop.
+
+## 2026-08-18 - Module 1, Lesson 16: Counter Pattern with `while`
+
+### Session Evidence
+
+- Date: 2026-08-18
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Daily Order Counter
+- Final status: Passed
+- Verified skills: Initializing a counter at zero, adding exactly one per valid business event, distinguishing counts from accumulated money, using zero as the only sentinel, handling positive and negative paths inside one loop, excluding invalid events, repeated input updates, and preserving prior counts
+- Code personally written: Yes; the student personally wrote the complete counter implementation. Codex created only the exercise scaffold and supplied progressive hints
+- Errors encountered: One knowledge-check answer missed the valid event after an invalid event; several implementation attempts stopped at negative input or placed retry logic outside the continuing loop; one attempt used an invalid spaced variable name and another used `while ... else`; the student-designed sequence first omitted zero; and two understanding answers needed correction
+- Corrections understood: The loop must remain active for every nonzero input; `!=` means not equal and allows zero to be the sole stopping value; only positive orders increment the counter; negative orders display an error and continue; resetting the counter loses previous counts; and failure to update input can cause an infinite loop
+- Teaching adjustment: Codex explicitly taught `order_amount != 0` after the student pointed out that using `!=` as a sentinel condition had not been explained before the implementation request
+- Tests performed: `0` -> `Total Orders: 0`; `10, 0` -> `1`; `10, 20, 5, 0` -> `3`; `5.50, 4.50, 10, 8, 0` -> `4`; `10, -5, 20, 0` -> invalid message and `2`; student-designed `1, 2, 3, 4, -5, 0` -> invalid message and `4`
+- Negative-input test: Passed; negative amounts displayed `Invalid Order Amount`, did not increase the counter, and did not prevent later valid orders from being counted
+- Understanding check: Passed after correction; the student explained zero initialization, increment-by-one behavior, invalid-event exclusion, count versus sales total, zero termination, and the effect of resetting inside the loop
+- Codex review result: Passed through knowledge check, static inspection, six student-reported manual tests, negative-input verification, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_16_purrnest_daily_order_counter.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 17; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A counter records how many valid events occurred rather than adding their monetary values.
+- A nonzero loop condition can process positive and negative input while reserving zero as the sentinel.
+- The counter increases only in the positive valid-event branch.
+- Initializing the counter before the loop preserves counts from earlier iterations.
