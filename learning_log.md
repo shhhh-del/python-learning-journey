@@ -684,3 +684,32 @@
 - A nonzero loop condition can process positive and negative input while reserving zero as the sentinel.
 - The counter increases only in the positive valid-event branch.
 - Initializing the counter before the loop preserves counts from earlier iterations.
+
+## 2026-08-20 - Module 1, Lesson 17: Combining Counter and Accumulator
+
+### Session Evidence
+
+- Date: 2026-08-20
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Daily Sales Summary
+- Final status: Passed
+- Verified skills: Maintaining a counter and accumulator in one loop, updating both for a valid order, keeping count and sales value separate, excluding negative input from both, using zero as a sentinel, repeated input updates, natural termination, final output placement, and two-decimal formatting
+- Code personally written: Yes; the student personally wrote the complete combined implementation. Codex created only the exercise scaffold
+- Errors encountered: Three knowledge-check responses needed completion; the first code attempt left positive `order_amount` unchanged, placed final output inside the loop, and misspelled `Summary`
+- Corrections understood: A valid event contributes its monetary amount to `total_sales` and one to `order_count`; invalid input changes neither metric; both positive and negative paths need fresh input; zero ends the loop before updates; and resetting either variable inside the loop destroys prior history
+- Tests performed: `0` -> `0` and `RM0.00`; `10, 0` -> `1` and `RM10.00`; `10, 20, 5, 0` -> `3` and `RM35.00`; `5.50, 4.50, 10, 8, 0` -> `4` and `RM28.00`; `10, -5, 20, 0` -> invalid message, `2`, and `RM30.00`; `-5, -10, 0` -> two invalid messages, `0`, and `RM0.00`; student-designed `1, 2, 3, 4, -1, -2, 0` -> two invalid messages, `4`, and `RM10.00`
+- Student-designed test: Predicted `4` orders and `RM10.00` before running; actual output matched
+- Negative-input verification: Passed; negative amounts displayed `Invalid Order Amount`, changed neither metric, and did not stop later processing
+- Understanding check: Passed; the student explained the meaning and update behavior of both metrics, invalid and zero exclusion, termination, and reset consequences
+- Codex review result: Passed through knowledge check, static inspection, all seven student-reported manual tests, negative-input verification, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_17_purrnest_daily_sales_summary.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 18; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- One valid event can update both a total value and an event count.
+- The accumulator and counter answer different business questions even when updated together.
+- Negative input must change neither metric, while zero ends the session without being processed.
+- Both variables must be initialized before the loop to preserve earlier results.

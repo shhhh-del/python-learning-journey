@@ -431,6 +431,37 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_16_purrnest_daily_order_counter.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 17; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 17 Status
+
+- [x] Module 1 - Lesson 17: Combining Counter and Accumulator in One `while` Loop
+
+Verified skills:
+
+- [x] Initializing a counter and accumulator before one loop
+- [x] Updating both metrics for one valid event
+- [x] Keeping count and total value as separate information
+- [x] Excluding negative input from both metrics
+- [x] Using zero as a sentinel without counting or accumulating it
+- [x] Preserving both metrics across iterations
+- [x] Producing final count and formatted sales output
+
+### Lesson 17 Evidence
+
+- Date: 2026-08-20
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Daily Sales Summary
+- Final status: Passed
+- Verified skills: Combined counter and accumulator initialization, simultaneous valid-event updates, separate count and total meanings, nonzero sentinel flow, negative-input exclusion, repeated input updates, natural zero termination, output placement, and two-decimal money formatting
+- Code personally written: Yes; the student personally wrote the complete combined counter-and-accumulator implementation. Codex created only the exercise instructions
+- Errors encountered: Several knowledge-check answers were initially incomplete; the first implementation did not update positive input and could loop forever, printed final results inside the loop, and misspelled the title
+- Corrections understood: Every nonzero path must replace `order_amount`; positive input updates both metrics, negative input updates neither, zero exits before either update, final results belong after the loop, and resetting either metric inside the loop loses earlier information
+- Tests performed: Initial `0` -> `0` orders and `RM0.00`; `10, 0` -> `1` and `RM10.00`; `10, 20, 5, 0` -> `3` and `RM35.00`; `5.50, 4.50, 10, 8, 0` -> `4` and `RM28.00`; `10, -5, 20, 0` -> one invalid message, `2`, and `RM30.00`; `-5, -10, 0` -> two invalid messages, `0`, and `RM0.00`; student-designed `1, 2, 3, 4, -1, -2, 0` -> two invalid messages, `4`, and `RM10.00`
+- Student-designed prediction: Correctly predicted Total Orders `4` and Total Sales `RM10.00` before running
+- Codex review result: Passed through the corrected six-question knowledge check, static code inspection, seven student-reported manual tests, negative-input verification, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_17_purrnest_daily_sales_summary.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 18; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid
