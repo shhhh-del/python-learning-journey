@@ -713,3 +713,32 @@
 - The accumulator and counter answer different business questions even when updated together.
 - Negative input must change neither metric, while zero ends the session without being processed.
 - Both variables must be initialized before the loop to preserve earlier results.
+
+## 2026-08-21 - Friday Review #4: PurrNest Daily Order Processing Summary
+
+### Session Evidence
+
+- Date: 2026-08-21
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Daily Order Processing Summary
+- Final status: Passed
+- Verified skills: Maintaining one accumulator and two distinct counters in one `while` loop, assigning business events to the correct metrics, excluding zero, repeated input updates, natural termination, output placement, infinite-loop recognition, and formatted sales output
+- Code personally written: Yes; the student personally wrote the complete core implementation. Codex created only the exercise scaffold
+- Errors encountered: Three knowledge-check answers needed correction; two required output labels initially lacked colons; Test 6 initially omitted its invalid-message lines in the report; the debugging challenge first blamed the positive branch; and the understanding check required corrections about initialization and a nonzero condition remaining true
+- Corrections understood: Valid positive input changes only Valid Order Count and Total Sales; invalid negative input changes only Invalid Entry Count; zero changes no metric; negative amounts cannot be subtracted from sales; metrics initialized outside the loop retain earlier results; final results print after processing; and missing repeated input can cause an infinite loop
+- Tests performed: `0` -> `0 / 0 / RM0.00`; `10, 0` -> `1 / 0 / RM10.00`; `-5, 0` -> one invalid message and `0 / 1 / RM0.00`; `10, -5, 20, 0` -> `2 / 1 / RM30.00`; `10, -5, 20, -2, 5, 0` -> `3 / 2 / RM35.00`; `-1, -2, -3, 0` -> three invalid messages and `0 / 3 / RM0.00`; student-designed `1, 2, 3, 4, -5, -6, -7, 0` -> `4 / 3 / RM10.00`
+- Student-designed test: Predicted all three metrics correctly before running; actual output matched
+- Debugging challenge: Passed after correction; the student located the negative-sales update bug, calculated the incorrect `25`, and identified Invalid Entry Count as the only permitted update
+- Understanding check: Passed after correction; the student explained separate metrics, valid and invalid updates, zero sentinel behavior, initialization, final output placement, and infinite-loop risk
+- Codex review result: Passed through knowledge check, static inspection, all required manual tests, prediction verification, debugging challenge, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/friday_review_04_purrnest_daily_order_processing_summary.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 18 or another exercise; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- Separate counters can classify valid and invalid events within one processing loop.
+- Each business event must update only the metrics defined by its rule.
+- The zero sentinel ends processing without affecting counts or totals.
+- Fresh input on every nonzero path prevents repeated processing and infinite loops.

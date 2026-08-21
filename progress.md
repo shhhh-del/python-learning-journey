@@ -368,6 +368,29 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_14_purrnest_stock_input_retry.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
 
+## Friday Review #4 Status
+
+- [x] Friday Review #4: PurrNest Daily Order Processing Summary
+
+### Friday Review #4 Evidence
+
+- Date: 2026-08-21
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Lesson or business feature completed: PurrNest Daily Order Processing Summary
+- Final status: Passed
+- Verified skills: One accumulator plus two event counters in a single `while` flow, metric separation, positive and negative branch updates, zero-sentinel behavior, repeated input, natural termination, infinite-loop recognition, final output placement, and two-decimal money formatting
+- Code personally written: Yes; the student personally wrote the complete processing-summary implementation. Codex created only the exercise instructions
+- Errors encountered: Knowledge-check answers initially needed more precise value-to-metric mapping; the first implementation omitted colons from two output labels; the first Test 6 report omitted the three invalid messages; the debugging challenge first identified the valid branch instead of the invalid branch; and several understanding-check answers needed clarification, including the truth value of `10 != 0`
+- Corrections understood: Positive amounts update Valid Order Count and Total Sales; negative amounts update only Invalid Entry Count; zero updates nothing; negative values must not reduce Total Sales; all metrics must be initialized before the loop; final output belongs after the loop; and an unchanged nonzero input keeps the condition true and causes an infinite loop
+- Tests performed: Initial `0` -> valid `0`, invalid `0`, `RM0.00`; `10, 0` -> `1`, `0`, `RM10.00`; `-5, 0` -> one invalid message, `0`, `1`, `RM0.00`; `10, -5, 20, 0` -> `2`, `1`, `RM30.00`; `10, -5, 20, -2, 5, 0` -> `3`, `2`, `RM35.00`; `-1, -2, -3, 0` -> three invalid messages, `0`, `3`, `RM0.00`; student-designed `1, 2, 3, 4, -5, -6, -7, 0` -> `4`, `3`, `RM10.00`
+- Student-designed prediction: Correctly predicted Valid Orders `4`, Invalid Entries `3`, and Total Sales `RM10.00` before running
+- Debugging challenge: Passed after correction; the student identified that a negative amount must not be added to Total Sales, predicted the incorrect change from `30` to `25`, and stated that only Invalid Entry Count should change
+- Understanding check: Passed after corrections covering metric roles, branch-specific updates, sentinel behavior, initialization, output placement, and infinite-loop risk
+- Codex review result: Passed through the corrected seven-question knowledge check, static code inspection, seven student-reported manual tests, student-designed prediction, debugging challenge, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/friday_review_04_purrnest_daily_order_processing_summary.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 18 or another exercise; wait for the Daily Learning Supervisor
+
 ## Module 1 Lesson 15 Status
 
 - [x] Module 1 - Lesson 15: `while` Loop with an Accumulator
