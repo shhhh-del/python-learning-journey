@@ -506,6 +506,28 @@ Verified skills:
 - Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start another feature or Stage 1C; wait for the SaaS Product Builder
 
+## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.2 Status
+
+- [x] Stage 1B.2: Multi-Order Session Summary
+
+### Stage 1B.2 Evidence
+
+- Date: 2026-08-22
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Lesson or business feature completed: Multi-Order Session Summary
+- Final status: Passed
+- Verified features: Preserved Stage 1B.1 validation and calculations, repeated complete order processing, lowercase `yes` continuation and `no` termination, Orders Processed counter, Session Total Sales Revenue accumulator, Session Total Net Profit accumulator, invalid-retry isolation, and one final formatted Session Summary
+- Code personally written: Yes; the student personally wrote the session variables, session metric updates, outer order loop, yes/no control, and Session Summary. Codex changed only the version and scope documentation
+- Errors encountered: The student initially confused per-order formulas with session variables; used singular `order_processed`; first asked yes/no before the first order; initially left the single-order flow outside the outer loop; first placed Session Summary inside repeated processing; and had summary label and variable-format errors
+- Corrections understood: Session metrics begin before all orders, the complete Stage 1B.1 flow belongs inside the outer loop, each valid order updates session metrics once, yes/no is requested after a completed order, the control variable must update, and Session Summary belongs after the loop
+- Tests performed: Test 1 one profitable order -> `1 / RM30.00 / RM14.00`; Test 2 two profitable orders -> `2 / RM40.00 / RM16.00`; Test 3 profit-plus-loss actual result -> `2 / RM30.00 / RM7.00`; Test 4 three orders -> `3 / RM70.00 / RM30.00`; Test 5 invalid Quantity retry -> one processed order and `RM30.00 / RM14.00`; Test 6 invalid Packaging Cost retry -> one processed order and `RM30.00 / RM14.00`; Test 7 student-designed three-order scenario with invalid Quantity retry and mixed `PROFITABLE` / `LOSS` statuses -> `3 / RM70.00 / RM30.00`
+- Test 3 prediction note: Functional results were correct; the student explicitly waived repeating the pre-run prediction step due to time after running the scenario
+- Student-designed test: Predicted Orders Processed `3`, Session Total Sales Revenue `RM70.00`, and Session Total Net Profit `RM30.00`; actual output matched
+- Codex review result: Passed through static inspection, seven student-reported manual tests, preserved formula and validation review, session update and control-flow review, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start another feature or Stage 1C; wait for the Daily Learning Supervisor / SaaS Product Builder
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

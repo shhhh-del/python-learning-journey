@@ -742,3 +742,34 @@
 - Each business event must update only the metrics defined by its rule.
 - The zero sentinel ends processing without affecting counts or totals.
 - Fresh input on every nonzero path prevents repeated processing and infinite loops.
+
+## 2026-08-22 - PurrNest Shopee Order Profit Calculator, Stage 1B.2
+
+### Session Evidence
+
+- Date: 2026-08-22
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Available time: 30 minutes
+- Tool name: PurrNest Shopee Order Profit Calculator
+- Previous version: Stage 1B.1 - Repeated Input Until Valid
+- Current feature: Stage 1B.2 - Multi-Order Session Summary
+- Final status: Passed
+- Verified features: Multiple valid orders in one run, preserved per-order validation and formulas, per-order status output, session order counter, session revenue and net-profit accumulators, invalid-retry isolation, yes/no control, natural outer-loop termination, and final two-decimal Session Summary
+- Code personally written: Yes; the student personally wrote the complete Stage 1B.2 core flow. Codex updated only documentation labels after the implementation passed
+- Errors encountered: Session metrics were initially confused with per-order calculations; the count variable was singular; the first outer-loop attempt prompted before the first order and did not indent the order flow; yes/no placement required clarification; Session Summary was initially inside the loop and contained output-label and variable-expression errors
+- Corrections understood: Per-order values and session totals serve different scopes; all session metrics initialize once before the outer loop; the complete existing calculator repeats; updates occur only after a valid order; yes/no must update after each order; and the summary prints once after processing ends
+- Tests performed: One profitable order `1 / RM30.00 / RM14.00`; two profitable orders `2 / RM40.00 / RM16.00`; profitable-plus-loss scenario `2 / RM30.00 / RM7.00`; three-order session `3 / RM70.00 / RM30.00`; invalid Quantity retry counted once; invalid Packaging Cost retry counted once; student-designed three-order mixed-status scenario with invalid retry `3 / RM70.00 / RM30.00`
+- Test 3 prediction note: The student ran the scenario before submitting predictions and explicitly requested that the repeat-prediction portion be waived due to time; the actual calculations and session totals were correct
+- Student-designed test: Predicted and produced three processed orders, `RM70.00` Session Total Sales Revenue, and `RM30.00` Session Total Net Profit, with an invalid Quantity retry, two profitable orders, and one loss order
+- Understanding check: Passed; the student explained counter versus accumulators, valid-order update timing, invalid-retry isolation, repeated calculation flow, preservation across orders, and final-summary placement
+- Codex review result: Passed through static code inspection, all seven student-reported functional tests, formula and validation preservation checks, session control review, understanding check, AGENTS.md and scope verification, and sensitive-information review
+- Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start another feature or Stage 1C; wait for the Daily Learning Supervisor / SaaS Product Builder
+
+### Concepts Demonstrated
+
+- An outer `while` loop can repeat a complete validated single-order workflow.
+- Session counters and accumulators update once after each valid order is fully calculated.
+- Invalid field retries remain inside one order and do not affect session-level metrics.
+- A control string updated after each order allows natural session termination and one final summary.
