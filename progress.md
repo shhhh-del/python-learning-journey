@@ -485,6 +485,39 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_17_purrnest_daily_sales_summary.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 18; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 18 Status
+
+- [x] Module 1 - Lesson 18: Calculating an Average from Counter and Accumulator
+
+Verified skills:
+
+- [x] Calculating an average from a final total and count
+- [x] Distinguishing Total Sales from Average Order Value
+- [x] Protecting division when the count is zero
+- [x] Displaying `N/A` when no average exists
+- [x] Excluding invalid negative values from both average inputs
+- [x] Calculating the derived metric after input processing
+- [x] Formatting Average Order Value to two decimal places
+
+### Lesson 18 Evidence
+
+- Date: 2026-08-24
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Average Order Value Calculator
+- Final status: Passed
+- Verified skills: Accumulator and counter reuse, `total_sales / order_count`, average interpretation, zero-count protection, `N/A` output, negative-input exclusion, zero sentinel, post-loop calculation, final output placement, and two-decimal formatting
+- Code personally written: Yes; the student personally wrote the complete average-order-value implementation. Codex created only the exercise instructions
+- Errors encountered: The knowledge check initially said division by zero would produce zero and described average order value as profit; the first implementation calculated the average inside the input loop and omitted the final `N/A` output; several understanding-check answers needed correction about zero, final-data timing, and an inflated denominator
+- Corrections understood: Division by zero causes an error and requires `N/A`; Average Order Value is average sales per valid order, not profit; average calculation belongs after the loop when total and count are final; zero is only the sentinel; and incorrectly counting invalid inputs makes the average too low
+- Tests performed: Initial `0` -> `0 / RM0.00 / N/A`; `10, 0` -> `1 / RM10.00 / RM10.00`; `10, 20, 30, 0` -> `3 / RM60.00 / RM20.00`; `5.50, 4.50, 10, 0` -> `3 / RM20.00 / RM6.67`; `10, -5, 20, 0` -> one invalid message and `2 / RM30.00 / RM15.00`; `-5, -2, 10, 20, 0` -> two invalid messages and `2 / RM30.00 / RM15.00`; student-designed `1, 2, 3, 4, -5, -6, 0` -> two invalid messages and `4 / RM10.00 / RM2.50`
+- Student-designed prediction: Correctly predicted Total Orders `4`, Total Sales `RM10.00`, and Average Order Value `RM2.50` before running
+- Zero-order protection: Passed; initial zero produced `Average Order Value: N/A` without division
+- Negative-input verification: Passed; negative values affected neither total nor count
+- Codex review result: Passed through the corrected six-question knowledge check, static code inspection, seven student-reported manual tests, zero-order and negative-input verification, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_18_purrnest_average_order_value_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 19; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

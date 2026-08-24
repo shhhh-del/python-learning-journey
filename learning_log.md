@@ -773,3 +773,33 @@
 - Session counters and accumulators update once after each valid order is fully calculated.
 - Invalid field retries remain inside one order and do not affect session-level metrics.
 - A control string updated after each order allows natural session termination and one final summary.
+
+## 2026-08-24 - Module 1, Lesson 18: Average from Counter and Accumulator
+
+### Session Evidence
+
+- Date: 2026-08-24
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Average Order Value Calculator
+- Final status: Passed
+- Verified skills: Deriving Average Order Value from Total Sales and Total Orders, interpreting totals versus averages, protecting zero-count division, producing `N/A`, excluding negative input from both source metrics, calculating after the input loop, and formatting a numeric average to two decimal places
+- Code personally written: Yes; the student personally wrote the complete implementation. Codex created only the exercise scaffold
+- Errors encountered: Knowledge-check answers initially treated division by zero as zero and confused average sales with profit; average calculation was first inside the loop; the final no-order output initially omitted the Average Order Value line; and understanding answers required clarification about sentinel behavior, final-data timing, and average distortion
+- Corrections understood: Average uses total divided by valid count; dividing by zero raises an error; no valid orders display `N/A`; final total and count are known after the loop; negative inputs affect neither input metric; and an incorrectly increased denominator lowers the calculated average
+- Tests performed: `0` -> `0 / RM0.00 / N/A`; `10, 0` -> `1 / RM10.00 / RM10.00`; `10, 20, 30, 0` -> `3 / RM60.00 / RM20.00`; `5.50, 4.50, 10, 0` -> `3 / RM20.00 / RM6.67`; `10, -5, 20, 0` -> invalid message and `2 / RM30.00 / RM15.00`; `-5, -2, 10, 20, 0` -> two invalid messages and `2 / RM30.00 / RM15.00`; student-designed `1, 2, 3, 4, -5, -6, 0` -> two invalid messages and `4 / RM10.00 / RM2.50`
+- Student-designed test: Predicted all three final metrics correctly before running; actual output matched
+- Zero-order test: Passed; the program skipped division and displayed `Average Order Value: N/A`
+- Negative-input verification: Passed; invalid negative values changed neither Total Sales nor Total Orders
+- Understanding check: Passed after correction; the student explained the two average inputs, division, invalid exclusion, sentinel behavior, zero protection, post-loop timing, and denominator distortion
+- Codex review result: Passed through knowledge check, static inspection, all seven student-reported manual tests, zero-order and negative-input checks, understanding check, AGENTS.md and scope review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_18_purrnest_average_order_value_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 19; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A derived average requires both a completed accumulator and its valid-event count.
+- Zero-count protection must occur before division.
+- Invalid events must not alter either source metric used by the average.
+- Calculating after the loop uses the complete session totals.
