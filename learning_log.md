@@ -803,3 +803,33 @@
 - Zero-count protection must occur before division.
 - Invalid events must not alter either source metric used by the average.
 - Calculating after the loop uses the complete session totals.
+
+## 2026-08-25 - Module 1, Lesson 19: Tracking the Highest Value
+
+### Session Evidence
+
+- Date: 2026-08-25
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Highest Order Value Tracker
+- Final status: Passed
+- Verified skills: Initializing a running maximum, comparing new valid values, replacing only for a larger amount, retaining the previous maximum for smaller or equal input, excluding negatives, using zero as a sentinel, producing `N/A` when no valid order exists, and formatting the highest money value
+- Code personally written: Yes; the student personally wrote the complete implementation. Codex created only the exercise scaffold
+- Errors encountered: Two knowledge-check answers required correction for the intermediate maximum sequence and no-order behavior; the code contained a harmless unnecessary self-assignment; and the no-order understanding answer needed clarification
+- Corrections understood: Highest value means the largest valid amount seen so far; only a greater positive amount replaces it; negative input and zero cannot participate; no valid order displays `N/A`; and unconditional replacement would incorrectly return the last valid amount
+- Tests performed: `0` -> `N/A`; `10, 0` -> `RM10.00`; `10, 30, 20, 0` -> `RM30.00`; `5, 10, 25, 0` -> `RM25.00`; `5.50, 9.99, 7.25, 0` -> `RM9.99`; `10, -100, 20, 0` -> invalid message and `RM20.00`; `50, 10, 20, 0` -> `RM50.00`; student-designed `1, 2, 3, 4, 5, -6, -7, 0` -> two invalid messages and `RM5.00`
+- Student-designed test: Predicted `RM5.00`; actual output matched
+- No-order test: Passed; sentinel-only input displayed `Highest Order Value: N/A`
+- Negative-input verification: Passed; negative values displayed errors and did not affect the maximum
+- Understanding check: Passed after clarification; the student explained stored information, update conditions, smaller/equal preservation, invalid exclusion, sentinel behavior, no-order output, and the last-value bug
+- Codex review result: Passed through knowledge check, static inspection, all eight student-reported manual tests, no-order and negative-input checks, understanding check, AGENTS.md and scope review, verification that `max()` was not used in implementation code, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_19_purrnest_highest_order_value_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 20; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A running maximum stores the largest valid value seen so far.
+- A new value replaces the stored maximum only when it is greater.
+- Invalid and sentinel values must not participate in maximum tracking.
+- A no-valid-event check prevents the initial placeholder from being reported as real data.

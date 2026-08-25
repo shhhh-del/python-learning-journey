@@ -518,6 +518,39 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_18_purrnest_average_order_value_calculator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 19; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 19 Status
+
+- [x] Module 1 - Lesson 19: Tracking the Highest Value in a `while` Loop
+
+Verified skills:
+
+- [x] Maintaining a running highest valid value
+- [x] Comparing each new valid value with the stored highest
+- [x] Updating only when the new value is larger
+- [x] Preserving the highest for smaller or equal values
+- [x] Excluding invalid negative input from comparison
+- [x] Handling the no-valid-order case with `N/A`
+- [x] Tracking a maximum without using `max()`
+
+### Lesson 19 Evidence
+
+- Date: 2026-08-25
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Highest Order Value Tracker
+- Final status: Passed
+- Verified skills: Running-maximum initialization, greater-than comparison, conditional replacement, smaller/equal preservation, negative-input exclusion, zero sentinel, no-order handling, natural termination, final output placement, and two-decimal money formatting without `max()`
+- Code personally written: Yes; the student personally wrote the complete highest-order-value implementation. Codex created only the exercise instructions
+- Errors encountered: The knowledge-check sequence answer initially omitted intermediate highest values; the first no-order answer gave an incorrect valid count and then an incorrect final output; the implementation included an unnecessary self-assignment for the non-larger case; and the understanding-check no-order explanation needed clarification
+- Corrections understood: The running highest changes only for a larger valid value; smaller, equal, negative, and sentinel values do not replace it; no valid orders must display `N/A` rather than a fake `RM0.00`; and replacing on every valid input would store the last order instead of the largest
+- Tests performed: Initial `0` -> `N/A`; `10, 0` -> `RM10.00`; `10, 30, 20, 0` -> `RM30.00`; `5, 10, 25, 0` -> `RM25.00`; `5.50, 9.99, 7.25, 0` -> `RM9.99`; `10, -100, 20, 0` -> one invalid message and `RM20.00`; `50, 10, 20, 0` -> `RM50.00`; student-designed `1, 2, 3, 4, 5, -6, -7, 0` -> two invalid messages and `RM5.00`
+- Student-designed prediction: Correctly predicted Highest Order Value `RM5.00` before the final result was verified
+- No-order test: Passed; initial zero produced `Highest Order Value: N/A`
+- Negative-input verification: Passed; negative values did not alter the stored highest value
+- Codex review result: Passed through the corrected six-question knowledge check, static code inspection, eight student-reported manual tests, no-order and negative-input verification, understanding check, AGENTS.md and scope review, prohibited-`max()` review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_19_purrnest_highest_order_value_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 20; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid
