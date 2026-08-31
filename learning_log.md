@@ -833,3 +833,36 @@
 - A new value replaces the stored maximum only when it is greater.
 - Invalid and sentinel values must not participate in maximum tracking.
 - A no-valid-event check prevents the initial placeholder from being reported as real data.
+
+## 2026-08-31 - Module 1, Lesson 20: Tracking the Lowest Value
+
+### Session Evidence
+
+- Date: 2026-08-31
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson or business feature: PurrNest Lowest Order Value Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote and corrected all core implementation logic. Codex created only the exercise scaffold
+- Knowledge check: Passed all six prediction questions; for `30, 10, 20`, the student correctly predicted running lowest values `30, 10, 10`
+- Verified skills: Running minimum, first-valid-value handling, comparison-based replacement using `<`, equal/larger preservation, negative-input exclusion, zero sentinel, no-valid-data handling with `N/A`, natural loop termination, and two-decimal money formatting
+- Manual tests: All nine required tests passed based on student-run output
+- Student-designed test: Input `1, 2, 3, 4, 5, -6, -7, 0`; predicted and produced two invalid messages and `Lowest Order Value: RM1.00`
+- No-order test: Passed with `Lowest Order Value: N/A`
+- Negative-input verification: Passed; `-100`, `-6`, and `-7` did not participate in minimum calculation
+- Zero-sentinel verification: Passed; zero stopped input and was not stored as a real order
+- Errors encountered: Repeated input was temporarily placed only under the non-update branch, creating an infinite-loop risk after a new minimum; indentation was initially inconsistent; and the comparison-direction answer initially lacked the actual operators
+- Corrections understood: Every loop path must update the controlling input; nested blocks use consistent four-space indentation; a smaller positive value replaces the minimum; larger/equal values preserve it; Lesson 19 uses `>` and Lesson 20 uses `<`
+- Understanding check: Passed all nine questions after the final operator clarification
+- Codex review: Passed static logic, control-flow, formatting, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_20_purrnest_lowest_order_value_tracker.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Next confirmed task: Do not introduce Lesson 21; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A running minimum stores the smallest valid value seen so far.
+- The first valid positive value must establish a real minimum before later comparisons.
+- Only a smaller valid value replaces the stored minimum.
+- Invalid values and the zero sentinel must not participate in minimum tracking.

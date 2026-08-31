@@ -551,6 +551,41 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_19_purrnest_highest_order_value_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 20; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 20 Status
+
+- [x] Module 1 - Lesson 20: Tracking the Lowest Value in a `while` Loop
+
+Verified skills:
+
+- [x] Maintaining a running lowest valid value
+- [x] Handling the first valid value with a placeholder check
+- [x] Updating only when the new value is smaller
+- [x] Preserving the lowest for larger or equal values
+- [x] Excluding invalid negative input and the zero sentinel
+- [x] Handling the no-valid-order case with `N/A`
+- [x] Tracking a minimum without using `min()`
+
+### Lesson 20 Evidence
+
+- Date: 2026-08-31
+- Day of week: Monday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Lowest Order Value Tracker
+- Final status: Passed
+- Verified skills: Running-minimum initialization, first-valid-order handling, less-than comparison, conditional replacement, equal/larger preservation, negative-input exclusion, zero sentinel, no-order handling, natural termination, final output placement, and two-decimal money formatting without `min()`
+- Code personally written: Yes; the student personally wrote and corrected the complete lowest-order-value implementation. Codex created only the exercise instructions
+- Errors encountered: Repeated input was temporarily nested inside the non-update branch, which would leave the controlling value unchanged after a new minimum and cause an infinite loop; several blocks initially used inconsistent indentation; and the final comparison-direction explanation initially omitted the operators
+- Corrections understood: Repeated input must be reached after either positive-order comparison result; consistent four-space indentation shows block structure; the first positive order can replace a zero placeholder; only a smaller valid value replaces the minimum; highest uses `>` while lowest uses `<`
+- Tests performed: `0` -> `N/A`; `10, 0` -> `RM10.00`; `30, 10, 20, 0` -> `RM10.00`; `25, 15, 5, 0` -> `RM5.00`; `5, 20, 10, 0` -> `RM5.00`; `9.99, 5.50, 7.25, 0` -> `RM5.50`; `20, -100, 10, 0` -> one invalid message and `RM10.00`; `10, 10, 20, 0` -> `RM10.00`; student-designed `1, 2, 3, 4, 5, -6, -7, 0` -> two invalid messages and `RM1.00`
+- Student-designed prediction: Correctly predicted Lowest Order Value `RM1.00` and two invalid messages before running the final test
+- No-order test: Passed; initial zero produced `Lowest Order Value: N/A`
+- Negative-input verification: Passed; negative values displayed errors and did not alter the stored lowest value
+- Zero-sentinel verification: Passed; zero ended the loop and did not become the minimum
+- Understanding check: Passed after clarifying the comparison operators; the student explained stored state, update rules, invalid and sentinel exclusion, no-order output, unconditional-replacement failure, and the highest/lowest direction difference
+- Codex review result: Passed through knowledge check, static code inspection, nine student-reported manual tests, student-designed prediction, no-order and negative-input verification, understanding check, AGENTS.md and scope review, prohibited-`min()`/`max()` implementation review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_20_purrnest_lowest_order_value_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 21; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid
