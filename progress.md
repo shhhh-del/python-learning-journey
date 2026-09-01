@@ -586,6 +586,43 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_20_purrnest_lowest_order_value_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 21; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 21 Status
+
+- [x] Module 1 - Lesson 21: Tracking Highest and Lowest Values Together in One `while` Loop
+
+Verified skills:
+
+- [x] Maintaining running maximum and minimum states together
+- [x] Establishing both states from the first valid value
+- [x] Using two independent comparisons for every valid input
+- [x] Preserving both states for middle and equal values
+- [x] Excluding negative input and the zero sentinel from both metrics
+- [x] Handling the no-valid-order case with two `N/A` outputs
+- [x] Tracking a value range without `min()` or `max()`
+
+### Lesson 21 Evidence
+
+- Date: 2026-09-01
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Order Value Range Tracker
+- Final status: Passed
+- Verified skills: Combined running maximum and minimum, first-valid-value handling, independent `>` and `<` comparisons, conditional replacement, middle/equal-value preservation, negative-input exclusion, zero sentinel, no-order handling, natural termination, final output placement, and two-decimal money formatting
+- Code personally written: Yes; the student personally wrote and formatted the complete implementation. Codex created only the exercise instructions
+- Knowledge check: Passed all six questions and correctly predicted the sequence `20/20`, `20/5`, `30/5`, `30/5` for inputs `20, 5, 30, 10`
+- Errors encountered: Initial implementation indentation used six spaces; the first correction mixed three-, six-, and twelve-space indentation; and the understanding answer initially described first-value behavior instead of explaining why later values cannot update both extremes
+- Corrections understood: Each indentation level adds four spaces; Highest and Lowest require independent comparisons; after a range exists, one new value cannot be both greater than Highest and less than Lowest; and every input path must update the loop control variable
+- Tests performed: `0` -> two `N/A` outputs; `10, 0` -> both `RM10.00`; `20, 5, 30, 10, 0` -> `RM30.00 / RM5.00`; `30, 20, 10, 0` -> `RM30.00 / RM10.00`; `5, 10, 20, 0` -> `RM20.00 / RM5.00`; `9.99, 2.50, 7.25, 15.50, 0` -> `RM15.50 / RM2.50`; `10, -100, 5, 20, -50, 0` -> two invalid messages and `RM20.00 / RM5.00`; `10, 10, 10, 0` -> both `RM10.00`; student-designed `1, 2, 3, 4, 5, -6, -7, 0` -> two invalid messages and `RM5.00 / RM1.00`
+- Student-designed prediction: Correctly predicted Highest `RM5.00`, Lowest `RM1.00`, and two invalid messages before running
+- First-valid-value verification: Passed; one valid order established both Highest and Lowest as `RM10.00`
+- No-order test: Passed; initial zero produced two `N/A` outputs
+- Negative-input verification: Passed; negative values changed neither metric
+- Zero-sentinel verification: Passed; zero ended the loop and changed neither metric
+- Understanding check: Passed after clarifying that a later value cannot simultaneously exceed Highest and fall below Lowest
+- Codex review result: Passed through knowledge check, static inspection, nine student-reported manual tests, student-designed prediction, first-value/no-order/negative/sentinel verification, understanding check, AGENTS.md and scope review, prohibited-method review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_21_purrnest_order_value_range_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 22; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

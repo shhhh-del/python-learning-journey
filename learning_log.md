@@ -866,3 +866,40 @@
 - The first valid positive value must establish a real minimum before later comparisons.
 - Only a smaller valid value replaces the stored minimum.
 - Invalid values and the zero sentinel must not participate in minimum tracking.
+
+## 2026-09-01 - Module 1, Lesson 21: Tracking Highest and Lowest Together
+
+### Session Evidence
+
+- Date: 2026-09-01
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 21
+- Exercise: PurrNest Order Value Range Tracker
+- Final status: Passed
+- Code personally written: Yes; the student wrote and corrected all core implementation logic. Codex created only the exercise scaffold
+- Knowledge check: Passed six prediction questions, including both running states after every value in `20, 5, 30, 10`
+- Verified skills: Maintaining Highest and Lowest in one loop, first-valid-value establishment, independent comparison directions, middle/equal preservation, invalid exclusion, zero sentinel, two-output no-data handling, and money formatting
+- Manual tests: All nine required tests passed based on student-run output
+- Student-designed test: Input `1, 2, 3, 4, 5, -6, -7, 0`; predicted and produced two invalid messages, Highest `RM5.00`, and Lowest `RM1.00`
+- First-valid-value verification: Passed; input `10, 0` produced `RM10.00` for both metrics
+- No-order test: Passed; input `0` produced `Highest Order Value: N/A` and `Lowest Order Value: N/A`
+- Negative-input verification: Passed; `-100`, `-50`, `-6`, and `-7` did not affect either state
+- Zero-sentinel verification: Passed; zero naturally ended processing and affected neither result
+- Errors encountered: Indentation initially used six spaces, then mixed three/six/twelve spaces; the first response about simultaneous updates discussed the first order rather than later established ranges
+- Corrections understood: VS Code `Spaces: 4` plus Tab/Shift+Tab produces consistent levels; every valid input needs two independent comparisons; after the first value, a new input cannot simultaneously be greater than Highest and less than Lowest
+- Understanding check: Passed all nine questions after the simultaneous-update clarification
+- Codex review: Passed static logic, control-flow, indentation, output, scope, prohibited-method, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_21_purrnest_order_value_range_tracker.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 21 order value range tracker`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 22; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- One valid input can be evaluated independently against multiple stored states.
+- The first valid input establishes both ends of an initially empty range.
+- Later values may update one end or neither end, but cannot update both ends of an established valid range.
+- Invalid values and the sentinel must not alter either stored extreme.
