@@ -623,6 +623,43 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_21_purrnest_order_value_range_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 22; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 22 Status
+
+- [x] Module 1 - Lesson 22: Calculating a Range / Spread from Highest and Lowest Values
+
+Verified skills:
+
+- [x] Deriving Spread from final Highest and Lowest values
+- [x] Calculating `Highest - Lowest` after repeated processing
+- [x] Producing a zero Spread for one or equal valid values
+- [x] Protecting the no-valid-order case with three `N/A` outputs
+- [x] Excluding negative input and the zero sentinel from all metrics
+- [x] Formatting all numeric money outputs to two decimal places
+- [x] Calculating a range without `min()`, `max()`, or `abs()`
+
+### Lesson 22 Evidence
+
+- Date: 2026-09-02
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest Order Value Spread Analyzer
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete implementation. Codex created only the exercise instructions
+- Knowledge check: Passed all six questions, including `30 - 5 = 25`, equal endpoints producing `0`, decimal Spread `13`, and no-data `N/A`
+- Verified skills: Preserving Highest/Lowest tracking, post-loop subtraction, one-value zero Spread, decimal calculation, no-data protection, invalid-input isolation, zero sentinel, natural termination, and two-decimal formatting
+- Errors encountered: The initial understanding answer incorrectly said one value could not be subtracted and did not fully explain why calculation belongs after the loop
+- Corrections understood: One valid order makes Highest and Lowest equal, so subtracting them produces zero; the complete session endpoints are determined only after the input loop ends
+- Tests performed: `0` -> three `N/A` outputs; `10, 0` -> `RM10.00 / RM10.00 / RM0.00`; `20, 5, 30, 10, 0` -> `RM30.00 / RM5.00 / RM25.00`; `30, 20, 10, 0` -> `RM30.00 / RM10.00 / RM20.00`; `9.99, 2.50, 7.25, 15.50, 0` -> `RM15.50 / RM2.50 / RM13.00`; `10, -100, 5, 20, -50, 0` -> two invalid messages and `RM20.00 / RM5.00 / RM15.00`; `10, 10, 10, 0` -> `RM10.00 / RM10.00 / RM0.00`; student-designed `1, 2, 3, 4, 5, -6, -7, 0` -> two invalid messages and `RM5.00 / RM1.00 / RM4.00`
+- Student-designed prediction: Correctly predicted Highest `RM5.00`, Lowest `RM1.00`, Spread `RM4.00`, and two invalid messages before running
+- One-order test: Passed; one `RM10.00` order produced Spread `RM0.00`
+- No-order test: Passed; initial zero produced three `N/A` outputs
+- Negative-input verification: Passed; negative values affected neither endpoint nor Spread
+- Zero-sentinel verification: Passed; zero ended the loop and affected no metric
+- Understanding check: Passed after correcting the one-value subtraction and post-loop timing explanations
+- Codex review result: Passed through knowledge check, static inspection, eight student-reported manual tests, student-designed prediction, one-order/no-order/negative/sentinel verification, understanding check, AGENTS.md and scope review, prohibited-method review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_22_purrnest_order_value_spread_analyzer.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 23; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

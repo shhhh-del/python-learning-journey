@@ -903,3 +903,40 @@
 - The first valid input establishes both ends of an initially empty range.
 - Later values may update one end or neither end, but cannot update both ends of an established valid range.
 - Invalid values and the sentinel must not alter either stored extreme.
+
+## 2026-09-02 - Module 1, Lesson 22: Calculating Order Value Spread
+
+### Session Evidence
+
+- Date: 2026-09-02
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 22
+- Exercise: PurrNest Order Value Spread Analyzer
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote all core Highest, Lowest, Spread, control-flow, and output logic. Codex created only the exercise scaffold
+- Knowledge check: Passed six prediction questions covering endpoints, subtraction, equal endpoints, decimal values, no valid data, and invalid-negative exclusion
+- Verified skills: Calculating a derived range after repeated processing, using `Highest - Lowest`, preserving Lesson 21 endpoint logic, zero Spread, no-data protection, invalid-input isolation, zero sentinel, and formatted output
+- Manual tests: All eight required tests passed based on student-run output
+- Student-designed test: Input `1, 2, 3, 4, 5, -6, -7, 0`; predicted and produced two invalid messages, Highest `RM5.00`, Lowest `RM1.00`, and Spread `RM4.00`
+- One-order test: Passed; `10, 0` produced Highest and Lowest `RM10.00` and Spread `RM0.00`
+- No-order test: Passed; initial `0` produced `N/A` for Highest, Lowest, and Spread
+- Negative-input verification: Passed; negative values affected no endpoint or derived result
+- Zero-sentinel verification: Passed; zero ended the session and did not affect any metric
+- Errors encountered: The first understanding response claimed one value could not be subtracted and gave an incomplete reason for post-loop calculation
+- Corrections understood: Equal endpoints can be subtracted and produce zero; final endpoints are known after the loop, so the final Spread belongs after repeated processing
+- Understanding check: Passed all eight questions after correcting the one-value and calculation-timing explanations
+- Codex review: Passed static logic, calculation placement, control flow, output, scope, prohibited-method, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_22_purrnest_order_value_spread_analyzer.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 22 order value spread analyzer`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 23; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A derived Spread depends on correctly maintained final Highest and Lowest endpoints.
+- One valid value establishes equal endpoints, naturally producing a zero Spread.
+- Final derived metrics should use the completed state after repeated input ends.
+- No-data and invalid-data cases must not produce a fake numeric range.
