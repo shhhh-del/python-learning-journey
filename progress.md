@@ -660,6 +660,43 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_22_purrnest_order_value_spread_analyzer.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 23; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 23 Status
+
+- [x] Module 1 - Lesson 23: Conditional Counter for a Business Rule
+
+Verified skills:
+
+- [x] Counting all valid events with a normal counter
+- [x] Counting only qualifying events with a conditional counter
+- [x] Applying the inclusive `>= 20.00` boundary correctly
+- [x] Calculating a percentage from two completed counters
+- [x] Protecting percentage calculation from division by zero
+- [x] Excluding negative input and the zero sentinel from both counters
+- [x] Formatting percentage output to two decimal places
+
+### Lesson 23 Evidence
+
+- Date: 2026-09-03
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest High-Value Order Rate Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete implementation. Codex created only the exercise instructions
+- Knowledge check: Passed after correcting that Total Orders counts every valid positive order, not only orders below RM20
+- Verified skills: Normal counter, conditional counter, separate increment conditions, inclusive threshold boundary, invalid-input isolation, zero sentinel, rate calculation, zero-count protection, natural termination, and percentage formatting
+- Errors encountered: The first knowledge-check answer said Total Orders counted only valid orders below RM20; the final understanding answer initially described checking the total only as confirming the number of orders and needed clarification about division by zero
+- Corrections understood: Total Orders counts all valid positive orders; High-Value Orders counts the subset at or above RM20; Total Orders must be checked before division to prevent a division-by-zero error and produce `N/A`
+- Tests performed: `0` -> `0 / 0 / N/A`; `10, 0` -> `1 / 0 / 0.00%`; `20, 0` -> `1 / 1 / 100.00%`; `19.99, 0` -> `1 / 0 / 0.00%`; `10, 25, 30, 15, 20, 0` -> `5 / 3 / 60.00%`; `25, -100, 10, 30, -5, 0` -> two invalid messages and `3 / 2 / 66.67%`; `5, 10, 15, 19.99, 0` -> `4 / 0 / 0.00%`; `20, 25, 50, 100, 0` -> `4 / 4 / 100.00%`; student-designed `5, 15, 18, 20, 25, 30, -7, -8, 0` -> two invalid messages and `6 / 3 / 50.00%`
+- Student-designed prediction: Correctly predicted Total Orders `6`, High-Value Orders `3`, High-Value Rate `50.00%`, and two invalid messages before running
+- Boundary verification: Passed; `19.99` did not increment the conditional counter, while `20.00` did
+- No-order test: Passed; both counters remained zero and rate displayed `N/A`
+- Negative-input verification: Passed; negative values incremented neither counter
+- Zero-sentinel verification: Passed; zero ended the loop and incremented neither counter
+- Understanding check: Passed after clarifying division-by-zero protection
+- Codex review result: Passed through corrected knowledge check, static inspection, nine student-reported manual tests, student-designed prediction, boundary/no-order/negative/sentinel verification, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_23_purrnest_high_value_order_rate_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 24; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

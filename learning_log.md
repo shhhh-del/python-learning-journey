@@ -940,3 +940,40 @@
 - One valid value establishes equal endpoints, naturally producing a zero Spread.
 - Final derived metrics should use the completed state after repeated input ends.
 - No-data and invalid-data cases must not produce a fake numeric range.
+
+## 2026-09-03 - Module 1, Lesson 23: Conditional Counter
+
+### Session Evidence
+
+- Date: 2026-09-03
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 23
+- Exercise: PurrNest High-Value Order Rate Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote all counter, threshold, loop, rate, and output logic. Codex created only the exercise scaffold
+- Knowledge check: Passed seven questions after correcting the scope of Total Orders
+- Verified skills: Counting a normal counter from a conditional counter, inclusive-boundary classification, percentage calculation two completed counters, preventing division by zero, invalid-input exclusion, zero sentinel, and formatted percentage output
+- Manual tests: All nine required tests passed based on student-run output
+- Student-designed test: Input `5, 15, 18, 20, 25, 30, -7, -8, 0`; predicted and produced two invalid messages, Total Orders `6`, High-Value Orders `3`, and High-Value Rate `50.00%`
+- Boundary verification: Passed; RM20 was included by `>= 20.00`, while RM19.99 was excluded
+- No-order test: Passed; input `0` produced both counters as zero and `High-Value Rate: N/A`
+- Negative-input verification: Passed; negative values changed neither counter
+- Zero-sentinel verification: Passed; zero naturally stopped processing without changing either counter
+- Errors encountered: Total Orders was initially described as counting only valid values below RM20; the reason for checking Total Orders before rate calculation initially omitted division-by-zero protection
+- Corrections understood: Total Orders includes all positive valid orders; qualifying orders form a subset; a zero denominator would fail with a division-by-zero error, so the program skips division and prints `N/A`
+- Understanding check: Passed all ten questions after the zero-denominator clarification
+- Codex review: Passed static logic, counter placement, boundary behavior, rate calculation, control flow, output, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_23_purrnest_high_value_order_rate_tracker.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 23 high-value order rate tracker`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 24; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A normal counter records every valid event, while a conditional counter records only a qualifying subset.
+- An inclusive threshold requires careful boundary handling at exactly RM20.00.
+- A rate can be calculated after both counters are complete and the denominator is confirmed nonzero.
+- Invalid input and the sentinel must affect neither the total nor conditional count.
