@@ -697,6 +697,34 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_23_purrnest_high_value_order_rate_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 24; wait for the Daily Learning Supervisor
 
+## Friday Review #5 Status
+
+- [x] Friday Review #5: PurrNest Daily Order Analytics Summary
+
+### Friday Review #5 Evidence
+
+- Date started: 2026-09-04
+- Date completed: 2026-09-07
+- Scheduled day: Friday; completed after resuming on Monday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Exercise completed: PurrNest Daily Order Analytics Summary
+- Final status: Passed
+- Code personally written: Yes; the student personally combined all raw-metric, derived-metric, input-control, and output logic. Codex created only the exercise instructions
+- Knowledge check: Passed after correcting Counter versus Accumulator, the Lowest comparison direction, and the scope of a conditional counter
+- Verified skills: Counter, accumulator, conditional counter, total sales, average, High-Value rate, running maximum, running minimum, Spread, first-valid-value handling, inclusive RM20 boundary, negative-input isolation, zero sentinel, zero-count protection, natural termination, and two-decimal formatting in one flow
+- Errors encountered: `total_sales` initially used invalid `RM 0.0` syntax; repeated input initially existed only in the negative branch; Highest and Lowest initially incremented by 1 instead of storing the order amount; the High-Value rate used a mismatched variable name; several required labels and prompt punctuation needed correction; the student-designed test initially joined two negatives and counted seven valid orders instead of six, causing incorrect Average and Rate predictions
+- Corrections understood: Currency text belongs only in output; every loop path must reach repeated input; Highest and Lowest store amounts rather than counts; variable names must match exactly; required labels must match their business meanings; invalid inputs do not enter the denominator; and derived predictions must use the corrected valid-order count
+- Tests performed: `0` -> zero raw totals and all appropriate `N/A` outputs; `10, 0` -> one order, `RM10.00` total/average, zero High-Value rate, equal endpoints, zero Spread; `10, 25, 30, 15, 20, 0` -> `5 / RM100.00 / RM20.00 / 3 / 60.00% / RM30.00 / RM10.00 / RM20.00`; `25, -100, 10, 30, -5, 0` -> two invalid messages and `3 / RM65.00 / RM21.67 / 2 / 66.67% / RM30.00 / RM10.00 / RM20.00`; `19.99, 20, 20.01, 0` -> `3 / RM60.00 / RM20.00 / 2 / 66.67% / RM20.01 / RM19.99 / RM0.02`; `20, 20, 20, 0` -> `3 / RM60.00 / RM20.00 / 3 / 100.00% / RM20.00 / RM20.00 / RM0.00`; student-designed `10, 10, 10, 20, 30, 40, -1, -2, 0` -> two invalid messages and `6 / RM120.00 / RM20.00 / 3 / 50.00% / RM40.00 / RM10.00 / RM30.00`
+- Student-designed test: Initial count, Average, and Rate predictions were corrected before running; final prediction and actual output matched all eight metrics and two invalid messages
+- Boundary verification: Passed; RM19.99 was excluded and RM20.00 was included in High-Value Orders
+- No-order test: Passed; no division occurred and unavailable metrics displayed `N/A`
+- Negative-input verification: Passed; negative inputs changed none of the five raw metrics or three derived results
+- Debugging challenge: Passed; the student identified that an unconditional High-Value increment counted every positive order, described the wrong result, and restored the `order_amount >= 20` rule
+- Understanding check: Passed after adding Order Value Spread to the derived metrics and stating independent Highest and Lowest update directions
+- Codex review result: Passed through corrected knowledge check, static code inspection, seven student-reported manual tests, corrected student-designed prediction, boundary/no-order/negative verification, debugging challenge, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/friday_review_05_purrnest_daily_order_analytics_summary.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 24 or another exercise; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

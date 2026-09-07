@@ -977,3 +977,41 @@
 - An inclusive threshold requires careful boundary handling at exactly RM20.00.
 - A rate can be calculated after both counters are complete and the denominator is confirmed nonzero.
 - Invalid input and the sentinel must affect neither the total nor conditional count.
+
+## 2026-09-04 to 2026-09-07 - Friday Review #5
+
+### Session Evidence
+
+- Date started: 2026-09-04
+- Date completed: 2026-09-07
+- Day: Friday review resumed and completed on Monday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Available time at start: 30 minutes
+- Review: Friday Review #5
+- Exercise: PurrNest Daily Order Analytics Summary
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote and corrected the combined analytics implementation. Codex provided the exercise scaffold and progressive review hints only
+- Knowledge check: Passed after correcting Counter/Accumulator meaning, the Lowest direction, and normal versus conditional counter behavior
+- Verified skills: Five raw metrics and three derived metrics in one `while` flow, valid-event updates, conditional counting, Highest/Lowest tracking, Average, Rate, Spread, boundary handling, invalid exclusion, no-data protection, sentinel termination, and formatted reporting
+- Manual tests: All seven required tests passed based on student-run outputs
+- Student-designed test: `10, 10, 10, 20, 30, 40, -1, -2, 0`; after correcting the pre-run valid count and calculations, predicted and produced Total Orders `6`, Total Sales `RM120.00`, Average `RM20.00`, High-Value Orders `3`, Rate `50.00%`, Highest `RM40.00`, Lowest `RM10.00`, Spread `RM30.00`, and two invalid messages
+- Boundary verification: Passed with `19.99`, `20.00`, and `20.01`; only the latter two were High-Value
+- No-order test: Passed with zero counts/sales and `N/A` for Average, Rate, Highest, Lowest, and Spread
+- Negative-input verification: Passed; invalid negatives changed no metric
+- Debugging challenge: Passed; the student found a missing threshold guard around High-Value counter updates, predicted the overcount, and restored the RM20-inclusive rule
+- Errors encountered: Invalid currency syntax in initialization, positive-path infinite-loop risk, amount states incremented as counters, mismatched variable naming, inaccurate output labels, missing prompt punctuation, and an initially incorrect student-test denominator
+- Corrections understood: Keep currency symbols in display text; update loop control on all paths; assign order amounts to extreme-value states; use consistent names and exact labels; exclude invalid inputs from all metrics; calculate Average and Rate using only valid orders
+- Understanding check: Passed all ten questions after adding Spread to the derived list and clarifying independent comparison conditions
+- Codex review: Passed static logic, control flow, all required metrics, formulas, formatting, test evidence, debugging, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/friday_review_05_purrnest_daily_order_analytics_summary.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Friday Review 5 daily order analytics summary`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not start Lesson 24 or another exercise; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- Raw metrics update during valid-event processing; derived metrics use the completed raw state after the loop.
+- Counters, accumulators, conditional counters, and running extremes can coexist in one controlled input flow.
+- Invalid input and the sentinel must not contaminate any business metric.
+- Correct denominators and endpoints determine the accuracy of every derived result.
