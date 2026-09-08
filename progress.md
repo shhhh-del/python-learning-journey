@@ -725,6 +725,41 @@ Verified skills:
 - Files created or modified: `exercises/module_01/friday_review_05_purrnest_daily_order_analytics_summary.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 24 or another exercise; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 24 Status
+
+- [x] Module 1 - Lesson 24: Introduction to `for` Loops with `range()`
+
+Verified skills:
+
+- [x] Choosing `for` when the repetition count is known
+- [x] Using `range(1, 6)` for exactly Day 1 through Day 5
+- [x] Using the loop variable in a dynamic prompt
+- [x] Allowing `for` to advance the loop variable automatically
+- [x] Combining fixed outer iteration with same-day `while` validation
+- [x] Preventing invalid retries from consuming an iteration
+- [x] Accumulating exactly five valid daily values
+
+### Lesson 24 Evidence
+
+- Date: 2026-09-08
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest 5-Day Sales Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete `for`, `range()`, input-validation, accumulator, average, and output implementation. Codex created only the exercise instructions and used progressive hints
+- Knowledge check: Passed after clarifying the loop variable and the difference between exhausting a fixed range and making a `while` condition false
+- Verified skills: `for` syntax, `range()` end exclusion, fixed iteration, loop variable, dynamic f-string prompt, nested same-day `while` validation, accumulator placement, average calculation, and formatted output
+- Errors encountered: The first `for` line omitted both Total Sales initialization and the colon; the first prompt printed a hard-coded Day 1 and formatted the day as money instead of accepting input; the next input attempt misplaced `{day}` and omitted closing parentheses; the final outputs initially omitted the f-string prefix; several understanding-check explanations needed greater precision
+- Corrections understood: `range(1, 6)` supplies 1 through 5; block headers end with a colon; `{day}` belongs inside the dynamic prompt; `float(input(...))` requires both closing parentheses; validation retries stay inside the current iteration; valid accumulation occurs after validation but inside `for`; output interpolation requires f-strings
+- Tests performed: `10, 20, 30, 40, 50` -> `RM150.00 / RM30.00`; five zeros -> `RM0.00 / RM0.00`; five twenties -> `RM100.00 / RM20.00`; `10.50, 20.50, 30, 15, 24` -> predicted and produced `RM100.00 / RM20.00`; Day 1 `-5, 10` then `20, 30, 40, 50` -> one invalid message, same-day retry, and `RM150.00 / RM30.00`; Day 1 `-1, -2, 5` then `10, 15, 20, 25` -> two invalid messages and `RM75.00 / RM15.00`; final valid days `1, 2, 5, 6, 7` with Day 3 retries `-3, -4` -> two invalid messages and `RM21.00 / RM4.20`
+- Student-designed test: The student predicted Total Sales `RM21.00` and Average `RM4.20` before a qualifying run with five valid values and two negative retries; the run produced the predicted metrics. A later different sequence produced `RM19.00 / RM3.80`, correctly exposing a separate arithmetic mismatch; no further rerun was required
+- Fixed-iteration verification: Passed; Day 1 through Day 5 were requested exactly once each after validation succeeded
+- Negative-retry verification: Passed; negative attempts repeated the same day and did not affect Total Sales or consume one of the five days
+- Understanding check: Passed after clarifying that `day` represents the current day number, retry count is unknown, and consuming an invalid iteration would leave fewer than five valid days
+- Codex review result: Passed through corrected knowledge check, static inspection, seven student-reported manual tests, a matching pre-run metric prediction, fixed-iteration and negative-retry verification, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_24_purrnest_5_day_sales_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 25; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid
