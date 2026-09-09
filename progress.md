@@ -760,6 +760,42 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_24_purrnest_5_day_sales_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 25; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 25 Status
+
+- [x] Module 1 - Lesson 25: Conditional Counter inside a `for` Loop
+
+Verified skills:
+
+- [x] Processing exactly seven business records with `for` and `range()`
+- [x] Maintaining an accumulator during fixed iteration
+- [x] Maintaining a conditional counter during fixed iteration
+- [x] Applying the inclusive `>= RM20.00` target boundary
+- [x] Retrying invalid input within the same day
+- [x] Preventing invalid attempts from consuming an iteration or changing metrics
+- [x] Calculating and formatting a fixed-seven-day target rate
+
+### Lesson 25 Evidence
+
+- Date: 2026-09-09
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest 7-Day Sales Target Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete fixed-iteration, validation, accumulator, conditional-counter, rate, and output implementation. Codex created only the exercise instructions
+- Knowledge check: Passed after clarifying that Target Days includes the RM20 boundary and that invalid attempts must not leave the current day
+- Verified skills: `range(1, 8)`, Day 1–7 loop variable, same-day `while` validation, Total Sales accumulation, Target Days conditional counting, inclusive boundary handling, fixed-denominator percentage, and two-decimal formatting
+- Errors encountered: Both daily prompts initially omitted the f-string prefix; Target Hit Rate initially omitted `.2f`; the student-designed Rate prediction initially truncated `71.428...` to `71.42%` instead of rounding to `71.43%`; two understanding answers needed clearer distinction between iteration consumption and metric data types
+- Corrections understood: Dynamic day prompts require f-strings; percentage output requires `.2f`; the third decimal determines rounding to two places; an invalid attempt cannot consume one of seven iterations; Total Sales stores accumulated money while Target Days stores a qualifying-event count
+- Tests performed: `5, 10, 15, 19, 0, 12, 8` -> `RM69.00 / 0 / 0.00%`; seven twenties -> `RM140.00 / 7 / 100.00%`; `10, 20, 30, 15, 25, 5, 40` -> `RM145.00 / 4 / 57.14%`; `19.99, 20, 20.01, 10, 30, 5, 25` -> predicted and produced `RM130.00 / 4 / 57.14%`; Day 1 retry `-5, 20` followed by `10, 30, 15, 25, 5, 40` -> one invalid message and `RM145.00 / 4 / 57.14%`; Day 1 retry `-1, 10` and Day 3 retries `-2, -3, 30` with remaining values -> three invalid messages and `RM145.00 / 4 / 57.14%`; student-designed Day 1 retries `-1, -2, 10` followed by `10, 30, 40, 50, 60, 70` -> two invalid messages and `RM270.00 / 5 / 71.43%`
+- Student-designed test: Total Sales `RM270.00` and Target Days `5` were predicted correctly; the initial `71.42%` Rate prediction was corrected to the actual rounded `71.43%` after a formatting hint
+- Fixed-iteration verification: Passed; exactly seven valid day values were processed
+- Boundary verification: Passed; `19.99` did not qualify, while `20.00` and `20.01` did
+- Negative-retry verification: Passed; one, two, and three invalid-attempt scenarios remained on their current days and changed no metric
+- Understanding check: Passed after clarifying same-day iteration preservation and amount-versus-count state
+- Codex review result: Passed through corrected knowledge check, static inspection, seven student-reported manual tests, student-designed scenario, fixed-iteration/boundary/negative-retry verification, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_25_purrnest_7_day_sales_target_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 26; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

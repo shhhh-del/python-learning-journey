@@ -1050,3 +1050,39 @@
 - `range(1, 6)` supplies the five day numbers while excluding the stop value.
 - A nested validation `while` can repeat an unknown number of attempts without advancing the outer day.
 - Accumulation after validation ensures exactly five valid values contribute to the result.
+
+## 2026-09-09 - Module 1, Lesson 25: Conditional Counter inside `for`
+
+### Session Evidence
+
+- Date: 2026-09-09
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 25
+- Exercise: PurrNest 7-Day Sales Target Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote all core implementation logic. Codex created the scaffold and provided progressive review hints only
+- Knowledge check: Passed seven questions after correcting threshold wording and same-day retry reasoning
+- Verified skills: Seven fixed iterations, loop-variable prompts, nested validation, accumulator plus conditional counter, inclusive RM20 target, fixed-day rate, rounding, and formatted output
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Day 1 inputs `-1, -2, 10`, followed by valid days `10, 30, 40, 50, 60, 70`; produced Total Sales `RM270.00`, Target Days `5`, and Target Hit Rate `71.43%`
+- Fixed-iteration verification: Passed; invalid inputs did not reduce the seven valid days
+- Boundary verification: Passed with `19.99`, `20.00`, and `20.01`
+- Negative-retry verification: Passed with invalid attempts on the same day and across different days
+- Errors encountered: Missing f-string prefixes in prompts, missing percentage formatting, truncated instead of rounded Rate prediction, and imprecise explanations of same-day retry and metric types
+- Corrections understood: Use f-strings for the current day, `.2f` for Rate, standard rounding for `71.428...`, `while` to preserve the current `for` iteration, and distinct money versus count variables
+- Understanding check: Passed all ten questions after two clarifications
+- Codex review: Passed static syntax, seven-iteration behavior, validation, accumulator, conditional counter, boundary, rate, formatting, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_25_purrnest_7_day_sales_target_tracker.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 25 seven-day sales target tracker`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 26; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A fixed `for` loop can update both an accumulator and a conditional counter for each valid record.
+- An inner validation `while` protects the current iteration from invalid attempts.
+- Inclusive business thresholds require the boundary value to qualify.
+- A fixed-period rate uses the known number of valid periods as its denominator.
