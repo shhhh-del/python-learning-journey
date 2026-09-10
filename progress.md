@@ -796,6 +796,43 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_25_purrnest_7_day_sales_target_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 26; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 26 Status
+
+- [x] Module 1 - Lesson 26: Tracking a Value with Its Associated Label
+
+Verified skills:
+
+- [x] Tracking the highest daily sales value and its associated day
+- [x] Initializing both associated states from the first valid day
+- [x] Updating value and label together for a strictly greater value
+- [x] Preserving the earliest day when the highest value is tied
+- [x] Handling all-zero data with Day 1 as the earliest best day
+- [x] Excluding negative retries from both tracked states
+- [x] Producing synchronized final value-and-label output
+
+### Lesson 26 Evidence
+
+- Date: 2026-09-10
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Lesson or business feature completed: PurrNest 7-Day Best Sales Day Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete fixed-day input, validation, associated-state, tie-rule, and output implementation. Codex created only the exercise instructions and provided progressive hints
+- Knowledge check: Passed all seven questions and correctly predicted the state sequence `10/Day1`, `30/Day2`, `30/Day2`, `50/Day4`
+- Verified skills: Associated state tracking, synchronized replacement, first-day initialization, strict greater-than comparison, earliest-occurrence tie handling, same-day negative retry, loop-variable labels, and formatted final output
+- Errors encountered: `range` initially used braces instead of parentheses; the title had a leading space; indentation first used six spaces, then mixed tabs and spaces; the new-maximum check was initially inside the validation loop, used `>=`, omitted its colon, and assigned values in the wrong direction; the final output initially printed the ending loop variable instead of `best_day`
+- Corrections understood: Function calls use parentheses; Python block indentation should use consistent four-space levels; comparison follows validation; Day 1 or a strictly greater value triggers replacement; left-side state variables receive the current sales and day; final output must use the stored associated label rather than the last iteration value
+- Tests performed: increasing `10..70` -> `Day 7 / RM70.00`; decreasing `70..10` -> `Day 1 / RM70.00`; middle maximum `10, 20, 80, 40, 50, 60, 70` -> `Day 3 / RM80.00`; tie `50, 100, 20, 100, 30, 40, 50` -> earliest `Day 2 / RM100.00`; seven zeros -> `Day 1 / RM0.00`; negative retries and decimals `-5, 10.50, 20.75, -2, 15.25, 20.74, 5, 18, 12` -> two invalid messages and `Day 2 / RM20.75`; student-designed `10, 20, 30, 40, -10, -10, 40, 40, 40` -> two Day 5 invalid retries and earliest tied maximum `Day 4 / RM40.00`
+- Student-designed test: Correctly predicted Best Sales Day `Day 4` and Highest Daily Sales `RM40.00` before running; actual output matched
+- Fixed-iteration verification: Passed; exactly seven valid days were processed
+- First-day initialization verification: Passed; all-zero input preserved Day 1 as the best day
+- Tie verification: Passed; equal later maxima did not replace the earliest day
+- Negative-retry verification: Passed; invalid attempts consumed no day and changed neither associated state
+- Understanding check: Passed after clarifying that value and label must refer to the same record and that Day 1 establishes both initial states
+- Codex review result: Passed through knowledge check, static inspection, seven student-reported manual tests, student-designed prediction, fixed-iteration/first-day/tie/negative-retry verification, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_26_purrnest_7_day_best_sales_day_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not introduce Lesson 27; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid

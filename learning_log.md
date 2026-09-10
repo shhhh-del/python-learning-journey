@@ -1086,3 +1086,40 @@
 - An inner validation `while` protects the current iteration from invalid attempts.
 - Inclusive business thresholds require the boundary value to qualify.
 - A fixed-period rate uses the known number of valid periods as its denominator.
+
+## 2026-09-10 - Module 1, Lesson 26: Associated State Tracking
+
+### Session Evidence
+
+- Date: 2026-09-10
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 26
+- Exercise: PurrNest 7-Day Best Sales Day Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote and corrected all core implementation logic. Codex created the scaffold and provided progressive hints only
+- Knowledge check: Passed seven questions plus a four-day state prediction
+- Verified skills: Highest value plus associated label, synchronized updates, first-valid-day handling, strict comparison, earliest tie rule, all-zero behavior, same-day retry, and final stored-state output
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Day 1–4 values `10, 20, 30, 40`; Day 5 retries `-10, -10, 40`; Day 6–7 values `40, 40`; predicted and produced Best Sales Day `Day 4` and Highest Daily Sales `RM40.00`
+- Fixed-iteration verification: Passed; seven valid daily values were processed
+- First-day initialization verification: Passed with seven zero values producing Day 1 and RM0.00
+- Tie verification: Passed in required and student-designed tests; later equal values preserved the earliest maximum day
+- Negative-retry verification: Passed on Day 1, Day 3, and Day 5 scenarios
+- Errors encountered: Wrong `range` delimiters, leading title whitespace, mixed indentation, incorrect comparison placement and boundary, missing colon, reversed assignments, and output of `day` instead of `best_day`
+- Corrections understood: Associated value and label must update together after validation; strict `>` preserves the earliest tie; Day 1 explicitly initializes zero-valued data; the stored label, not the ending loop variable, belongs in final output
+- Understanding check: Passed all nine questions after clarifying synchronized association and first-day state establishment
+- Codex review: Passed static syntax, validation, state synchronization, first-day and tie behavior, output, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_26_purrnest_7_day_best_sales_day_tracker.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 26 best sales day tracker`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 27; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A business metric may require both a value and the label identifying its source.
+- Associated states must update in the same branch to remain synchronized.
+- Strict comparison preserves the earliest source when maximum values tie.
+- First-record initialization handles valid zero data without relying on a false maximum placeholder.
