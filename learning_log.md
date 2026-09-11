@@ -1123,3 +1123,42 @@
 - Associated states must update in the same branch to remain synchronized.
 - Strict comparison preserves the earliest source when maximum values tie.
 - First-record initialization handles valid zero data without relying on a false maximum placeholder.
+
+## 2026-09-11 - Friday Review #6
+
+### Session Evidence
+
+- Date: 2026-09-11
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Available time: 30 minutes
+- Review: Friday Review #6
+- Exercise: PurrNest 7-Day Sales Performance Summary
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete combined implementation. Codex created the scaffold and used progressive review hints only
+- Knowledge check: Passed eight questions and the required seven-day prediction
+- Verified skills: Fixed `for` processing, nested input validation, accumulator, conditional counter, Average, percentage, associated maximum tracking, first-day and tie rules, negative-input isolation, and final formatted summary
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Final valid values `10, 15, 20, 25, 30, 35, 35` with two Day 5 negative retries; predicted and produced Total Sales `RM170.00`, Average `RM24.29`, Target Days `5`, Rate `71.43%`, Best Day `Day 6`, and Highest `RM35.00`
+- Fixed-iteration verification: Passed; invalid attempts did not reduce the seven valid days
+- Boundary verification: Passed with `19.99`, `20.00`, and `20.01`
+- First-day initialization verification: Passed with all-zero data
+- Tie verification: Passed in the required mixed test and student-designed test
+- Negative-retry verification: Passed with three attempts across two days and two attempts on one day
+- Debugging challenge: Passed; the student identified that `>=` violates earliest-tie behavior, corrected the predicted wrong day to Day 6, and restored strict `>`
+- Errors encountered: Inconsistent indentation, an overly nested validation/metric block, missing tie in the first designed scenario, stale arithmetic after modifying that scenario, and initially incomplete debugging and understanding answers
+- Corrections understood: Use consistent 4/8-space nesting; keep valid processing outside validation; recalculate dependent metrics after input changes; synchronize value and label; strict comparison preserves the earliest tie
+- Understanding check: Passed all ten questions after clarifying associated states and the three metric-update categories
+- Codex review: Passed static syntax, control flow, all raw/conditional/associated/derived metrics, all seven tests, debugging, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/friday_review_06_purrnest_7_day_sales_performance_summary.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Friday Review 6 sales performance summary`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not start Lesson 27 or another exercise; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- One fixed processing loop can maintain always-updated, conditionally updated, and associated states together.
+- Derived metrics should use the complete raw state after all seven valid records.
+- Same-day validation prevents invalid attempts from contaminating metrics or consuming iterations.
+- Strict maximum comparison keeps the earliest label when the maximum value ties.

@@ -833,6 +833,35 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_26_purrnest_7_day_best_sales_day_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not introduce Lesson 27; wait for the Daily Learning Supervisor
 
+## Friday Review #6 Status
+
+- [x] Friday Review #6: PurrNest 7-Day Sales Performance Summary
+
+### Friday Review #6 Evidence
+
+- Date: 2026-09-11
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Exercise completed: PurrNest 7-Day Sales Performance Summary
+- Final status: Passed
+- Code personally written: Yes; the student personally combined fixed iteration, validation, accumulation, conditional counting, associated maximum tracking, average, rate, and output logic. Codex created only the exercise instructions
+- Knowledge check: Passed all eight questions and correctly predicted `RM200 / 5 / Day 4 / RM50` for the required seven-day sequence
+- Verified skills: Seven-day `for` processing, same-day `while` validation, Total Sales accumulation, Target Days conditional counting, Average, Target Hit Rate, synchronized Highest/Best Day state, first-day initialization, earliest tie preservation, and formatted reporting
+- Errors encountered: The initial `for` body used inconsistent 3/6/9-space indentation; the first correction left `while` and all following metric updates one level too deep; the student-designed scenario initially omitted the required tie, then retained an outdated Total/Average after adding the tie; the debugging challenge initially predicted Day 2 instead of the erroneous Day 6 result; two understanding answers needed concrete state and metric examples
+- Corrections understood: Every Python nesting level uses four spaces; validation and valid-day metrics share the correct `for` level; changing test values requires recalculating derived metrics; strict `>` prevents a later tie from replacing the earlier day; raw, conditional, associated, and derived states have distinct update timing
+- Tests performed: increasing `10, 20, 30, 40, 50, 60, 70` -> `RM280.00 / RM40.00 / 6 / 85.71% / Day 7 / RM70.00`; decreasing values -> same totals and `Day 1 / RM70.00`; mixed `10, 30, 20, 50, 15, 50, 25` -> `RM200.00 / RM28.57 / 5 / 71.43% / Day 4 / RM50.00`; seven zeros -> all zero metrics and `Day 1 / RM0.00`; boundary sequence `19.99, 20, 20.01, 10, 30, 5, 25` -> predicted and produced `RM130.00 / RM18.57 / 4 / 57.14% / Day 5 / RM30.00`; three negative retries across Day 1 and Day 3 with the mixed valid sequence -> three invalid messages and the correct mixed summary; student-designed Day 5 retries `-1, -2, 30` within valid values `10, 15, 20, 25, 30, 35, 35` -> two invalid messages and `RM170.00 / RM24.29 / 5 / 71.43% / Day 6 / RM35.00`
+- Student-designed test: After adding the required tie and recalculating Total/Average, the student correctly predicted all six metrics before running; actual output matched
+- Fixed-iteration verification: Passed; exactly seven valid days were processed
+- Boundary verification: Passed; RM19.99 did not qualify, while RM20.00 and RM20.01 did
+- First-day initialization verification: Passed; seven zeros produced Best Sales Day 1
+- Tie verification: Passed; later equal maxima preserved the earlier day
+- Negative-retry verification: Passed; invalid attempts stayed on the same day and changed no metric
+- Debugging challenge: Passed after correcting that `>=` would replace Day 2 with tied Day 6; the student restored strict `>`
+- Understanding check: Passed after identifying the two associated states and providing concrete examples for each metric-update category
+- Codex review result: Passed through knowledge check, static inspection, seven student-reported manual tests, corrected student-designed prediction, fixed-iteration/boundary/first-day/tie/negative-retry verification, debugging challenge, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/friday_review_06_purrnest_7_day_sales_performance_summary.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 27 or another exercise; wait for the Daily Learning Supervisor
+
 ## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.1 Status
 
 - [x] Stage 1B.1: Repeated Input Until Valid
