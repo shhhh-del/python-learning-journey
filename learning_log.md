@@ -1162,3 +1162,40 @@
 - Derived metrics should use the complete raw state after all seven valid records.
 - Same-day validation prevents invalid attempts from contaminating metrics or consuming iterations.
 - Strict maximum comparison keeps the earliest label when the maximum value ties.
+
+## 2026-09-14 - Module 1, Lesson 27: Associated Minimum State Tracking
+
+### Session Evidence
+
+- Date: 2026-09-14 (completed 2026-09-15)
+- Day of week: Monday (continued Tuesday)
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 27
+- Exercise: PurrNest 7-Day Worst Sales Day Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote all core implementation logic. Codex created the scaffold and used progressive review hints only
+- Knowledge check: Passed seven questions plus the required four-day running-state prediction
+- Verified skills: Running minimum, synchronized lowest-value/associated-day tracking, first-day initialization, strict comparison, earliest tie preservation, all-zero behavior, same-day retry, fixed iteration, and formatted output
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Final valid values `2, 1, 3, 4, 5, 1, 7`, with Day 7 retries `-1, -2, 7`; predicted and produced Worst Sales Day `Day 2` and Lowest Daily Sales `RM1.00`
+- Fixed-iteration verification: Passed; invalid attempts did not reduce the seven valid days
+- First-day initialization verification: Passed with seven zero values producing Day 1 and RM0.00
+- Tie verification: Passed in required and student-designed tests; later equal values preserved the earliest minimum day
+- Negative-retry verification: Passed in the required decimal test and student-designed test
+- Errors encountered: Two knowledge-check answers initially referenced the wrong state; indentation first used 3/6 spaces and then Tab characters; the final comparison explanation initially lacked full variable order
+- Corrections understood: Associated value and day carry different but connected information; both update together; four-space indentation contains no Tab characters; strict `<` tracks the minimum and preserves the earliest tie
+- Understanding check: Passed all nine questions after clarifying the stale-day mismatch and exact comparison forms
+- Codex review: Passed static control-flow, range, validation, synchronized updates, first-day/tie/all-zero behavior, output formatting, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_27_purrnest_7_day_worst_sales_day_tracker.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 27 worst sales day tracker`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 28; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A minimum business metric can be paired with the day that produced it.
+- The minimum value and associated label must update in the same branch.
+- Strict `<` comparison preserves the earliest day when minimum values tie.
+- First-valid-day initialization correctly handles zero as valid sales data.

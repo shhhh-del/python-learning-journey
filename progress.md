@@ -368,6 +368,33 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_14_purrnest_stock_input_retry.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 27 Status
+
+- [x] Lesson 27: Tracking the Lowest Value Together with Its Associated Label
+
+### Lesson 27 Evidence
+
+- Date: 2026-09-14 (completed 2026-09-15)
+- Day of week: Monday (continued Tuesday)
+- Session type: Core Python Learning Day
+- Exercise completed: PurrNest 7-Day Worst Sales Day Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote all core implementation logic. Codex created the exercise scaffold and provided progressive review guidance only
+- Knowledge check: Passed seven questions and correctly tracked `lowest_sales / worst_day` across `30, 10, 20, 5` as `30/Day 1`, `10/Day 2`, `10/Day 2`, and `5/Day 4`
+- Verified skills: Running minimum, lowest value plus associated day, synchronized state updates, first-valid-day initialization, strict `<` comparison, earliest-wins tie handling, fixed seven-day iteration, same-day negative retry, and two-decimal formatting
+- Errors encountered: The first answers confused `worst_day` with an unrelated example and described maximum state for a minimum question; the initial implementation used 3/6-space indentation, then Tab characters; the comparison-symbol explanation initially omitted the complete operand order
+- Corrections understood: `worst_day` stores the source day; higher values change neither minimum state; each level uses four spaces; indentation can be converted from Tabs to spaces; `daily_sales > highest_sales` tracks a maximum while `daily_sales < lowest_sales` tracks a minimum
+- Tests performed: Increasing values -> `Day 1 / RM10.00`; decreasing values -> `Day 7 / RM10.00`; middle minimum -> `Day 3 / RM5.00`; tied minimum -> `Day 2 / RM5.00`; seven zeros -> `Day 1 / RM0.00`; negative retries and decimals -> two invalid messages and `Day 3 / RM5.25`; student-designed scenario -> two invalid messages and `Day 2 / RM1.00`
+- Student-designed test: Input sequence `2, 1, 3, 4, 5, 1, -1, -2, 7`, with both invalid attempts retried on Day 7; the student predicted `Day 2 / RM1.00`, and actual output matched
+- Fixed-iteration verification: Passed; exactly seven final valid days were processed
+- First-day initialization verification: Passed; seven zeros produced Day 1 and RM0.00
+- Tie verification: Passed; later equal minima preserved the earliest day in required and student-designed tests
+- Negative-retry verification: Passed; negative attempts consumed no day and changed neither tracked state
+- Understanding check: Passed all nine questions after clarifying the mismatched-state bug and writing the exact maximum/minimum comparison directions
+- Codex review result: Passed through knowledge check, static inspection, seven student-reported manual tests, fixed-iteration/first-day/tie/negative-retry verification, understanding check, scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_27_purrnest_7_day_worst_sales_day_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 28; wait for the Daily Learning Supervisor
+
 ## Friday Review #4 Status
 
 - [x] Friday Review #4: PurrNest Daily Order Processing Summary
