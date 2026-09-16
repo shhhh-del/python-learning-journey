@@ -395,6 +395,34 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_27_purrnest_7_day_worst_sales_day_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 28; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 28 Status
+
+- [x] Lesson 28: Tracking Maximum and Minimum Associated States Together
+
+### Lesson 28 Evidence
+
+- Date: 2026-09-16
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Exercise completed: PurrNest 7-Day Best & Worst Sales Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally combined the maximum pair, minimum pair, fixed iteration, and validation logic. Codex created only the exercise scaffold and provided progressive review guidance
+- Knowledge check: Passed all eight questions and correctly tracked all four states across `20, 5, 40, 10`
+- Verified skills: Independent maximum and minimum checks, synchronized associated-state pairs, first-valid-day initialization of four states, strict comparisons, earliest-wins ties, middle-value handling, fixed seven-day processing, same-day negative retry, decimals, and formatted output
+- Errors encountered: The completed file initially ended with four trailing spaces; the first student-designed scenario contained only one negative retry instead of the required two
+- Corrections understood: A completely blank final line avoids trailing-whitespace failures; invalid attempts can be added without changing valid-day state predictions; maximum and minimum pairs update independently
+- Tests performed: Increasing -> `Day 7 / RM70.00 / Day 1 / RM10.00`; decreasing -> `Day 1 / RM70.00 / Day 7 / RM10.00`; mixed -> `Day 3 / RM40.00 / Day 2 / RM5.00`; maximum/minimum ties -> same mixed result with earliest days preserved; all equal -> both pairs at `Day 1 / RM10.00`; negative retries and decimals -> two invalid messages and `Day 5 / RM30.10 / Day 3 / RM5.25`; student-designed test -> two invalid messages and `Day 5 / RM30.00 / Day 6 / RM5.00`
+- Student-designed test: Input sequence `10, 10, -10, 10, -10, 20, 30, 5, 10`, producing seven valid values `10, 10, 10, 20, 30, 5, 10`; predicted all four final states correctly before running
+- Fixed-iteration verification: Passed; exactly seven valid days were processed
+- First-day initialization verification: Passed; all-equal input kept all four states associated with Day 1
+- Maximum tie verification: Passed; later RM40 and later RM10 ties did not replace the earliest best day
+- Minimum tie verification: Passed; later RM5 and later RM10 ties did not replace the earliest worst day
+- Negative-retry verification: Passed; required and student-designed negative attempts changed no tracked state and consumed no day
+- Understanding check: Passed all ten questions
+- Codex review result: Passed through knowledge check, static inspection, seven student-reported manual tests, fixed-iteration/first-day/both-tie/negative-retry verification, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_28_purrnest_7_day_best_worst_sales_tracker.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 29; wait for the Daily Learning Supervisor
+
 ## Friday Review #4 Status
 
 - [x] Friday Review #4: PurrNest Daily Order Processing Summary

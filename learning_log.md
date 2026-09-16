@@ -1199,3 +1199,41 @@
 - The minimum value and associated label must update in the same branch.
 - Strict `<` comparison preserves the earliest day when minimum values tie.
 - First-valid-day initialization correctly handles zero as valid sales data.
+
+## 2026-09-16 - Module 1, Lesson 28: Combined Associated-State Tracking
+
+### Session Evidence
+
+- Date: 2026-09-16
+- Day of week: Wednesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 28
+- Exercise: PurrNest 7-Day Best & Worst Sales Tracker
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the combined four-state implementation. Codex created the scaffold and provided progressive review only
+- Knowledge check: Passed eight questions and the required four-day state prediction
+- Verified skills: Maximum and minimum associated pairs in one loop, independent comparisons, synchronized updates, first-day initialization of four states, earliest maximum/minimum tie handling, middle values, negative retry isolation, and two-decimal output
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Final valid values `10, 10, 10, 20, 30, 5, 10`, with negative retries before Day 3 and Day 4; predicted and produced Best Day `Day 5`, Highest `RM30.00`, Worst Day `Day 6`, and Lowest `RM5.00`
+- Fixed-iteration verification: Passed; two invalid attempts did not reduce seven valid days
+- First-day initialization verification: Passed with all-equal values keeping both associated pairs at Day 1
+- Maximum tie verification: Passed in required and student-designed tests
+- Minimum tie verification: Passed in required and student-designed tests
+- Negative-retry verification: Passed in required and student-designed tests
+- Errors encountered: Four trailing spaces remained on the final blank line; the first custom test proposal had one negative retry instead of two
+- Corrections understood: Remove whitespace-only trailing lines; distinguish attempts from final valid values; independently compare every valid value with both stored extremes
+- Understanding check: Passed all ten questions, including both possible stale-label bugs
+- Codex review: Passed static structure, range, validation, four-state initialization and synchronization, independent comparisons, both tie rules, decimals, output, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_28_purrnest_7_day_best_worst_sales_tracker.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 28 best and worst sales tracker`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 29; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- One valid record can be checked independently against both stored extremes.
+- Maximum and minimum values each require their own synchronized source label.
+- A middle value can leave all four states unchanged.
+- Strict comparisons preserve the earliest day for both maximum and minimum ties.
