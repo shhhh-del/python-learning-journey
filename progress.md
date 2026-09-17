@@ -423,6 +423,35 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_28_purrnest_7_day_best_worst_sales_tracker.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 29; wait for the Daily Learning Supervisor
 
+## Module 1 Lesson 29 Status
+
+- [x] Lesson 29: Calculating a Derived Spread from Maximum and Minimum Associated States
+
+### Lesson 29 Evidence
+
+- Date: 2026-09-17
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Exercise completed: PurrNest 7-Day Sales Range Summary
+- Final status: Passed
+- Code personally written: Yes; the student personally reused the four-state tracking flow and added the post-loop Sales Spread calculation. Codex created only the scaffold and provided progressive review guidance
+- Knowledge check: Passed all seven questions and correctly predicted `RM18.25` from `RM30.50 - RM12.25`
+- Verified skills: Reusing associated maximum/minimum states, post-loop derived metrics, Sales Spread calculation, strict tie preservation, negative retry isolation, decimal subtraction, and two-decimal reporting
+- Errors encountered: `lowest_sales` was initially misspelled as `loest_sales`; both input prompts initially contained an extra space after the required colon; the first understanding answer described calculation timing rather than what makes a metric derived; the tie explanation initially omitted its effect on associated labels
+- Corrections understood: Variable names must match exactly; exact prompts require no trailing space; a derived metric is calculated from other stored metrics; ties can leave Spread unchanged while still changing associated dates if strict comparisons are not used
+- Tests performed: Increasing -> `Day 7 / RM70.00 / Day 1 / RM10.00 / RM60.00`; decreasing -> `Day 1 / RM70.00 / Day 7 / RM10.00 / RM60.00`; mixed -> `Day 3 / RM40.00 / Day 2 / RM5.00 / RM35.00`; all equal -> both Day 1 and `RM0.00` Spread; tied extremes -> earliest Day 3 and Day 2 with `RM35.00`; negative retries and decimals -> two invalid messages and `Day 5 / RM30.10 / Day 3 / RM5.25 / RM24.85`; student-designed -> two invalid messages and `Day 3 / RM30.00 / Day 4 / RM5.00 / RM25.00`
+- Student-designed test: Input sequence `10, -10, 10, -10, 30, 5, 5, 20, 20`, giving seven valid values `10, 10, 30, 5, 5, 20, 20`; all five predictions matched actual output
+- Fixed-iteration verification: Passed; exactly seven valid days were processed
+- First-day initialization verification: Passed; all-equal input kept both associated pairs at Day 1
+- Maximum tie verification: Passed; later equal maximum did not replace the earliest Best Day
+- Minimum tie verification: Passed; later equal minimum did not replace the earliest Worst Day
+- Negative-retry verification: Passed; invalid attempts changed no state and consumed no day
+- Spread verification: Passed across zero, integer, and decimal spreads
+- Understanding check: Passed all nine questions after clarifying derived-data meaning and label effects of ties
+- Codex review result: Passed through knowledge check, static inspection, seven student-reported manual tests, fixed-iteration/first-day/both-tie/negative-retry/Spread verification, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/lesson_29_purrnest_7_day_sales_range_summary.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 30; wait for the Daily Learning Supervisor
+
 ## Friday Review #4 Status
 
 - [x] Friday Review #4: PurrNest Daily Order Processing Summary

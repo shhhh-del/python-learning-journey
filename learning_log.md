@@ -1237,3 +1237,42 @@
 - Maximum and minimum values each require their own synchronized source label.
 - A middle value can leave all four states unchanged.
 - Strict comparisons preserve the earliest day for both maximum and minimum ties.
+
+## 2026-09-17 - Module 1, Lesson 29: Derived Sales Spread
+
+### Session Evidence
+
+- Date: 2026-09-17
+- Day of week: Thursday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 29
+- Exercise: PurrNest 7-Day Sales Range Summary
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete implementation, including the derived Spread calculation. Codex created the scaffold and used progressive review only
+- Knowledge check: Passed seven questions and the required decimal Spread prediction
+- Verified skills: Derived metrics from stored states, post-loop calculation, maximum/minimum associated tracking, strict tie rules, negative input isolation, decimal subtraction, and formatted reporting
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Final valid values `10, 10, 30, 5, 5, 20, 20`, with two negative retries; predicted and produced Best Day `Day 3`, Highest `RM30.00`, Worst Day `Day 4`, Lowest `RM5.00`, and Spread `RM25.00`
+- Fixed-iteration verification: Passed; invalid attempts did not reduce seven valid days
+- First-day initialization verification: Passed with all-equal values keeping both labels at Day 1
+- Maximum tie verification: Passed in the required tied-extremes test
+- Minimum tie verification: Passed in required and student-designed tests
+- Negative-retry verification: Passed in required and student-designed tests
+- Spread verification: Passed for `RM60.00`, `RM35.00`, `RM0.00`, `RM24.85`, and `RM25.00` cases
+- Errors encountered: Misspelled `lowest_sales`; extra spaces in both exact input prompts; initially incomplete definitions of a derived metric and why tie rules still matter
+- Corrections understood: Exact variable spelling prevents `NameError`; exact output text includes whitespace; Spread is derived from finalized extremes; ties affect labels even when they do not affect numeric Spread
+- Understanding check: Passed all nine questions after two focused corrections
+- Codex review: Passed static control flow, exact prompts, range, validation, four-state tracking, post-loop Spread, ties, decimals, output, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_29_purrnest_7_day_sales_range_summary.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 29 seven-day sales range summary`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 30; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- A derived metric is calculated from finalized stored metrics rather than entered directly.
+- Sales Spread uses the finalized highest and lowest values after fixed processing.
+- Associated dates do not enter the subtraction but must still obey tie rules for accurate reporting.
+- Incorrect maximum or minimum state makes every dependent metric inaccurate.
