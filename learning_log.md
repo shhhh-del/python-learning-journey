@@ -1276,3 +1276,43 @@
 - Sales Spread uses the finalized highest and lowest values after fixed processing.
 - Associated dates do not enter the subtraction but must still obey tie rules for accurate reporting.
 - Incorrect maximum or minimum state makes every dependent metric inaccurate.
+
+## 2026-09-18 - Friday Review #7
+
+### Session Evidence
+
+- Date: 2026-09-18
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Available time: 30 minutes
+- Review: Friday Review #7
+- Exercise: PurrNest 7-Day Sales Extremes Report
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote and corrected all core implementation logic. Codex created the scaffold and used progressive hints only
+- Knowledge check: Passed eight questions and the required five-result prediction after correcting Spread to `RM35.00`
+- Verified skills: Seven-day fixed processing, repeated same-day validation, combined maximum/minimum associated tracking, independent strict comparisons, earliest tie preservation, final Spread calculation, decimals, zero spread, and exact formatted output
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Final valid values `10, 5, 20, 20, 5, 5, 30`, with two negative retries on Day 3; predicted and produced Best Day `Day 7`, Highest `RM30.00`, Worst Day `Day 2`, Lowest `RM5.00`, and Spread `RM25.00`
+- Fixed-iteration verification: Passed; invalid attempts did not consume a day
+- First-day initialization verification: Passed with all-equal values
+- Maximum tie verification: Passed in required and student-designed tests
+- Minimum tie verification: Passed in required and student-designed tests
+- Negative-retry verification: Passed, including two consecutive invalid attempts on the same day
+- Spread verification: Passed for integer, decimal, and zero differences
+- Debugging challenge: Passed; the student found reversed subtraction, identified the negative business result, calculated `-35`, and restored the correct rule
+- Errors encountered: One-time `if` validation, missing f-string prefixes, missing spaces in associated-day output, an incorrect initial Spread prediction, an incomplete debugging result, and uncertainty about the term derived metric
+- Corrections understood: Use `while` for repeated retry; f-strings resolve loop variables; exact output spacing matters; Spread is `highest - lowest`; derived metrics use finalized stored values
+- Understanding check: Passed all ten questions after one focused review
+- Codex review: Passed static control flow, exact seven records, validation, four-state synchronization, independent comparisons, ties, post-loop Spread, formatting, all seven tests, debugging, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/friday_review_07_purrnest_7_day_sales_extremes_report.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Friday Review 7 sales extremes report`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 30 or another exercise; wait for the Daily Learning Supervisor
+
+### Concepts Demonstrated
+
+- Review implementation requires rebuilding known logic without receiving the finished structure.
+- Repeated validation must use a loop, not a one-time condition.
+- Associated values and labels must remain synchronized for both extremes.
+- Finalized raw states support a reliable derived Sales Spread.

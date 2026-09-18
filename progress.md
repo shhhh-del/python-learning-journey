@@ -452,6 +452,36 @@ Verified skills:
 - Files created or modified: `exercises/module_01/lesson_29_purrnest_7_day_sales_range_summary.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 30; wait for the Daily Learning Supervisor
 
+## Friday Review #7 Status
+
+- [x] Friday Review #7: PurrNest 7-Day Sales Extremes Report
+
+### Friday Review #7 Evidence
+
+- Date: 2026-09-18
+- Day of week: Friday
+- Session type: Review, Debugging, and Knowledge-Check Day
+- Exercise completed: PurrNest 7-Day Sales Extremes Report
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete review implementation. Codex created the scaffold and provided progressive code-review hints only
+- Knowledge check: Passed all eight questions after correcting Sales Spread from `8` to `35`; correctly predicted both associated extremes for the required seven-day sequence
+- Verified skills: Fixed seven-day iteration, repeated negative validation, first-day four-state initialization, independent maximum/minimum comparisons, synchronized associated labels, earliest-wins ties, post-loop Sales Spread, decimal handling, zero-spread handling, exact prompts, and formatted output
+- Errors encountered: Used `if` instead of `while` for repeated validation; omitted `f` from both dynamic day prompts; omitted the space between `Day` and the associated day number; initially predicted Spread as `8`; first debugging explanation omitted the exact `-35` result; needed a reminder of the meaning of a derived metric
+- Corrections understood: Validation must repeat until valid; f-strings interpolate the current day; exact output includes required spaces; Spread is highest minus lowest; reversed subtraction produces a meaningless negative difference; derived metrics are calculated from other finalized states
+- Tests performed: Increasing -> `Day 7 / RM70.00 / Day 1 / RM10.00 / RM60.00`; decreasing -> `Day 1 / RM70.00 / Day 7 / RM10.00 / RM60.00`; middle extremes -> `Day 3 / RM40.00 / Day 2 / RM5.00 / RM35.00`; tied extremes -> same result with earliest labels preserved; all equal -> both Day 1 and `RM0.00`; negative retries and decimals -> two invalid messages and `Day 5 / RM30.10 / Day 3 / RM5.25 / RM24.85`; student-designed -> two invalid messages and `Day 7 / RM30.00 / Day 2 / RM5.00 / RM25.00`
+- Student-designed test: Input sequence `10, 5, -10, -10, 20, 20, 5, 5, 30`, producing valid values `10, 5, 20, 20, 5, 5, 30`; all five predictions matched actual output
+- Fixed-iteration verification: Passed; exactly seven valid sales records were processed
+- First-day initialization verification: Passed; all-equal input kept both pairs at Day 1
+- Maximum tie verification: Passed; later equal maximums preserved the earliest Best Day
+- Minimum tie verification: Passed; later equal minimums preserved the earliest Worst Day
+- Negative-retry verification: Passed; repeated invalid attempts stayed on the same day and changed no state
+- Spread verification: Passed across integer, decimal, and zero-spread cases
+- Debugging challenge: Passed; identified reversed subtraction, explained the invalid negative result, calculated `-35`, and restored `highest_sales - lowest_sales`
+- Understanding check: Passed all ten questions after reviewing the definition of a derived metric and why finalized extremes are required
+- Codex review result: Passed through knowledge check, static inspection, seven student-reported manual tests, custom prediction, fixed-iteration/first-day/both-tie/negative-retry/Spread verification, debugging challenge, understanding check, AGENTS.md and scope review, prohibited-feature review, and sensitive-information review
+- Files created or modified: `exercises/module_01/friday_review_07_purrnest_7_day_sales_extremes_report.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Lesson 30 or another exercise; wait for the Daily Learning Supervisor
+
 ## Friday Review #4 Status
 
 - [x] Friday Review #4: PurrNest Daily Order Processing Summary
