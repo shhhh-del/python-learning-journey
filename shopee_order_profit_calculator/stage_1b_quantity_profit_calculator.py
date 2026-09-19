@@ -1,6 +1,6 @@
 """
 PurrNest Shopee Order Profit Calculator
-Version 1 - Stage 1B.2: Multi-Order Session Summary
+Version 1 - Stage 1B.3: Best & Worst Order Profit Tracking
 
 Business problem:
 A seller may calculate multiple Shopee orders in one working session, with
@@ -55,6 +55,7 @@ You must personally write and understand the core implementation.
 orders_processed=0
 session_total_sales_revenue=0.0
 session_total_net_profit=0.0
+
 
 process_another_order ="yes"
 while process_another_order=="yes":
@@ -113,6 +114,18 @@ while process_another_order=="yes":
         orders_processed+=1
         session_total_sales_revenue+=total_sales_revenue
         session_total_net_profit+=net_profit
+        if orders_processed==1:
+            highest_net_profit=net_profit
+            highest_profit_order_number=orders_processed
+            lowest_net_profit=net_profit
+            lowest_profit_order_number=orders_processed
+        else:
+            if net_profit>highest_net_profit:
+                highest_net_profit=net_profit
+                highest_profit_order_number=orders_processed
+            if net_profit<lowest_net_profit:
+                lowest_net_profit=net_profit
+                lowest_profit_order_number=orders_processed
         process_another_order = input("Process Another Order? (yes/no):")
 
 
@@ -120,3 +133,7 @@ print("Session Summary")
 print(f"Orders Processed: {orders_processed}")
 print(f"Total Sales Revenue: RM{session_total_sales_revenue:.2f}")
 print(f"Total Net Profit: RM{session_total_net_profit:.2f}")
+print(f"Highest Profit Order: Order {highest_profit_order_number}")
+print(f"Highest Net Profit: RM{highest_net_profit:.2f}")
+print(f"Lowest Profit Order: Order {lowest_profit_order_number}")
+print(f"Lowest Net Profit: RM{lowest_net_profit:.2f}")

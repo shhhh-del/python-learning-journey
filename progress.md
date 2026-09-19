@@ -1019,6 +1019,29 @@ Verified skills:
 - Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start another feature or Stage 1C; wait for the Daily Learning Supervisor / SaaS Product Builder
 
+## PurrNest Shopee Order Profit Calculator Version 1 - Stage 1B.3 Status
+
+- [x] Stage 1B.3: Best & Worst Order Profit Tracking
+
+### Stage 1B.3 Evidence
+
+- Date: 2026-09-19
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Business feature completed: Highest and lowest Net Profit tracking with associated Order Numbers across a multi-order session
+- Final status: Passed
+- Code personally written: Yes; the student personally added first-valid-order initialization, independent maximum/minimum comparisons, associated order-number updates, and final summary output. Codex provided progressive design and review guidance only
+- Verified features: Preserved Stage 1B.2 behavior; first valid order initializes both profit pairs; strict highest/lowest comparisons; earliest-wins ties; all-loss handling; invalid-retry isolation; synchronized order-number labels; existing order counter and session accumulators; final four-line profit-extremes summary
+- Skills applied: Repeated validation, multi-order `while` processing, counter and accumulators, running maximum/minimum, associated-state tracking, first-record initialization without artificial zero, independent comparisons, strict tie handling, negative-profit reasoning, and two-decimal formatting
+- Errors encountered: Initially reused day/sales variable concepts instead of profit/order concepts; treated negative Net Profit as invalid; reversed the incorrect RM0.00 and actual RM-5.00 values during the all-loss explanation; initially initialized new profit states to zero; misspelled `Profit` as `Profrit`; first Highest Tie test used incorrect inputs; the file header still identified Stage 1B.2
+- Corrections understood: Negative input and negative Net Profit have different business meanings; the first real order must establish both profit pairs; among losses, the value closest to zero is highest; associated order numbers update with their values; strict comparisons preserve the earliest order; session results belong after termination; documentation must match the implemented version
+- Tests performed: One profitable order -> both pairs `Order 1 / RM8.00`; three distinct profits `RM4.00, RM10.00, RM-1.00` -> Highest Order 2 and Lowest Order 3 with session totals `RM35.00 / RM13.00`; highest tie `RM10.00, RM5.00, RM10.00` -> earliest Order 1; lowest tie `RM-5.00, RM5.00, RM-5.00` -> earliest Order 1; all-loss session `RM-5.00, RM-2.00, RM-10.00` -> Highest Order 2 and Lowest Order 3 with no false RM0.00; invalid Quantity retry -> one processed Order 1 with both pairs RM8.00; mixed four-order session -> `RM4.00, RM10.00, RM-5.00, RM2.00`, one invalid Packaging retry, totals `RM47.00 / RM11.00`, Highest Order 2 and Lowest Order 3
+- Student-designed/prediction note: The supplied session designs were run and verified. The student explicitly changed the process during testing to remove further pre-run predictions; this waiver is recorded rather than claiming prediction evidence
+- Understanding check: Passed all ten questions after reviewing running maximum terminology and the all-loss zero-initialization failure
+- Codex review result: Passed Stage 1B.2 preservation, first-order initialization, both associated state pairs, independent strict comparisons, both tie cases, all-loss behavior, invalid-retry isolation, session counters/accumulators, natural termination, exact final outputs, formatting, scope, and sensitive-information checks
+- Files created or modified: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Next confirmed task: Do not start Stage 1C or another feature; wait for the SaaS Product Builder
+
 ## Review Approach
 
 - Use a short explanation and one assessment exercise for familiar topics.

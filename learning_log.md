@@ -1316,3 +1316,40 @@
 - Repeated validation must use a loop, not a one-time condition.
 - Associated values and labels must remain synchronized for both extremes.
 - Finalized raw states support a reliable derived Sales Spread.
+
+## 2026-09-19 - PurrNest Profit Calculator Stage 1B.3
+
+### Session Evidence
+
+- Date: 2026-09-19
+- Day of week: Saturday
+- Session type: Shopee / TikTok Business Application Day
+- Available time: 30 minutes
+- Tool: PurrNest Shopee Order Profit Calculator
+- Previous version: Stage 1B.2 Multi-Order Session Summary
+- Current feature: Stage 1B.3 Best & Worst Order Profit Tracking
+- Final status: Passed
+- Code personally written: Yes; the student personally implemented all new tracking logic and summary output. Codex reviewed and provided progressive guidance only
+- Verified features: Highest Net Profit plus Order Number; Lowest Net Profit plus Order Number; first-valid-order initialization; independent later comparisons; earliest-wins ties; all-loss correctness; invalid retry isolation; preserved per-order and session calculations
+- Skills applied: Running extrema, associated labels, session counters, accumulators, repeated validation, first-record branching, strict comparison, and formatted reporting
+- Tests: Seven functional scenarios passed: one order; three distinct profits; highest tie; lowest tie; all losses; invalid Quantity retry; and a four-order mixed session with invalid Packaging retry
+- Student-designed test: Mixed four-order session produced profits `RM4.00, RM10.00, RM-5.00, RM2.00`, Orders Processed `4`, Total Sales `RM47.00`, Total Net Profit `RM11.00`, Highest Order `2 / RM10.00`, and Lowest Order `3 / RM-5.00`
+- Prediction note: The student explicitly requested that further pre-run prediction steps be removed; functional results and understanding were verified, and no unperformed prediction is claimed
+- Errors encountered: Sales/day terminology carried into order-profit design; negative profit was confused with invalid input; all-loss maximum values were reversed; artificial zero initialization was used first; one output label was misspelled; one tie test was entered incorrectly; version documentation was initially stale
+- Corrections understood: Losses are valid calculated orders; real first-order profit is the comparison baseline; `RM-5.00` is higher than `RM-10.00`; value/label pairs update together; strict comparisons preserve earliest orders; final summary follows session termination
+- Understanding check: Passed all ten questions after focused corrections
+- Codex review: Passed preservation, formulas, validation, session flow, initialization, extrema, labels, ties, all-loss case, invalid isolation, formatting, version documentation, scope, and sensitive-information checks
+- Scope review: Passed; no Stage 1C, functions, collections, files, APIs, integrations, sorting, `max()`, `min()`, GUI, dashboard, or SaaS feature added
+- Files changed: `shopee_order_profit_calculator/stage_1b_quantity_profit_calculator.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Add Stage 1B.3 order profit extremes tracking`
+- Git commit status: Not yet committed
+- Git push status: Not yet pushed
+- Next confirmed task: Do not start Stage 1C or another feature; wait for the SaaS Product Builder
+
+### Concepts Demonstrated
+
+- The first real business record is a safer extrema baseline than an arbitrary zero.
+- A negative Net Profit is a valid loss result, not an invalid input.
+- Profit extrema and their Order Numbers are synchronized associated states.
+- Session-level extrema are finalized only after repeated order processing ends.
