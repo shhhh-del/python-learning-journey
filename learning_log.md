@@ -1353,3 +1353,46 @@
 - A negative Net Profit is a valid loss result, not an invalid input.
 - Profit extrema and their Order Numbers are synchronized associated states.
 - Session-level extrema are finalized only after repeated order processing ends.
+
+## 2026-09-22 - Module 1, Lesson 30: Final Integration Capstone
+
+### Session Evidence
+
+- Date: 2026-09-22
+- Day of week: Tuesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes
+- Lesson: Module 1 Lesson 30
+- Exercise: PurrNest 7-Day Sales Analytics Capstone
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the complete nine-metric integration. Codex created the scaffold and used progressive review guidance only
+- Knowledge check: Passed ten questions and the required nine-output prediction after correcting Average rounding
+- Verified skills: Seven-day `for + range()`, inner `while` validation, Total Sales accumulator, Target Days conditional counter, inclusive boundary, four synchronized associated states, independent extrema checks, first-day and tie rules, Average, Rate, Spread, and formatted final reporting
+- Manual tests: All seven required tests passed based on student-run output
+- Student-designed test: Valid values `10, 10, 20, 20, 5, 5, 5`, with three negative retries on Day 3; predicted and produced all nine outputs: Total `RM75.00`, Average `RM10.71`, Target Days `2`, Rate `28.57%`, Best `Day 3 / RM20.00`, Worst `Day 5 / RM5.00`, Spread `RM15.00`
+- Fixed-iteration verification: Passed; invalid retries did not reduce seven valid records
+- Boundary verification: Passed at RM19.99, RM20.00, and RM20.01
+- First-day initialization verification: Passed with all-zero data
+- Maximum tie verification: Passed in core, tied-extreme, and custom cases
+- Minimum tie verification: Passed in core, tied-extreme, decimal, and custom cases
+- Negative-retry verification: Passed with two and three retry scenarios
+- Average verification: Passed, including standard rounding to `RM17.86`
+- Rate verification: Passed, including `42.86%` and `28.57%`
+- Spread verification: Passed, including `RM0.00` and `RM24.85`
+- Debugging challenge: Passed; the student explained why assignment loses prior Total Sales and restored accumulation
+- Errors encountered: Six raw states were initially uninitialized; one Average prediction was truncated; two target metrics were initially missing from a prediction; derived-metric explanation initially focused on timing
+- Corrections understood: Initialize before use; distinguish accumulation from replacement; `.2f` rounds; complete analytics require all outputs; derived metrics are calculated from finalized raw metrics
+- Understanding check: Passed all twelve questions after one focused correction
+- Codex review: Passed static control flow, all raw/associated/derived states, validation, boundary, ties, formatting, seven tests, debugging, scope, prohibited-feature, and sensitive-information checks
+- Files changed: `exercises/module_01/lesson_30_purrnest_7_day_sales_analytics_capstone.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Lesson 30 sales analytics capstone`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not introduce Lesson 31 or Module 2; wait for the 30-Lesson Technical + Full Portfolio Review and supervisor decision
+
+### Concepts Demonstrated
+
+- One fixed processing flow can maintain accumulated, conditional, and associated raw states together.
+- Invalid retries must be isolated before every business metric update.
+- Strict independent extrema checks preserve synchronized earliest labels.
+- Finalized raw states support multiple reliable derived metrics.
