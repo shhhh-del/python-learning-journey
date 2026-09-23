@@ -6,7 +6,8 @@
 
 ## Current Module
 
-- [ ] Module 1: Python Foundations
+- [x] Module 1: Python Foundations - FORMALLY COMPLETED (2026-09-23)
+- [ ] Module 2: NOT STARTED
 
 ## Completed Lessons
 
@@ -18,6 +19,28 @@
 - [x] Module 1 – Lesson 06: Shopee Stock Input Validator
 - [x] Module 1 — Lesson 07: Shopee Inventory Action Checker
 - [x] Module 1 — Lesson 08: Business Rule Priority Review
+- [x] Module 1 - Lesson 09: Using `float()` for Business Calculations
+- [x] Module 1 - Lesson 10: Multiple Business Inputs and Combined Calculations
+- [x] Module 1 - Lesson 11: Multiple Business Outputs and Percentage Calculation
+- [x] Module 1 - Lesson 12: Business Input Validation with Multiple Money Fields
+- [x] Module 1 - Lesson 13: Introduction to `while` Loops
+- [x] Module 1 - Lesson 14: Using `while` Loops for Input Validation
+- [x] Module 1 - Lesson 15: `while` Loop with an Accumulator
+- [x] Module 1 - Lesson 16: Counter Pattern with `while`
+- [x] Module 1 - Lesson 17: Combining Counter and Accumulator
+- [x] Module 1 - Lesson 18: Average from Counter and Accumulator
+- [x] Module 1 - Lesson 19: Tracking the Highest Value
+- [x] Module 1 - Lesson 20: Tracking the Lowest Value
+- [x] Module 1 - Lesson 21: Tracking Highest and Lowest Together
+- [x] Module 1 - Lesson 22: Calculating a Value Spread
+- [x] Module 1 - Lesson 23: Conditional Counter
+- [x] Module 1 - Lesson 24: Introduction to `for` and `range()`
+- [x] Module 1 - Lesson 25: Conditional Counter inside `for`
+- [x] Module 1 - Lesson 26: Associated State Tracking
+- [x] Module 1 - Lesson 27: Associated Minimum State Tracking
+- [x] Module 1 - Lesson 28: Combined Associated-State Tracking
+- [x] Module 1 - Lesson 29: Derived Sales Spread
+- [x] Module 1 - Lesson 30: Final Integration Capstone
 
 ## Verified Skills
 
