@@ -1432,3 +1432,33 @@
 
 - MODULE 1 - FORMALLY COMPLETED
 - Suggested Git commit: `Complete Module 1 final technical and portfolio review`
+
+## 2026-09-24 to 2026-09-25 - Module 2, Lesson 01: Introduction to Lists
+
+### Standardized Lesson Summary
+
+- Date: 2026-09-24 to 2026-09-25
+- Day: Thursday to Friday; the Thursday Core Python Learning session was completed the following day
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 01 - Introduction to Lists - Grouping Related Data
+- Exercise: PurrNest 5-SKU Price Editor
+- Final status: Passed
+- Code personally written: Yes; the student personally created the List, selected indexes, read elements, validated input, replaced SKU 3, and formatted all outputs. Codex created only the instruction scaffold and used progressive hints
+- New concepts: List literal syntax, elements, zero-based indexing, indexed reading, and indexed replacement
+- Knowledge check: Passed after correcting that a List groups multiple related values in one variable and that `[]` represents the List while contained values are elements; all three index predictions were correct
+- Manual tests: 6 / 6 passed
+- Student-designed test: Input `20`; predicted and produced SKU 1 `RM12.90`, SKU 3 `RM20.00`, and SKU 5 `RM15.50`
+- Index reading verification: Passed; indexes `0`, `2`, and `4` correctly displayed SKU 1, SKU 3, and SKU 5
+- Index replacement verification: Passed; `SKU[2]` alone was replaced, while SKU 1 and SKU 5 remained unchanged
+- Negative-retry verification: Passed; inputs `-5`, `-1`, and `13.25` produced two invalid messages and finally updated SKU 3 to `RM13.25`
+- Index debugging check: Passed; the student explained that `cities[2]` changes the third element and that `cities[1]` is required for the second element
+- Understanding check: Passed after distinguishing the whole List (`prices`) from one selected element (`prices[2]`)
+- Carry-forward weakness observation: Exact output labels required one correction; conceptual vocabulary required clarification. Validation-loop recall was correct without reteaching. Maximum/minimum comparison direction did not arise naturally in this lesson
+- Errors encountered: Non-Python brackets initially caused invalid List syntax; the first print began on the same line; the first version stopped before indexed replacement and final output; output labels initially omitted `Price`; the specified `19.99` test was first run with `19.90`
+- Corrections understood: Use English square brackets for List literals; separate statements by line; assign to one indexed element after validation; preserve exact output contracts; run the specified test data exactly; distinguish a whole List from one element
+- Codex review: Passed List syntax, five-value order, indexes, reads, SKU 3 replacement, preservation of other elements, repeated negative validation, two-decimal formatting, six manual tests, student prediction, debugging, understanding, student ownership, prohibited-concept scope, and AGENTS.md compliance
+- Files changed: `exercises/module_02/lesson_01_purrnest_5_sku_price_editor.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Module 2 Lesson 01 list fundamentals`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not start Module 2 Lesson 02; wait for the Daily Learning Supervisor / Roadmap Manager
