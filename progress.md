@@ -16,6 +16,16 @@
 - Module 1 Final Review initial closed-book recall: 7 / 12
 - Next confirmed task: Do not start Module 2 Lesson 02; wait for the Daily Learning Supervisor / Roadmap Manager
 
+### Current Saturday Business Tool
+
+- [x] PurrNest Shopee Product Cost and Pricing Tracker - Version 0.1
+- Feature: 5-SKU Selling Price Editor
+- Final status: Passed
+- Data status: Simulated test prices only
+- Verified transfer: One five-price List, SKU-number-to-index conversion, indexed reading, indexed replacement, SKU range validation, non-negative price validation, and two-decimal money formatting
+- Previous PurrNest Shopee Order Profit Calculator: Stages 1A, 1B, 1B.1, 1B.2, and 1B.3 remain Passed and unchanged
+- Next confirmed task: Do not start Version 0.2 or Profit Calculator Stage 1C; wait for the SaaS Product Builder
+
 ## Completed Lessons
 
 - [x] Module 1 — Lesson 01: Foundations Assessment
