@@ -12,9 +12,10 @@
 ### Module 2 Current Status
 
 - [x] Module 2 - Lesson 01: Introduction to Lists - Grouping Related Data
-- Current topic: List fundamentals, zero-based indexing, indexed reading, and indexed replacement
+- [x] Module 2 - Lesson 02: Iterating Through a List with `for`
+- Current topic: Direct List iteration, loop-variable tracing, accumulation, and post-loop average calculation
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 02; wait for the Daily Learning Supervisor / Roadmap Manager
+- Next confirmed task: Do not start Module 2 Lesson 03; wait for the Daily Learning Supervisor / Roadmap Manager
 
 ### Current Saturday Business Tool
 
