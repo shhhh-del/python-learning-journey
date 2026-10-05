@@ -1520,3 +1520,35 @@
 - Suggested Git commit: `Complete Module 2 Lesson 02 list iteration`
 - Git commit/push status: Not yet committed or pushed
 - Next confirmed task: Do not start Module 2 Lesson 03; wait for the Daily Learning Supervisor / Roadmap Manager
+
+## 2026-10-05 - Module 2, Lesson 03: Building a List Dynamically with `append()`
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-05
+- Day: Monday
+- Tracker ID: JR-19
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 03 - Building a List Dynamically with `append()`
+- Exercise: PurrNest 5-SKU Price Collector
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the empty List, fixed five-SKU input loop, repeated validation, append placement, direct processing loop, accumulator, Average, and formatted output. Codex created only the instruction scaffold and provided progressive review guidance
+- New concept: Creating an empty List and adding one valid element to its end with `append()`
+- Knowledge check: Passed after clarifying the precise meaning of an empty List and representing the post-append result as a complete List; final-order prediction `[5, 8, 12]` was correct
+- Manual tests: 6 / 6 passed
+- Student-designed test: Input sequence `1, 2, 3, -4, -5, 6, 0`; predicted and produced two invalid messages, stored order `1, 2, 3, 6, 0`, Total `RM12.00`, and Average `RM2.40`
+- Append verification: Passed; one final valid price was appended for each SKU and all five elements were stored at the List end in collection order
+- Invalid-data exclusion verification: Passed; negative attempts were rejected before append and never appeared in Stored Price output; zero was accepted
+- Processing order verification: Passed across all tests; direct iteration reproduced append order exactly
+- Accumulator verification: Passed after adding the initially omitted `total_price` initialization before direct iteration
+- Average verification: Passed; Average used the finalized Total divided by five after processing
+- Debugging check: Passed after tracing that append-before-validation stores the invalid `-5` and fails to append the later valid `10`
+- Understanding check: Passed after clarifying that one append per SKU prevents missing or duplicate elements and yields exactly five valid prices
+- Carry-forward weakness observation: Conceptual vocabulary precision appeared when `[]` was first described only as a List rather than an empty List. Validation structure was recalled, but the initial `<= 0` boundary incorrectly rejected valid zero and was self-corrected during the first code revision. Exact output labels were correct. Maximum/minimum direction did not arise
+- Corrections understood: `[]` is an existing List with no elements; append adds one element to the end; initialize an accumulator before use; zero is valid under `>= 0`; append only once after validation; trace actual execution order rather than assuming control returns to an earlier statement
+- Codex review: Passed empty-List creation, fixed five-record collection, repeated same-SKU validation, append placement, exact element count, invalid exclusion, order preservation, direct iteration, accumulator, post-loop Average, formatting, student ownership, prohibited-concept review, AGENTS.md compliance, and scope compliance
+- Files changed: `exercises/module_02/lesson_03_purrnest_5_sku_price_collector.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Module 2 Lesson 03 append fundamentals`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not start Module 2 Lesson 04; wait for the Daily Learning Supervisor / Roadmap Manager
