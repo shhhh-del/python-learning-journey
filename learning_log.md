@@ -1552,3 +1552,36 @@
 - Suggested Git commit: `Complete Module 2 Lesson 03 append fundamentals`
 - Git commit/push status: Not yet committed or pushed
 - Next confirmed task: Do not start Module 2 Lesson 04; wait for the Daily Learning Supervisor / Roadmap Manager
+
+## 2026-10-06 - Module 2, Lesson 04: Measuring a List with `len()`
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-06
+- Day: Tuesday
+- Tracker ID: JR-19
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 04 - Measuring a List with `len()`
+- Exercise: PurrNest Dynamic SKU Price Summary
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote SKU-count validation, dynamic collection, price validation, append placement, `len()` reporting, direct processing, accumulation, length-based Average, and formatted output. Codex created only the instruction scaffold and provided progressive staged guidance
+- New concept: Using `len(list)` to obtain the actual number of stored elements
+- Knowledge check: 8 / 8 correct; the follow-up prediction was corrected from element values to first index `0` and last index `3`
+- Manual tests: 6 / 6 passed
+- Student-designed test: Input sequence `0, 5, -1, 10, -2, 20, 0, 20, 50`; predicted and produced one invalid-count message, two invalid-price messages, five stored elements in order `10, 20, 0, 20, 50`, Total `RM100.00`, and Average `RM20.00`
+- `len()` verification: Passed; Stored SKU Count came from `len(prices)` and Average used `total_price / len(prices)`
+- Length-vs-index verification: Passed after correcting that length `3` has valid indexes `0, 1, 2` and last index equals `len(prices) - 1`
+- Dynamic collection verification: Passed for requested counts `1`, `3`, and `5`, including repeated invalid-count attempts before collection
+- Invalid-data exclusion verification: Passed; invalid counts did not start collection and negative prices were not appended; zero remained valid
+- Accumulator verification: Passed; `total_price` was initialized once before direct iteration and updated from every stored price
+- Average verification: Passed across one-, three-, and five-element Lists using actual List length
+- Debugging check: Passed after correcting the last-index formula and explaining that `prices[len(prices)]` attempts a nonexistent index and stops with an error
+- Understanding check: Passed after clarifying length as element count, actual length as the Average denominator, invalid-data exclusion from length, and requested count versus actual stored count
+- Carry-forward weakness observation: Validation-loop recall and indentation appeared naturally: the first attempt incorrectly placed count input inside a fixed `for`, then placed collection inside the invalid-count `while`, and temporarily placed append outside the collection loop. Each was corrected through progressive hints. Conceptual vocabulary precision required clarification for length versus index and requested versus stored count. Exact output labels were correct. Maximum/minimum direction did not arise
+- Corrections understood: Validate the requested count before collection; execute collection after the count-validation loop; append once inside the collection loop but after price validation; `len()` reports element count rather than last index; last index is length minus one; use actual stored length for dynamic Average calculations
+- Codex review: Passed count validation, empty List, requested-size collection, valid-only append, direct iteration, `len()` use, actual Stored SKU Count, length-based Average, accumulator initialization, formatting, student ownership, prohibited-concept review, AGENTS.md compliance, and scope compliance
+- Files changed: `exercises/module_02/lesson_04_purrnest_dynamic_sku_price_summary.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Module 2 Lesson 04 len fundamentals`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not start Module 2 Lesson 05; wait for the Daily Learning Supervisor / Roadmap Manager
