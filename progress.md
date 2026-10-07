@@ -15,9 +15,10 @@
 - [x] Module 2 - Lesson 02: Iterating Through a List with `for`
 - [x] Module 2 - Lesson 03: Building a List Dynamically with `append()`
 - [x] Module 2 - Lesson 04: Measuring a List with `len()`
-- Current topic: Actual List size, length versus last index, dynamic collection counts, and length-based averages
+- [x] Module 2 - Lesson 05: Introduction to Dictionaries - One Structured Record
+- Current topic: Dictionary key-value pairs, key-based reading, and replacement of existing field values
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 05; wait for the Daily Learning Supervisor / Roadmap Manager
+- Next confirmed task: Do not start Module 2 Lesson 06; wait for the Daily Learning Supervisor / Roadmap Manager
 
 ### Current Saturday Business Tool
 

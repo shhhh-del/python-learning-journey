@@ -1585,3 +1585,34 @@
 - Suggested Git commit: `Complete Module 2 Lesson 04 len fundamentals`
 - Git commit/push status: Not yet committed or pushed
 - Next confirmed task: Do not start Module 2 Lesson 05; wait for the Daily Learning Supervisor / Roadmap Manager
+
+## 2026-10-07 - Module 2, Lesson 05: Introduction to Dictionaries
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-07
+- Day: Wednesday
+- Tracker ID: JR-19
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 05 - Introduction to Dictionaries - Representing One Structured Record with Key-Value Pairs
+- Exercise: PurrNest Single SKU Product Record
+- Final status: Passed
+- Code personally written: Yes; the student personally created the Dictionary, read four fields by key, validated price and stock, replaced two values by key, and displayed the final record. Codex created only the instruction scaffold and provided progressive review guidance
+- New concept: One Dictionary record containing named key-value pairs, with key-based reading and replacement
+- Knowledge check: Initial score 4 / 8; passed after distinguishing key from value and explaining that assigning `product["price"]` replaces only that field's value. All three key-reading predictions were correct
+- Manual tests: 6 / 6 passed
+- Student-designed test: Inputs `-2, 10, -3, 2`; predicted and produced final SKU `PN001`, Name `Cat Brush`, Price `RM10.00`, and Stock `2`
+- Dictionary creation verification: Passed; exactly one Dictionary contained the required `sku`, `name`, `price`, and `stock` fields with correct initial values
+- Key reading verification: Passed after adding exact labels; all initial and final values were retrieved through Dictionary keys rather than hard-coded business values
+- Key replacement verification: Passed; only `price` and `stock` values were replaced, while `sku` and `name` remained unchanged
+- Invalid-data verification: Passed; repeated negative price and stock attempts were rejected, and zero values were accepted
+- Key debugging check: Passed; the student explained that the key on the assignment's left side determines which field changes and selected `"price"` instead of `"stock"`
+- Understanding check: Passed after clarifying that Lists store similar values while one Dictionary gives named fields to different data about one record
+- Carry-forward weakness observation: Exact output labels appeared naturally when the initial SKU and Product Name labels were omitted, then corrected. Conceptual vocabulary precision required correction for Dictionary, key, and value. Validation-loop placement reappeared when key assignments were placed inside the invalid-input loops, then corrected. Maximum/minimum direction did not arise
+- Corrections understood: A key is a field name or label; a value is the stored data; initial/final outputs should read by key; validated values must be assigned after the validation loop; changing one key's value preserves unrelated fields; assignment uses the key on the left side regardless of the source variable name
+- Codex review: Passed one-record scope, Dictionary syntax, four required keys/values, key-based reads, exact outputs, price-only and stock-only replacement, repeated negative validation, zero behavior, two-decimal formatting, student ownership, prohibited-concept review, AGENTS.md compliance, and scope compliance
+- Files changed: `exercises/module_02/lesson_05_purrnest_single_sku_product_record.py`, `progress.md`, and `learning_log.md`
+- Secrets/private-data check: No secrets or private data found
+- Suggested Git commit: `Complete Module 2 Lesson 05 dictionary fundamentals`
+- Git commit/push status: Not yet committed or pushed
+- Next confirmed task: Do not start Module 2 Lesson 06; wait for the Daily Learning Supervisor / Roadmap Manager
