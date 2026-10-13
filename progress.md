@@ -16,9 +16,10 @@
 - [x] Module 2 - Lesson 03: Building a List Dynamically with `append()`
 - [x] Module 2 - Lesson 04: Measuring a List with `len()`
 - [x] Module 2 - Lesson 05: Introduction to Dictionaries - One Structured Record
-- Current topic: Dictionary key-value pairs, key-based reading, and replacement of existing field values
+- [x] Module 2 - Lesson 06: Iterating Through a Dictionary by Key
+- Current topic: Dictionary key iteration and current-key value retrieval - Passed (2026-10-13)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 06; wait for the Daily Learning Supervisor / Roadmap Manager
+- Next confirmed task: Do not start Module 2 Lesson 07; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1148,3 +1149,38 @@ Verified skills:
 - Codex review result: Passed through the corrected six-question knowledge check, static code inspection, five student-reported manual tests, debugging challenge, understanding check, scope review, and secrets/private-data review
 - Files created or modified: `exercises/module_01/friday_review_03_purrnest_restock_quantity_validator.py`, `progress.md`, and `learning_log.md`
 - Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
+
+## 2026-10-13 - Module 2, Lesson 06: Iterating Through a Dictionary by Key
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-13
+- Day: Tuesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (student-provided budget; elapsed duration not measured)
+- Tracker ID: JR-19
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 06 - Iterating Through a Dictionary by Key
+- Exercise: PurrNest Product Record Inspector
+- Final status: Passed
+- Code personally written: Yes; the student personally wrote the single Dictionary, direct key iteration, current-value retrieval, price-specific output, second processing pass, counter initialization/update, and final count. Codex reviewed and guided without editing the exercise code
+- New concept: Direct Dictionary key iteration with for key in product and current-value retrieval with product[key]
+- Knowledge check: Passed after clarifying that product[key] reads the value corresponding to the current key; all three key/value trace pairs were correct. This check was completed after coding to recover the omitted session step, rather than claiming a pre-coding assessment
+- Manual tests: 6 / 6 passed through student-reported manual output. Tests 1/2: original record displayed sku/name/price/stock, PN001/Cat Brush/RM15.90/20, and Total Fields: 4; Test 3: stock changed to 5 and output changed automatically; Test 4: name changed to Cat Comb and output changed automatically; Test 5: PN002/Cat Bowl/RM12.50/8 matched the pre-run prediction; Test 6: PN004/Dog Bowl/RM20.50/15 matched the student-designed pre-run prediction. Header appeared in Tests 5/6 and is present in final code; earlier pasted excerpts omitted the header
+- Student-designed test: Changed all four values while retaining the same four keys; predicted key order sku/name/price/stock, corresponding values PN004/Dog Bowl/RM20.50/15, and Total Fields: 4 before execution; actual output matched
+- Dictionary iteration verification: Passed; direct key iteration over exactly one Dictionary processes all fields without separate fixed-key reads
+- Key/value retrieval verification: Passed after correction; key contains the field name and product[key] retrieves its associated value
+- Processing order verification: Passed; student outputs and predictions used insertion order sku/name/price/stock with one visit per field in each pass
+- Field counter verification: Passed after moving counter initialization before the second loop; update remains inside the loop and final output after it; all reported tests yielded 4
+- Errors encountered: Counter initially reset inside the second loop; debugging prediction initially repeated name for both iterations and initially used product rather than the example variable device; understanding initially confused the current key with its value and implied direct Dictionary iteration retrieved both automatically
+- Corrections understood: Initialize a counter once before iteration; direct Dictionary iteration yields field names; use the appropriate Dictionary variable and current key to read a value; product["price"] selects a fixed field while product[key] selects the current field; changed stored values are read automatically; List direct iteration yields elements while Dictionary direct iteration yields keys
+- Debugging check: Passed after progressive hints; identified printing key instead of value, corrected retrieval to device[key], and ultimately traced incorrect Value outputs as name then stock
+- Understanding check: Passed after guided corrections; demonstrated whole-record meaning, field-name versus stored-value distinction, current-key retrieval, fixed versus variable key access, value-change behavior, four-field iteration count, List versus Dictionary iteration, and avoiding repeated per-field output code
+- Carry-forward weakness observation: Conceptual vocabulary precision required repeated correction for key versus value. Counter initialization placement also required correction. Exact output labels in supplied field outputs were correct. Validation-loop recall and maximum/minimum comparison direction did not arise; no extra remediation assigned
+- Codex review: Passed single-record scope, four retained keys, direct iteration, product[key] retrieval, automatic value changes, price-only RM/.2f formatting, second-pass count, initialization/update/output placement, student ownership, prohibited-concept review, AGENTS.md compliance, and scope compliance. Initial required values were manually tested; final file intentionally retains the student-designed Test 6 values
+- Tests performed by Codex: Static inspection of initial and final code and comparison of student-provided test output/predictions. Automated Python execution was unavailable because the shell process could not initialize; no automated execution claimed
+- Files changed: exercises/module_02/lesson_06_purrnest_product_record_inspector.py (student changes only), progress.md, learning_log.md
+- Secrets/private-data check: No secrets or private data found in the reviewed exercise or added session record; values are simulated product test data. All pending Git changes and the new exercise were reviewed before staging; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 06 dictionary iteration
+- Git commit/push status: Student explicitly authorized commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 07; wait for the Daily Learning Supervisor
