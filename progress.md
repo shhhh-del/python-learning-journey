@@ -17,9 +17,10 @@
 - [x] Module 2 - Lesson 04: Measuring a List with `len()`
 - [x] Module 2 - Lesson 05: Introduction to Dictionaries - One Structured Record
 - [x] Module 2 - Lesson 06: Iterating Through a Dictionary by Key
-- Current topic: Dictionary key iteration and current-key value retrieval - Passed (2026-10-13)
+- [x] Module 2 - Lesson 07: Checking Dictionary Key Membership with in
+- Current topic: Dictionary key membership and required-field checking - Passed (2026-10-14)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 07; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 08; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1184,3 +1185,39 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 06 dictionary iteration
 - Git commit/push status: Student explicitly authorized commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 07; wait for the Daily Learning Supervisor
+
+## 2026-10-14 - Module 2, Lesson 07: Checking Dictionary Key Membership with in
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-14
+- Day: Wednesday
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Tracker ID: JR-19
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 07 - Checking Dictionary Key Membership with in
+- Exercise: PurrNest Required Product Field Checker
+- Final status: Passed
+- Code personally written: Yes; student wrote the required-fields List, one product Dictionary, counters, List iteration, membership condition, guarded value retrieval, price formatting, branch-specific increments, and final summary. Codex created instructions only and did not modify student implementation
+- New concept: Dictionary key membership using field in product
+- Verified skills: Expected-key List processing, membership versus retrieval, guarded dynamic-key reads, independent present/missing counters, len(required_fields), exact labels, and price formatting
+- Knowledge check: Passed before coding; eight answers and three presence predictions correct in meaning. Clarified field as the current expected field name, which need not exist in product; predicted name Present, price Missing, stock Present
+- Manual tests: 6 / 6 passed based on student-provided actual outputs. Test 1 original complete record -> Required 4 / Present 4 / Missing 0, all values and RM15.90 correct. Test 2 missing stock -> 4/3/1, no stock value output. Test 3 missing price with stock restored -> 4/3/1, no price access/output and stock 20 processed. Test 4 sku/name only -> 4/2/2. Test 5 sku value price with no price key -> 4/3/1 and price MISSING. Test 6 student-designed complete record -> 4/4/0 with PN005/Cat Bowl/RM12.90/2
+- Student-designed test: Before running, student supplied the PN005/Cat Bowl/12.90/2 record and full predicted output, all four PRESENT with Required 4 / Present 4 / Missing 0. First actual run used different values and did not match prediction; after being prompted to check data and saving, the second actual output matched. Cause of the first mismatch was not confirmed
+- Dictionary membership verification: Passed; direct List iteration uses field in product for each expected field, with no four fixed checks or hard-coded statuses
+- Key-vs-value verification: Passed; student correctly predicted that a sku value of price does not make the price key exist, confirmed by Test 5
+- Missing-field safety verification: Passed; product[field] appears only in the PRESENT branch; missing stock, missing price, and two missing fields completed without reported runtime errors
+- Counter verification: Passed; both counters start at zero before iteration, only the appropriate branch increments its counter, and Required Fields uses len(required_fields); final summaries are outside the loop
+- Debugging check: Passed; student identified an unguarded device[field] access after the branches, predicted MISSING followed by KeyError, and clarified that retrieval belongs in the PRESENT branch because only existing fields can be read
+- Understanding check: Passed after guided clarification; student defined required_fields as expected field names to check and field as the current List element, traced absent stock to MISSING, and confirmed iteration does not add a missing key. Membership, key-only testing, safe reads, separate counters, reusable logic, and contrast with iterating existing Dictionary keys were understood
+- Carry-forward weakness observation: Conceptual vocabulary precision needed clarification for expected fields versus keys already in the Dictionary. Exact output labels were correct. Counter initialization and branch placement were correct in the first submitted implementation. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation assigned
+- Errors encountered: Initial understanding described required_fields as keys to retrieve and field as a key entered into the Dictionary; Test 6 first actual output used different data from the prediction. No logic defect found in submitted implementation
+- Corrections understood: Membership checks key existence without retrieving its value; List elements name expected fields and may be absent; List iteration does not insert Dictionary keys; retrieve only after confirming presence; inspect test data and compare actual values as well as counts
+- Codex review: Passed one List/one Dictionary scope, direct List iteration, dynamic membership, guarded retrieval, independent counters, price-only RM/.2f formatting, len of expected fields, summary placement, student ownership, prohibited-concept review, AGENTS.md compliance, and scope compliance. Final file retains student-designed Test 6 data
+- Tests performed by Codex: Static inspection before manual testing and final inspection; compared student-provided predictions and actual output. No automated Python execution claimed
+- Files changed: exercises/module_02/lesson_07_purrnest_required_product_field_checker.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added records contain simulated product data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 07 dictionary membership
+- Git commit/push status: Student explicitly authorized commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 08; wait for the Daily Learning Supervisor
