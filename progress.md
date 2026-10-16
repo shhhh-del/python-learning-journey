@@ -18,9 +18,10 @@
 - [x] Module 2 - Lesson 05: Introduction to Dictionaries - One Structured Record
 - [x] Module 2 - Lesson 06: Iterating Through a Dictionary by Key
 - [x] Module 2 - Lesson 07: Checking Dictionary Key Membership with in
-- Current topic: Dictionary key membership and required-field checking - Passed (2026-10-14)
+- [x] Module 2 - Lesson 08: Representing Multiple Structured Records with a List of Dictionaries
+- Current topic: List of Dictionaries and inventory aggregation - Passed (2026-10-16)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 08; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 09; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1221,3 +1222,41 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 07 dictionary membership
 - Git commit/push status: Student explicitly authorized commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 08; wait for the Daily Learning Supervisor
+
+## 2026-10-16 - Module 2, Lesson 08: List of Dictionaries
+
+### Standardized Lesson Summary
+
+- Date: Started 2026-10-15 (Thursday); completed 2026-10-16 (Friday)
+- Day: Friday (completion)
+- Session type: Core Python Learning Day continued into Friday Review, Debugging, and Knowledge Check
+- Available time: Original Thursday budget 30 minutes; Friday availability not supplied; elapsed duration not measured
+- Tracker ID: JR-19
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 08 - Representing Multiple Structured Records with a List of Dictionaries
+- Exercise: PurrNest Multi-Product Inventory Summary
+- Final status: Passed
+- Code personally written: Yes; student wrote the outer List, three Dictionary records, direct iteration, current-record output, accumulator initialization and updates, count, and final summary. Codex created instruction scaffold only and did not edit student implementation
+- New concept: List of Dictionaries; each outer List element is one structured record
+- Verified skills: Record collection construction, direct record iteration, key-based current-record reads, len(products), stock accumulation, price-times-stock accumulation, and formatted summary
+- Knowledge check: Passed before coding after correcting all-record versus current-record reading and identifying stock 8 rather than SKU PN002; A/10, B/20, C/30 trace correct
+- Manual tests: 6 / 6 passed through student-reported manual outputs. Test 1 original data -> count 3 / stock 43 / RM551.50. Test 2 PN002 stock 10 -> 3/45/RM576.50, matching pre-run prediction. Test 3 retained PN002 stock 10 and changed PN003 price to 10 -> 3/45/RM593.00 after correcting pre-run arithmetic. Test 4 retained those changes and set PN001 stock 0 -> 3/25/RM275.00; zero-stock record remained displayed. Test 5 A/5/2, B/10/3, C/20/1 -> 3/6/RM60.00, with individual values 10,30,20 traced before execution. Test 6 A/5/0, B/10.50/3, C/20/1 -> 3/4/RM51.50, matching pre-run prediction
+- Student-designed test: Student supplied full predicted output before running, processing A then B then C; count 3, stock 4, inventory RM51.50. Actual output matched. Records retained required fields, zero stock, non-negative stocks, and a decimal price; reused SKU/name values from Test 5 and changed stock/price rather than claiming every field was newly designed
+- List-of-Dictionaries verification: Passed; one outer List contains exactly three Dictionaries with sku/name/price/stock, with no second values List
+- Record iteration verification: Passed; student uses one direct traversal for display and another for accumulation; both operate on current Dictionary records. Two passes accepted in review
+- Current-record field access verification: Passed; all output and calculations use product['key'], not repeated products[0] or key lookup on the entire List
+- Product count verification: Passed; len(products) counts three Dictionary elements, including the zero-stock record
+- Total stock verification: Passed across all six tests; accumulator initialized before accumulation loop
+- Inventory value verification: Passed; each current price is multiplied by its stock and accumulated; currency output uses two decimals
+- Debugging check: Passed; student corrected books['price'] to book['price'] and identified per-record processing; clarified book as current Dictionary record
+- Understanding check: Passed after clarifying that product is one current record, its price read belongs only to it, and each List Dictionary represents one SKU so element count equals product count. Understood structured versus simple elements, reusable iteration, accumulator initialization, and business use
+- Carry-forward weakness observation: Conceptual vocabulary precision required correction for current record versus whole collection and SKU versus stock. Test 3 arithmetic initially omitted full stock impact; corrected with guided calculation. Test 5 initially retained old SKU labels, then corrected to A/B/C; names retained Cat prefixes, accepted as irrelevant to record trace. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation
+- Errors encountered: Initial stock-read answer PN002 instead of 8; initial claim that current read retrieves all stocks; Test 3 prediction RM577.70 instead of RM593.00; Test 5 initial PN001/PN002/PN003 labels instead of A/B/C
+- Corrections understood: Read the value associated with the requested key from the current Dictionary; collection iteration advances record by record; price changes affect price difference multiplied by stock; compare record labels as well as totals; initialize accumulators outside their processing loop
+- Codex review: Passed data structure, three complete records, current-record iteration and reads, both accumulator placements, correct formulas, len count, final summary placement, formatting, student ownership, prohibited-concept review, AGENTS.md compliance, and scope. Final file preserves Test 6 data
+- Tests performed by Codex: Pre-run and final static inspection and comparison of student-reported predictions/actual outputs; no automated Python execution claimed
+- Files changed: exercises/module_02/lesson_08_purrnest_multi_product_inventory_summary.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added records contain simulated product data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 08 structured records
+- Git commit/push status: Student explicitly authorized commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 09; wait for the Daily Learning Supervisor
