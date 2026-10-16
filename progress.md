@@ -19,7 +19,8 @@
 - [x] Module 2 - Lesson 06: Iterating Through a Dictionary by Key
 - [x] Module 2 - Lesson 07: Checking Dictionary Key Membership with in
 - [x] Module 2 - Lesson 08: Representing Multiple Structured Records with a List of Dictionaries
-- Current topic: List of Dictionaries and inventory aggregation - Passed (2026-10-16)
+- [x] Friday Review #8: PurrNest Multi-Product Inventory Audit - Passed (2026-10-16)
+- Current topic: Structured-data inventory audit - Passed (2026-10-16)
 - Module 1 Final Review initial closed-book recall: 7 / 12
 - Next confirmed task: Do not start Module 2 Lesson 09; wait for the Daily Learning Supervisor
 
@@ -1260,3 +1261,37 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 08 structured records
 - Git commit/push status: Student explicitly authorized commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 09; wait for the Daily Learning Supervisor
+
+## 2026-10-16 - Friday Review #8: PurrNest Multi-Product Inventory Audit
+
+### FRIDAY REVIEW #8 SUMMARY
+
+- Date: 2026-10-16
+- Day: Friday
+- Tracker ID: JR-19
+- Session type: Review / Debugging / Knowledge-Check Day
+- Available time: 30 minutes (student budget; elapsed duration not measured)
+- Lesson or feature: PurrNest Multi-Product Inventory Audit
+- Final status: FRIDAY REVIEW #8 — PASSED
+- Initial Knowledge Score: 7 / 10, preserved before corrections; questions 1, 8, 9 required clarification
+- Knowledge Corrections: Lists can contain records rather than only numbers; List indexing differs from Dictionary key access; initialize accumulators before their loop; products is the List and product is the current Dictionary
+- Code Personally Written: Yes; student wrote the four-record List, four-key membership condition, branches, counters, guarded reads, accumulators, and summary. Codex created instructions and provided progressive guidance only; student code was not edited
+- Verified skills: List of Dictionaries, direct record iteration, len, membership with in, and, safe current-record reads, counters versus accumulators, arithmetic, multiplication, exact labels, f-strings, and two-decimal currency output
+- Manual Tests: 6 / 6 passed based on student-provided actual output. Test 1 original -> records 4 / complete 3 / incomplete 1 / stock 28 / RM418.00. Test 2 add PN003 stock 15 -> 4/4/0/43/RM551.50, matching pre-run prediction. Test 3 retain PN003 stock 15 and remove PN002 price -> 4/3/1/35/RM451.50 without crash or PN002 contribution. Test 4 reused observed PN004 stock 0 COMPLETE output and verified explanation; no redundant run required. Test 5 PN002 contains sku/name/stock 5 but no price -> same 4/3/1/35/RM451.50 without unsafe access. Test 6 final custom data -> 4/3/1/32/RM422.80
+- Student-Designed Prediction: Student supplied four records with PN001 price 15.80 stock 20, PN002 missing price stock 5, PN003 price 8.90 stock 12, and PN004 price 10 stock 0. Predicted count 4, complete 3, incomplete 1, value RM422.80 correctly; stock prediction corrected from 37 to 22 to 32 before execution. Actual output matched corrected prediction. Dataset retained original identifiers/names and some values; do not claim all fields were newly designed
+- List-of-Dictionaries Understanding: Passed after clarification; outer List is collection, each iteration obtains one record; List element count includes incomplete records
+- Membership Understanding: Passed after guidance; initial claim that one key and or were sufficient corrected to all four keys and and; final student-written condition checks each key against current product
+- Missing-Key Safety: Passed; missing stock and missing price records classified INCOMPLETE, with field reads and both totals restricted to COMPLETE branch
+- Zero-vs-Missing Understanding: Passed after correction; membership checks presence rather than stock value; stock 0 remains COMPLETE when all required keys exist
+- Counter / Accumulator Verification: Passed; four states initialized before loop, appropriate branch counters increment once per record, only complete records contribute stock and price * stock, final summary outside loop uses len(products)
+- Debugging Challenge: Passed after correction; student identified zero stock wrongly marked INCOMPLETE, initially proposed >= 0, then correctly restored stock-key membership without value comparison; full audit still requires all four keys
+- Understanding Check: Passed after clarification; initial claim that accumulation waits until all records checked corrected through branch tracing; student correctly traced total_stock 20 -> 20 -> 32 through complete PN001, incomplete PN002, complete PN003
+- Carry-Forward Weakness Observation: Conceptual vocabulary, all-required-key logic, and accumulator execution timing required progressive guidance. Test 6 stock prediction needed arithmetic and exclusion correction. Exact output labels were correct. Validation-loop recall and maximum/minimum comparison direction did not arise; no unrelated remediation or module restart
+- Errors Encountered: Initial List restriction to numbers, incomplete List-versus-Dictionary explanation, accumulator reset placement wording, one-key/or completeness claim, stock prediction 37 then 22, numeric stock condition suggested for completeness, and post-loop accumulation claim
+- Corrections Understood: Completeness means all required keys exist; missing differs from zero; absent-field reads must be guarded; incomplete records contribute neither total under this business rule; complete counters count records while stock totals sum units; cumulative updates execute immediately within each complete-record branch
+- Secrets Check: Reviewed exercise and added records contain simulated product data; no secrets or private data found
+- Files Changed: exercises/module_02/friday_review_08_purrnest_multi_product_inventory_audit.py, progress.md, learning_log.md
+- Codex Review: Passed final static inspection, four-record structure, all-four membership, safe reads, zero handling, counters, totals, formatting, output placement, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Manual testing evidence supplied by student; no automated Python execution claimed
+- Git Status: Student explicitly authorized commit and push; execution follows this record update
+- Suggested Git Commit: Complete Friday Review 8 structured data audit
+- Next Confirmed Task: Do not start Lesson 09; wait for the Daily Learning Supervisor
