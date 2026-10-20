@@ -1794,3 +1794,39 @@
 - Suggested Git commit: Add SKU data completeness checker to pricing tracker
 - Git status: Student explicitly authorized Version 0.2 commit and push; execution follows this record update
 - Next confirmed task: Do not start Version 0.3 or another feature; wait for SaaS Product Builder to generate the final Business Tool Progress Report
+
+## 2026-10-20 - Module 2 Lesson 09: Function Fundamentals
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-20
+- Day: Tuesday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 09 - Introduction to Functions: Defining and Calling Reusable Code
+- Exercise: PurrNest Inventory Report Sections
+- Final status: Passed
+- Code personally written: Yes; student wrote both function definitions and bodies, calls, data structure, product iteration, accumulators, outputs, and test changes. Codex created instructions only, reviewed, guided, and documented; no student code was modified by Codex
+- New concept: Basic no-parameter function definitions and calls, with no return statements
+- Verified skills: def syntax, function name/body/call distinction, indentation, definition versus execution, repeated calls, execution order, and retained structured-data calculations
+- Knowledge check: Passed after clarifying function body as indented code and correcting greet() from definition to call. Student correctly predicted Start/A/B/End on separate output lines and explained defining versus calling after guidance; no numeric score assigned
+- Manual tests: 6 / 6 passed based on student-supplied actual outputs. Test 1 both header calls commented while definition remained -> no header, business report/rules remained; explanation clarified that definition alone does not execute body. Test 2 one header call -> header once at start. Test 3 two calls -> header at start and end without duplicated manual prints. Test 4 rules call commented -> rules absent; earlier called run included exact rules text. Test 5 original products -> count 3 / stock 43 / RM551.50 throughout reported business runs. Test 6 student-chosen rules/header/Hello order -> exact seven-line output matched pre-run prediction
+- Student-designed test: Student chose show_inventory_rules(), show_report_header(), print("Hello"); predicted three rules lines, three header lines, then Hello before running; actual output matched
+- Function definition verification: Passed; two correct def definitions precede calls; no parameters or return; defining functions did not itself display their bodies
+- Function call verification: Passed; calls execute the associated body; comments suppress calls without removing definitions
+- Repeated call verification: Passed; one header definition executed twice via calls, no manual duplicate header body
+- Execution-order verification: Passed; final flow header -> count/current products -> stock/value summary -> rules -> header; student also predicted a different temporary call order correctly
+- Existing structured-data verification: Passed; original three product Dictionaries, current-record field access, len(products), stock accumulation, price-times-stock accumulation, initialized before loop, final summary outside loop, .2f output
+- Debugging challenge: Passed; student identified missing parentheses in show_notice, predicted no Ready output, and corrected call to show_notice()
+- Understanding check: Passed after clarifying function body wording and invocation with parentheses; student identified both indented prints as body, call line as invocation, and a top-level print as outside the function and directly executed
+- Carry-forward weakness observation: Conceptual vocabulary precision required guidance for definition/body/call. Student's first submission already implemented the full program despite staged instructions; ownership preserved. Six-space block indentation is consistent and valid but four-space style was recommended. Validation-loop recall and maximum/minimum comparison direction did not arise; no unrelated remediation
+- Errors encountered: Initially called greet() a definition; described function body as compressed text/code; temporary Test 6 file commented products delimiters but left dictionary lines active inside rules function, and main report remained commented until final restoration. Reported Test 6 output still matched its intended observable output; temporary source state was identified during final inspection rather than silently accepted
+- Corrections understood: def stores a definition; function body is indented code executed only on a call; call requires parentheses; repeat calls instead of copying body; indentation establishes body boundaries; restore full main program and remove temporary test calls before final review
+- Codex review: Passed final restored source inspection, function definitions/calls, repeated calls, exact text, calculation flow, no parameters/return, ownership, prohibited-concept review, AGENTS.md and scope compliance. Final file inspected after student restored original main flow and removed Hello test calls. No automated Python execution claimed; execution evidence provided by student
+- Files changed: exercises/module_02/lesson_09_purrnest_inventory_report_sections.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added session records contain simulated product data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 09 function fundamentals
+- Git commit/push status: Student explicitly authorized Lesson 09 commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 10; wait for the Daily Learning Supervisor
