@@ -21,9 +21,10 @@
 - [x] Module 2 - Lesson 08: Representing Multiple Structured Records with a List of Dictionaries
 - [x] Friday Review #8: PurrNest Multi-Product Inventory Audit - Passed (2026-10-16)
 - [x] Module 2 - Lesson 09: Introduction to Functions - Passed (2026-10-20)
-- Current topic: Basic function definition and calling - Passed (2026-10-20)
+- [x] Module 2 - Lesson 10: Function Parameters and Arguments - Passed (2026-10-21)
+- Current topic: Single-parameter functions and Dictionary arguments - Passed (2026-10-21)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 10; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 11; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1368,3 +1369,38 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 09 function fundamentals
 - Git commit/push status: Student explicitly authorized Lesson 09 commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 10; wait for the Daily Learning Supervisor
+
+## 2026-10-21 - Module 2 Lesson 10: Function Parameters and Arguments
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-21
+- Day: Wednesday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 10 - Function Parameters and Arguments
+- Exercise: PurrNest Reusable Product Display
+- Final status: Passed
+- Code personally written: Yes; student wrote show_product, its single parameter, all four parameter-based field reads, List data, loop calls, indexed calls, and custom Dictionary test. Codex created instructions, explained, reviewed, and documented; never edited student implementation
+- New concept: One function parameter receiving the argument supplied by each call
+- Verified skills: Parameter/argument distinction, single Dictionary argument, current-record passing, reusable display, key-based field access, f-strings, and price formatting
+- Knowledge check: Passed after simplifying the explanation and guided checks; student distinguished parameter number from argument 5, predicted first/second values and output 5 then 10, located parameter in definition and argument in call, and understood reuse without automatic returned results. No initial numeric score assigned
+- Manual tests: 6 / 6 passed using student-reported actual outputs. Test 4 occurred first: direct List loop displayed PN001/PN002/PN003 in order. Test 1 isolated products[0] -> PN001/Cat Brush/RM15.90/20. Test 2 products[1] -> PN002/Cat Bowl/RM12.50/8. Test 3 products[2] -> PN003/Cat Toy/RM8.90/15. Test 5 changed PN002 name/price -> Cat Food Bowl/RM14.90, stock 8, with same function. Test 6 direct new_product Dictionary -> PN003/Dog Toy/RM9.90/12, matching predicted four-line function output
+- Student-designed test: Student first proposed modified List element; then independently defined new_product with sku PN003, name Dog Toy, price 9.90, stock 12 and called show_product(new_product). Product output matched prior prediction; title was not part of function output and was omitted in actual isolated test
+- Parameter verification: Passed; exactly one parameter product receives one Dictionary and all function display reads use it
+- Argument verification: Passed after clarification; student understood changing call data rather than editing parameter name/definition, and distinguished products[0] and new_product as call inputs
+- Dictionary argument verification: Passed for each indexed record, loop current record, and separate custom Dictionary
+- Reusability verification: Passed; same unchanged function body handles different records and changed name/price; no hard-coded business values in function
+- Debugging challenge: Passed after correction; identified hard-coded print("Cat") instead of parameter in show_pet, initially predicted Dog, then correctly traced original output Cat and corrected body to print(pet)
+- Understanding check: Passed after guided correction of parameter-versus-argument and List-versus-Dictionary access. Student correctly explained products[1] selects second Dictionary and product['price'] reads that record's price, rather than reading by index or using the term argument as a field access
+- Carry-forward weakness observation: Vocabulary precision and List indexing versus Dictionary key access needed focused guidance. Function-boundary indentation was correct. Exact output labels were correct. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation or module restart
+- Errors encountered: Initial uncertainty about parameters/arguments; described reuse as changing parameter; answered argument then product[0] for price-field reading; initially predicted passed Dog despite hard-coded Cat; final restoration first retained products[1] for extra call before student corrected to products[0]
+- Corrections understood: Parameter is receiving variable in definition; argument is data supplied at call; loop selects a record and passes it; Dictionary fields require keys; changing call data does not require changing function definition; trace actual function body rather than assuming it uses the argument
+- Codex review: Passed final restored source, one parameter, no return, parameter-only field reads, direct List loop calls, extra unindented show_product(products[0]) after loop, original data restored, no duplicate display logic, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Final restoration verified statically; no automated Python execution claimed
+- Files changed: exercises/module_02/lesson_10_purrnest_reusable_product_display.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added records contain simulated data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 10 function parameters
+- Git commit/push status: Student explicitly authorized Lesson 10 commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 11; wait for the Daily Learning Supervisor
