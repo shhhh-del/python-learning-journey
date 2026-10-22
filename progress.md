@@ -22,9 +22,10 @@
 - [x] Friday Review #8: PurrNest Multi-Product Inventory Audit - Passed (2026-10-16)
 - [x] Module 2 - Lesson 09: Introduction to Functions - Passed (2026-10-20)
 - [x] Module 2 - Lesson 10: Function Parameters and Arguments - Passed (2026-10-21)
-- Current topic: Single-parameter functions and Dictionary arguments - Passed (2026-10-21)
+- [x] Module 2 - Lesson 11: Function Return Values - Passed (2026-10-22)
+- Current topic: Function return values and caller reuse - Passed (2026-10-22)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 11; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 12; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1404,3 +1405,39 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 10 function parameters
 - Git commit/push status: Student explicitly authorized Lesson 10 commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 11; wait for the Daily Learning Supervisor
+
+## 2026-10-22 - Module 2 Lesson 11: Function Return Values
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-22
+- Day: Thursday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 11 - Function Return Values
+- Exercise: PurrNest Product Inventory Value Calculator
+- Final status: Passed
+- Code personally written: Yes; student wrote the single-parameter function, calculation and return, caller receiving variable, direct calls, product loop, formatted output, accumulator, test data, and restoration. Codex created instructions and gave progressive guidance, reviewed and documented; never edited student implementation
+- New concept: One returned value and assignment of function result to a caller variable
+- Verified skills: Dictionary argument, price-times-stock calculation, return versus print, input parameter versus output result, caller assignment, reuse of returned values in display and accumulation
+- Knowledge check: Passed after correcting return-versus-display and double(5) result; student traced add_fee(10) as 10/12/12/12, double(5) as input 5/result 10/caller 10, and understood no print means no display. No numeric score assigned
+- Manual tests: 6 / 6 passed based on student-supplied actual execution outputs. Test 1 predicted PN001 result 318 before direct call -> caller printed 318.0. Test 2 PN002 -> 100.0. Test 3 price 15.90 stock 0 -> 0.0. Test 4 predicted price 12.75 stock 3 -> actual 38.25. Test 5 original records -> RM318.00/RM100.00/RM133.50, count 3, total RM551.50; initial Current SKU label corrected to SKU and verified statically. Test 6 custom Dictionary -> 318.0, matching prediction
+- Student-designed test: Student chose PN001/Cat Play Brush/15.90/20, initially wrapped Dictionary in a List, corrected to a standalone new_product Dictionary, predicted 318 before execution, then supplied assignment inventory_value = calculate_inventory_value(new_product) and print(inventory_value), explicitly confirming 318.0 as actual output
+- Return verification: Passed; function computes current parameter price * stock and returns result, no internal printing
+- Caller-receives-value verification: Passed; inventory_value receives function call result before output and accumulation; student identified receiving variable after clarification
+- Print-vs-return verification: Passed; comparison A print only versus B return identified correctly, with B usable for accumulation; final check confirmed saved receives 8 without print while nothing appears on screen
+- Parameter-vs-return verification: Passed after repeated input/output tracing; student corrected number input 12 to 6 for double(6), identified saved as receiver, then independently traced double(4) input 4 / returned 8 / saved 8
+- Reusability verification: Passed; unchanged function handled multiple original and temporary records; caller both prints and accumulates returned number
+- Debugging challenge: Passed after correction; student identified return number instead of return result in triple, initially predicted actual 3, then correctly traced actual 4 versus desired 12
+- Understanding check: Passed after guided clarification of execution timing, parameter location, returned value versus displayed output, and caller variable. Student correctly traced a fresh input and distinguished stored result from automatic display
+- Carry-forward weakness observation: Function calling parentheses versus List indexing, singular product versus plural products, receiving-variable vocabulary, and input/returned-result distinction required focused guidance. Exact SKU label required correction. Function boundaries and final indentation correct. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation
+- Errors encountered: Return described as displaying stored result; double input confused with result; receiver named function; attempted calculate_inventory_value[product(0)] then product[0] instead of products[0]; custom Dictionary initially inside List; wrong variable returned in debugging explanation; parameter input confused with computed result
+- Corrections understood: Calls use round parentheses, List indexes use square brackets, pass one Dictionary; parameter receives input during call, calculation then executes, return hands result to caller, assignment stores it, print separately displays it; values can be accumulated without duplicating calculation
+- Codex review: Passed final restored source, exactly one Dictionary parameter, correct calculation/return, no internal print, caller assignment/display/accumulation, total initialization before loop, summary after loop, original data, exact final labels, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Final restoration and label correction checked statically; no automated Python execution claimed
+- Files changed: exercises/module_02/lesson_11_purrnest_product_inventory_value_calculator.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added records contain simulated product data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 11 return values
+- Git commit/push status: Student explicitly authorized Lesson 11 commit and push on 2026-10-23; execution follows this record update
+- Next confirmed task: Do not start Lesson 12; wait for the Daily Learning Supervisor
