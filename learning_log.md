@@ -1901,3 +1901,41 @@
 - Suggested Git commit: Complete Module 2 Lesson 11 return values
 - Git commit/push status: Student explicitly authorized Lesson 11 commit and push on 2026-10-23; execution follows this record update
 - Next confirmed task: Do not start Lesson 12; wait for the Daily Learning Supervisor
+
+## 2026-10-23 - Friday Review #9: PurrNest Inventory Valuation Audit
+
+### FRIDAY REVIEW #9 SUMMARY
+
+- Date: 2026-10-23
+- Day: Friday
+- Tracker ID: JR-19
+- Session type: Review / Debugging / Knowledge-Check Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Lesson or feature: PurrNest Inventory Valuation Audit
+- Final status: FRIDAY REVIEW #9 — PASSED
+- Initial Knowledge Score: 9 / 12, preserved before corrections; questions 2, 6, 9 required clarification. Student explicitly confirmed label name as initial answer to question 6 despite also supplying another description
+- Knowledge Corrections: Function call executes a body rather than merely fetching stored results; products[0] is a complete first Dictionary and acts as an argument; receiver result stores the returned number. Student traced input Dictionary price 5/stock 3 to return 15 and receiver 15
+- Code Personally Written: Yes; student wrote function, single parameter, multiplication and return, four-record List, membership logic, safe branches, receiving variable, counters, accumulation, output, and manual data changes. Codex created instructions, reviewed, guided, and documented only; student implementation was not edited
+- Verified skills: Function definition/call, one Dictionary argument and parameter, return, safe membership before calls, returned-value reuse, List iteration, counters, accumulator, len, and formatted currency
+- Manual Tests: 6 / 6 passed based on student-supplied actual output plus source review. Test 1 original -> records 4 / complete 3 / incomplete 1 / RM418.00. Test 2 add PN003 price 8.90 -> 4/4/0/RM551.50, PN003 RM133.50, matching pre-run prediction. Test 3 retain that price and remove PN002 stock -> 4/3/1/RM451.50, no PN002 value and no crash. Test 4 reused zero-stock PN004 COMPLETE/RM0.00 output and verified explanation. Test 5 inspected same inventory_value variable received, printed, and accumulated with no duplicate multiplication. Test 6 custom data -> 4/3/1/RM233.50 matching corrected pre-run prediction
+- Student-Designed Prediction: Final selected dataset PN001 lacking stock, PN002 price 12.50/stock 8, PN003 price 8.90/stock 15, PN004 price 10/stock 0. Values for complete records predicted 100/133.50/0, total 233.50. Initial proposal also omitted PN002 stock while predicting it complete; student changed dataset to restore stock, then corrected counters from 4/0 to 3/1 BEFORE running. Actual output matched revised prediction. Identifiers/names and most values reused; do not claim all fields were independently changed
+- Function Definition Verification: Passed; one parameter, price * stock inside function, return result, no result print inside function
+- Parameter / Argument Verification: Passed; student identified product as current Dictionary argument at call and receiving parameter in definition
+- Return Verification: Passed; numeric result delivered to caller inventory_value
+- Print-vs-Return Verification: Passed after terminology clarification; A displays calculated result, B returns data for reuse/accumulation; printing a calculation does not itself return that numeric result
+- List-of-Dictionaries Verification: Passed; one List, four records, direct current-record iteration, len counts all records
+- Missing-Key Safety: Passed; all four keys checked before function call; missing SKU safely omitted from incomplete-record label; no calculation call for incomplete records. Test 3 first mistakenly removed sku rather than stock; safe output observed, source inspected, data corrected and test repeated successfully
+- Zero-vs-Missing Understanding: Passed; student identified stock key present with zero, absent key would cause error on direct access, and guarded execution permits zero-stock calculation
+- Counter / Accumulator Verification: Passed; states initialized before processing, one status and branch counter per record, returned variable accumulated only for complete records, summary outside loop, complete plus incomplete equals len
+- Debugging Challenge: Passed; student identified calculation called before membership check, predicted error, moved call after checks, and explained safety. Codex clarified KeyError does not universally imply a window closes
+- Understanding Check: Passed; student correctly connected collection/current record/membership/argument/parameter/calculation/return/caller receiver/accumulator; clarified result returns from function to caller
+- Carry-Forward Weakness Observation: Vocabulary precision required correction in initial call, first-record, and receiver answers; all first implementation logic was correct. Test-data selection and status/count consistency needed correction during testing. Exact output labels and function boundaries correct. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation or module restart
+- Errors Encountered: Knowledge answers 2/6/9; removed PN002 sku instead of stock during Test 3; initial custom status/count predictions inconsistent with supplied data; print described as displaying a return value before wording clarified
+- Corrections Understood: Trace actual data, keep dataset and predictions aligned, count only matching statuses, guard calls before missing-field access, and reuse returned value without duplicating calculation
+- Secrets Check: Reviewed exercise and added records contain simulated product data; no secrets or private data found
+- Files Changed: exercises/module_02/friday_review_09_purrnest_inventory_valuation_audit.py, progress.md, learning_log.md
+- Codex Review: Passed final static inspection, single-parameter calculation/return, complete-only calls, safe incomplete branches, zero handling, returned-value display and accumulation, counters, outputs, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Manual execution evidence provided by student; no automated Python execution claimed. Final file retains Test 6 dataset
+- Git Status: Student explicitly authorized Friday Review 9 commit and push; execution follows this record update
+- Suggested Git Commit: Complete Friday Review 9 functions integration
+- Lesson 12: NOT STARTED
+- Next Confirmed Task: Do not start Lesson 12 or another lesson today; wait for the Daily Learning Supervisor
