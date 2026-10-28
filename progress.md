@@ -24,10 +24,10 @@
 - [x] Module 2 - Lesson 10: Function Parameters and Arguments - Passed (2026-10-21)
 - [x] Module 2 - Lesson 11: Function Return Values - Passed (2026-10-22)
 - [x] Friday Review #9: PurrNest Inventory Valuation Audit - Passed (2026-10-23)
-- Current topic: Functions and safe inventory valuation integration - Passed (2026-10-23)
-- Module 2 Lesson 12: NOT STARTED
+- Current topic: Two-parameter functions and positional arguments - Passed (2026-10-28)
+- [x] Module 2 Lesson 12: Functions with Multiple Parameters - Passed (2026-10-28)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 12; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 13; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1481,3 +1481,38 @@ Verified skills:
 - Suggested Git Commit: Complete Friday Review 9 functions integration
 - Lesson 12: NOT STARTED
 - Next Confirmed Task: Do not start Lesson 12 or another lesson today; wait for the Daily Learning Supervisor
+
+## 2026-10-28 - Module 2 Lesson 12: Functions with Multiple Parameters
+
+### Standardized Lesson Summary
+
+- Date: 2026-10-28
+- Day: Wednesday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 12 - Functions with Multiple Parameters
+- Exercise: PurrNest Order Total Calculator
+- Final status: Passed
+- Code personally written: Yes; student wrote two-parameter function, calculation, return, calls, receiving variable, order List processing, formatting, and accumulator. Codex created instructions, reviewed, guided, and documented only; no student implementation edited
+- New concept: Exactly two parameters receiving two positional arguments
+- Knowledge check: Passed after correcting quantity input from 2 to 3 for calculate(10, 3); student correctly identified parameter/argument locations, two positions, one return, subtract(10,3) trace 10/3/7/7 and reversed trace 3/10/-7/-7. No numeric score assigned
+- Manual tests: 6 / 6 passed using student-provided actual output. Test 1 predicted 10/2/20, first ran full loop instead, then explicitly confirmed isolated calculate_order_total(10,2) actual RM20.00. Test 2 12.50/3 -> RM37.50. Test 3 15.90/0 -> RM0.00. Test 4 predicted subtract(10,3)=7 and subtract(3,10)=-7 and verified actual output 7 then -7. Test 5 original List -> PN001 RM31.80, PN002 RM37.50, PN003 RM8.90, count 3, grand total RM78.20. Test 6 custom order -> RM15.80 matching pre-run prediction
+- Student-designed test: Student chose PN001, price 15.80, quantity 1, passed order['price'] and order['quantity'] separately, predicted 15.80 before running; actual Order Total: RM15.80 matched. Initial split-line assignment was corrected before execution
+- Multiple-parameter verification: Passed; exactly price and quantity used in multiplication, no hard-coded product values
+- Positional-argument verification: Passed; caller supplies current price first and current quantity second as separate arguments
+- Argument-order verification: Passed through subtraction prediction and execution, showing swapped argument positions change parameter values and result
+- Return verification: Passed; function returns one calculated number without internal printing; student clarified result names the variable whose numeric content is returned
+- Caller-reuse verification: Passed; order_total receives result, is displayed, and added to grand_total; grand_total initialized before loop, summary after loop uses len(orders)
+- Debugging challenge: Passed after guidance; initially blamed calculation for subtract(10) with two parameters, then correctly identified missing second argument and understood required count
+- Understanding check: Passed after clarifying parameter location in definition parentheses and returned number versus variable name; student independently traced 12.50/3 to return 37.5 received by order_total and explained reuse by changing call field values, not definition
+- Carry-forward weakness observation: Exact Order_Total label required correction to Order Total; initial test attempt executed full loop instead of isolated direct call. Terminology and argument-count debugging needed small clarifications. Function boundaries/indentation correct. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation
+- Errors encountered: Quantity mapping slip in knowledge check; underscored output label; split-line custom assignment; debugging initially claimed missing calculation despite valid body; returned result initially named without distinguishing stored numeric value
+- Corrections understood: Positional data maps first-to-first and second-to-second; two required parameters need two arguments; return sends numeric content; caller stores/displays/accumulates it; data can change without modifying function definition
+- Codex review: Passed final restored source, original order data, two parameters and correct order, both current fields passed separately, correct calculation/return, caller reuse, accumulator and output placement, exact labels, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Temporary subtraction/custom tests removed. Final restoration inspected statically; no automated Python execution claimed
+- Files changed: exercises/module_02/lesson_12_purrnest_order_total_calculator.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added records contain simulated order data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 12 multiple parameters
+- Git commit/push status: Student explicitly authorized Lesson 12 commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 13; wait for the Daily Learning Supervisor
