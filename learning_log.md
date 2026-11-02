@@ -1974,3 +1974,39 @@
 - Suggested Git commit: Complete Module 2 Lesson 12 multiple parameters
 - Git commit/push status: Student explicitly authorized Lesson 12 commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 13; wait for the Daily Learning Supervisor
+
+## 2026-11-02 - Module 2 Lesson 13: Basic Local Function Scope
+
+### Standardized Lesson Summary
+
+- Date: 2026-11-02
+- Day: Monday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 13 - Basic Function Scope: Understanding Local Variables
+- Exercise: PurrNest Order Discount Calculator
+- Final status: Passed
+- Code personally written: Yes; student wrote function definition, both parameters, three local calculations, conditional discount, return, calls, receiving variable, List processing, and accumulator. Codex created instructions, reviewed, gave focused hints and recorded evidence; no student code edited
+- New concept: Local function variables and basic function scope
+- Verified skills: Function-local temporary calculations, return of final value, caller assignment, two positional inputs, >= boundary, if/else, returned-value accumulation and formatting
+- Knowledge check: Passed; student identified function-local result, no assumed external availability, return transfer, caller answer, temporary calculation organization, parameter availability, and avoiding variable confusion; trace number 5 / doubled 10 / returned 10 / answer 10 and no direct outside doubled access correct. No numeric score assigned
+- Manual tests: 6 / 6 passed based on student-provided actual output. Test 1 inputs 10/2 -> RM20.00. Test 2 exact threshold 25/2 -> RM45.00. Test 3 inputs 20/3 -> RM54.00. Test 4 inputs 20/0 -> RM0.00. Test 5 original List -> RM31.80/RM54.00/RM8.90, Grand Total RM94.70. Test 6 custom inputs 20/4 -> RM72.00 matching pre-run original/discount/final prediction
+- Student-designed test: Student initially proposed same 20/3 inputs as Test 3, then independently selected 20/4; predicted original 80, discount eligibility yes, discount 8, final 72 before running. Actual RM72.00 matched
+- Local-variable verification: Passed; original_total, discount and final_total are assigned inside function and used for its calculation; parameters price/quantity available inside body
+- Basic-scope verification: Passed; main processing uses final_amount rather than attempting direct access to internal original_total/discount/final_total; no global workaround
+- Return verification: Passed; return final_total sends one numeric result, with no internal output
+- Caller verification: Passed; final_amount receives, displays and accumulates result; grand_total initialized before loop, final summary outside loop
+- Boundary verification: Passed; >= 50 gives exact-threshold 10% discount, below threshold no discount, zero quantity zero result
+- Scope Debugging Challenge: Passed; student identified outside use of local doubled, named it local, predicted returned 10 and selected caller answer for printing
+- Understanding check: Passed after clarifying that function call differs from return statement; student filled return final_total correctly and explained final_amount-to-grand_total flow
+- Carry-forward weakness observation: Local-variable and caller boundaries understood; vocabulary required one correction for return versus call. Source restoration initially not visible until student saved revised file; corrected without repeating tests. Exact labels, positional inputs, and indentation correct. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation
+- Errors encountered: Understanding answer named calculate_discounted_total call instead of return as value-transfer statement. Temporary test receiving variable named final_total matched internal name; Codex clarified these are separate variables, not direct access to internal local variable. Initial restoration done message preceded updated saved source
+- Corrections understood: Local variables organize internal calculations; return sends value to caller variable; a matching external name does not make internal variable directly accessible; restore official main flow after tests and save changes
+- Codex review: Passed final saved restored source, two parameters, local variables, no global, >= 50, 10% calculation, final return, caller reuse, accumulator placement, original data, exact output labels, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Collection called products and record product rather than orders/order; accepted as naming difference, no behavior change. No automated Python execution claimed; manual outputs supplied by student
+- Files changed: exercises/module_02/lesson_13_purrnest_order_discount_calculator.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added records contain simulated order data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 13 function scope basics
+- Git commit/push status: Student explicitly authorized Lesson 13 commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 14; wait for the Daily Learning Supervisor
