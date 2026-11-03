@@ -25,10 +25,11 @@
 - [x] Module 2 - Lesson 11: Function Return Values - Passed (2026-10-22)
 - [x] Friday Review #9: PurrNest Inventory Valuation Audit - Passed (2026-10-23)
 - [x] Module 2 Lesson 13: Basic Local Function Scope - Passed (2026-11-02)
-- Current topic: Local function variables and caller return-value use - Passed (2026-11-02)
+- [x] Module 2 Lesson 14: Basic String Normalization - Passed (2026-11-04)
+- Current topic: strip/lower normalization and normalized-input validation - Passed (2026-11-04)
 - [x] Module 2 Lesson 12: Functions with Multiple Parameters - Passed (2026-10-28)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 14; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 15; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1553,3 +1554,39 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 13 function scope basics
 - Git commit/push status: Student explicitly authorized Lesson 13 commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 14; wait for the Daily Learning Supervisor
+
+## 2026-11-04 - Module 2 Lesson 14: Basic String Normalization
+
+### Standardized Lesson Summary
+
+- Date: 2026-11-04 (session date; no elapsed duration measured)
+- Day: Wednesday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 14 - Basic String Normalization with strip() and lower()
+- Exercise: PurrNest Product Category Normalizer
+- Final status: Passed
+- Code personally written: Yes; student wrote normalization function, parameter, local variable, return, raw input, caller assignment, comparisons, validation loop, retries and final output. Codex created instructions, gave progressive guidance, inspected and documented; student implementation was not edited
+- New concept: Basic text normalization using strip() and lower()
+- Verified skills: Surrounding whitespace removal, lowercase conversion, returned normalized text, normalized comparisons, repeated input and re-normalization, valid-condition termination, exact output labels
+- Knowledge check: Passed after correcting comparison variable from raw text to normalized. String type, surrounding/internal whitespace, strip/lower results and toy/bowl/brush predictions correct. No numeric score assigned
+- Manual tests: 7 / 7 passed based on student-reported execution output. Test 1 brush -> brush. Test 2 BRUSH -> brush. Test 3 surrounding spaces around bowl -> bowl. Test 4 surrounding spaces and ToY -> toy. Test 5 food -> Invalid Category, then BOWL -> bowl. Test 6 cat brush -> Invalid Category, then brush -> brush. Test 7 dog toy -> Invalid Category, then TOy with trailing space -> toy, matching pre-run normalized-value and accept/reject prediction. Early test excerpts contained final lines rather than full transcripts; final source review confirms title/prompt and exact labels
+- Student-designed test: Student chose dog toy rejected then TOy plus trailing space accepted. Before execution predicted normalized dog toy/rejected, toy/accepted, final Normalized Category: toy; actual input/output transcript matched
+- strip() verification: Passed; removes surrounding whitespace, preserves internal space. Student initially wrote catbrush in explanation, corrected that result remains cat brush
+- lower() verification: Passed uppercase and mixed-case inputs; called with parentheses
+- Normalization verification: Passed; raw product_category is passed to function, normalized result stored separately, normalized_category used for validation
+- Validation-loop verification: Passed after correction; three != comparisons joined with and, invalid message, fresh input and normalization inside loop, final output after loop, no extra output for valid first input
+- Function / return verification: Passed; one parameter category, local normalized holds category.strip().lower(), return sends processed string, no function-internal print
+- Debugging challenge: Passed; student identified comparison of raw_text instead of normalized, predicted Invalid, selected normalized and processed-text return
+- Understanding check: Passed after clarifying raw input as original text rather than numeric value and distinguishing processing operations from storage variable. Student named normalized_category for validation and supplied both retry lines: fresh input and function re-call
+- Carry-forward weakness observation: Initial submission used untaught List membership and one-time if; next used valid-category or comparisons but still one-time check; then independently wrote correct invalid while condition and retries, but added while/else outside lesson scope; removed else and dedented final output following guidance. Validation-loop recall recovered without restarting Module 1. Vocabulary raw/normalized needed precision; function boundaries and return correct. Maximum/minimum direction did not arise
+- Errors encountered: Raw comparison selected in knowledge check; List not-in technique outside scope; one-time validation; while/else outside verified scope; internal-space explanation typo; incomplete flow description before guided retry explanation
+- Corrections understood: Compare stored normalized text, not untouched raw input; strip preserves middle spaces; lower handles letter case; retries must both read and normalize again; use previously learned comparisons and while rather than introducing new membership or while/else; final print belongs after loop
+- Codex review: Passed final source, single parameter, local result, strip/lower calls, return/caller storage, normalized-only validation, repeated fresh input, loop termination, exact labels, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Static review and student-supplied manual evidence; no automated Python execution claimed
+- Files changed: exercises/module_02/lesson_14_purrnest_product_category_normalizer.py, progress.md, learning_log.md
+- Secrets/private-data check: Reviewed exercise and added records contain category test strings only; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 14 string normalization
+- Git commit/push status: Student explicitly authorized Lesson 14 commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
