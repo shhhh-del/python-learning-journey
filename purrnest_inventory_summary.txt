@@ -1,0 +1,4 @@
+PurrNest Inventory Summary
+Product Count: 3
+Total Stock: 45
+Total Inventory Value: RM610.50

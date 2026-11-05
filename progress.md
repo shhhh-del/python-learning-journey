@@ -26,10 +26,11 @@
 - [x] Friday Review #9: PurrNest Inventory Valuation Audit - Passed (2026-10-23)
 - [x] Module 2 Lesson 13: Basic Local Function Scope - Passed (2026-11-02)
 - [x] Module 2 Lesson 14: Basic String Normalization - Passed (2026-11-04)
-- Current topic: strip/lower normalization and normalized-input validation - Passed (2026-11-04)
+- [x] Module 2 Lesson 15: Basic File Writing - Passed (2026-11-05)
+- Current topic: Plain-text report writing - Passed (2026-11-05)
 - [x] Module 2 Lesson 12: Functions with Multiple Parameters - Passed (2026-10-28)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 15; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 16; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1590,3 +1591,40 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 14 string normalization
 - Git commit/push status: Student explicitly authorized Lesson 14 commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 15; wait for the Daily Learning Supervisor
+
+## 2026-11-05 - Module 2 Lesson 15: Basic File Writing
+
+### Standardized Lesson Summary
+
+- Date: 2026-11-05
+- Day: Thursday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 15 - Basic File Writing
+- Exercise: PurrNest Inventory Summary File Writer
+- Final status: Passed
+- Code personally written: Yes; student wrote product data, count, accumulators, calculations, with open, filename/mode, file.write calls, newlines, formatting, and confirmation. Codex created instructions, reviewed, guided and documented; no student implementation or report content modified by Codex
+- New concept: Plain-text file writing with with open, write mode, file.write and newline characters
+- Knowledge check: Passed after clarifying writes belong in the with indented block; filename, write mode, creation/overwrite, file object, newline and two-line Cat/Brush prediction correct. No numeric score assigned
+- Manual tests: 7 / 7 passed using student-reported manual execution and file inspection, supported by final Codex filesystem read. Test 1 reported Inventory summary saved. and newly created output file. Test 2 manually opened original report -> 3 products / stock 43 / RM551.50, exact four lines. Test 3 explained terminal versus stored report. Test 4 predicted PN002 stock 10 -> total stock 45 / RM576.50 and same file matched. Test 5 manually inserted OLD REPORT then reran; pasted report no longer contained old text and student explained write overwrite. Test 6 removed first newline -> title and Product Count joined; restored newline and reran -> four lines, explained write does not auto-newline. Test 7 custom-data report -> 3/45/RM610.50 matching pre-run prediction
+- Student-designed test: Student chose PN001 price 15.90 stock 30, PN002 price 13.50 stock 0, PN003 price 8.90 stock 15, predicted all four report lines with count 3, stock 45, value RM610.50 before running. Actual file content matched. Initial pasted List omitted closing bracket; reminded to close it. Third record retained original values rather than claiming every record changed
+- File-creation verification: Passed through student confirmation and final existence/content inspection at repository root
+- Write-mode verification: Passed; exact filename and w mode in with open, all writes inside block, no reading/append introduced
+- Overwrite verification: Passed; OLD REPORT test replaced by current report, student understood old content is replaced
+- Newline verification: Passed deliberate missing-newline observation and restored four-line output; each write includes newline
+- Print-vs-file-write verification: Passed after correction; file.write stores report, print displays terminal confirmation. Student initially attributed print destination to block location; clarified ordinary print remains terminal output regardless of indentation, and confirmed success message waits until writing is complete
+- Stored-content verification: Passed; Codex read actual purrnest_inventory_summary.txt and confirmed exact four lines PurrNest Inventory Summary / Product Count: 3 / Total Stock: 45 / Total Inventory Value: RM610.50, consistent with final source data
+- Debugging challenge: Passed; student identified file.write outside with, clarified closed-file write raises error, and identified write operations belong inside block
+- Understanding check: Passed after clarifying why confirmation follows with: write operations finish and file closes before success is reported; not because indentation determines print destination. Student correctly explained complete products-to-calculation-to-file-to-confirmation flow
+- Carry-forward weakness observation: Vocabulary around file write versus print and purpose of block placement needed clarification. Newline/overwrite behavior demonstrated accurately. Accumulators and output labels correct in first implementation. Validation-loop recall and maximum/minimum direction did not arise; no unrelated remediation
+- Errors encountered: Confirmation placement initially explained as preventing print from being stored in file; debugging initially described failed outside write without naming error, then corrected; pasted custom List missing closing bracket
+- Corrections understood: with block controls open-file lifetime, not ordinary print destination; writes must occur while file is open; w creates or overwrites; file.write requires explicit newline; success message follows completed file operations
+- Codex review: Passed final source and actual report inspection, correct calculations, len count, accumulator initialization, filename, w mode, indented file.write, four logical lines, money formatting, confirmation after block, student ownership, no prohibited concepts, AGENTS.md and scope compliance. No automated Python execution claimed; student ran all tests and manually inspected file
+- Files changed: exercises/module_02/lesson_15_purrnest_inventory_summary_file_writer.py, progress.md, learning_log.md, purrnest_inventory_summary.txt
+- Generated file: purrnest_inventory_summary.txt at repository root; source and report retain student-designed Test 7 data
+- Secrets/private-data check: Reviewed exercise, generated report and added records contain simulated inventory data; no secrets or private data found
+- Suggested Git commit: Complete Module 2 Lesson 15 basic file writing
+- Git commit/push status: Student explicitly authorized Lesson 15 commit and push; execution follows this record update
+- Next confirmed task: Do not start Lesson 16; wait for the Daily Learning Supervisor
