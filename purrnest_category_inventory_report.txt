@@ -1,0 +1,5 @@
+PurrNest Category Inventory Report
+Category: toy
+Matching Products: 1
+Total Stock: 15
+Total Inventory Value: RM118.50

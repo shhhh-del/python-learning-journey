@@ -27,7 +27,9 @@
 - [x] Module 2 Lesson 13: Basic Local Function Scope - Passed (2026-11-02)
 - [x] Module 2 Lesson 14: Basic String Normalization - Passed (2026-11-04)
 - [x] Module 2 Lesson 15: Basic File Writing - Passed (2026-11-05)
-- Current topic: Plain-text report writing - Passed (2026-11-05)
+- [x] Friday Review #10: PurrNest Category Inventory Report Writer - Passed (2026-11-06)
+- Current topic: Normalized category report writing integration - Passed (2026-11-06)
+- Module 2 Lesson 16: NOT STARTED
 - [x] Module 2 Lesson 12: Functions with Multiple Parameters - Passed (2026-10-28)
 - Module 1 Final Review initial closed-book recall: 7 / 12
 - Next confirmed task: Do not start Module 2 Lesson 16; wait for the Daily Learning Supervisor
@@ -1628,3 +1630,44 @@ Verified skills:
 - Suggested Git commit: Complete Module 2 Lesson 15 basic file writing
 - Git commit/push status: Student explicitly authorized Lesson 15 commit and push; execution follows this record update
 - Next confirmed task: Do not start Lesson 16; wait for the Daily Learning Supervisor
+
+## 2026-11-06 - Friday Review #10: PurrNest Category Inventory Report Writer
+
+### FRIDAY REVIEW #10 SUMMARY
+
+- Date: 2026-11-06
+- Day: Friday
+- Tracker ID: JR-19
+- Session type: Review / Debugging / Knowledge-Check Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Lesson or feature: PurrNest Category Inventory Report Writer
+- Final status: FRIDAY REVIEW #10 — PASSED
+- Initial Knowledge Score: 11 / 12, preserved before corrections; question 7 needed surrounding-versus-internal whitespace precision
+- Knowledge Corrections: Student correctly predicted strip of surrounding-spaced Cat Brush retains internal space. Parameters/arguments, position, return, locals, normalization comparison, file-write destination, w mode and newline recalled correctly in meaning
+- Code Personally Written: Yes; student wrote both functions, parameters, local results, returns, raw input and normalization, fresh-input while retries, record matching, counter/accumulators, two-argument call, receiving variable, file writes, newlines and confirmation. Codex created instruction scaffold, reviewed, guided and documented only; student code and generated report not modified by Codex
+- Verified skills: Multiple positional inputs, local scope, return/caller reuse, strip/lower, normalization before comparison, while validation, List of Dictionaries, filtered counters/accumulators, w mode, file.write, newline handling and terminal confirmation
+- Manual Tests: 7 / 7 passed through student-reported runs/manual file inspection plus final source and actual file read. Test 1 brush -> category brush / matches 2 / stock 25 / RM418.00. Test 2 mixed-case surrounding-spaced BrUsH -> same values. Test 3 BOWL -> bowl/1/8/RM100.00. Test 4 toy -> toy/1/15/RM133.50, terminal confirmation explicitly confirmed. Test 5 food rejected, fresh ToY accepted -> toy/1/15/RM133.50 with normal exit and full terminal transcript; surrounding-space behavior independently tested in Test 2. Test 6 OLD REPORT replaced after brush run -> brush/2/25/RM418.00, overwrite explanation correct. Test 7 updated records with input ToY -> toy/1/15/RM118.50, matching pre-run prediction
+- Student-Designed Prediction: Initial proposal changed only one stock and used all-uppercase input; prompted to meet four-record changes and mixed-case/surrounding-space requirement. Final data changed all four prices to 15.80,12.60,7.90,21.00; stocks 20,0,15,5. Predicted normalized toy, one matching PN003, stock 15, PN003 value 118.50, total 118.50 and report content before running. Actual five report lines matched; zero-stock bowl record present in dataset though not selected by toy filter
+- Multiple-Parameter Verification: Passed; calculate_inventory_value(price,stock) receives current price first, stock second, calculates using both, no duplicate multiplication in caller
+- Local-Scope Verification: Passed; local normalization result and calculation result returned, caller uses receiving variables. Consistent local spelling normarized_category is a readability typo, not a logic failure; suggestion made, student source preserved
+- Return Verification: Passed; both functions return rather than print, calculation return stored in inventory_value and accumulated
+- String-Normalization Verification: Passed; strip/lower used before validation and category matching, input preserved separately, internal space understanding corrected in initial check
+- Validation-Loop Verification: Passed; invalid != conditions joined with and, fresh input and normalization inside loop, valid input terminates, no hard-coded successful category
+- List-of-Dictionaries Verification: Passed; one List with four records and direct iteration, only matching categories contribute
+- Counter / Accumulator Verification: Passed; matching_count, total_stock, total_inventory_value initialized before loop, updates restricted to matching records, returned value accumulated
+- File-Writing Verification: Passed; exact root-relative filename, indented file.write calls in with open, actual five-line file inspected, .2f currency format, confirmation after block
+- Write-Mode / Overwrite Verification: Passed; w mode replaces OLD REPORT, student explained old report overwritten
+- Newline Verification: Passed; all five write calls use newline, student file excerpts and final stored file have five logical lines
+- Debugging Challenge: Passed; student identified raw category comparison, predicted incorrect match count 0 versus correct 1, restored comparison to normalized_category
+- Understanding Check: Passed; student explained raw/normalized text, strip/lower, parameter roles, local result, return/caller reuse, file writing and overall processing flow. Corrected vocabulary raw numeric value to string and distinguished w mode from file.write; explicitly confirmed fresh input and normalization rather than automatic toy fallback
+- Carry-Forward Weakness Observation: Initial strip description imprecise, corrected through prediction. First implementation omitted terminal confirmation and contained consistent local variable spelling typo; student added correctly placed confirmation. Core functions, retry loop, calculations and file output correct at first inspection. Validation-loop recall demonstrated independently. No unrelated remediation, no new concepts, no module restart
+- Errors Encountered: Initial strip description lacked boundary restriction; missing confirmation in first submission; custom test initially did not meet data/input requirements; raw input described as number and w as writing fields before terminology clarified
+- Corrections Understood: Surrounding versus internal whitespace, compare normalized text, retry using fresh user choice, return numeric result for accumulation, separate write-mode opening from actual writes, confirm saving after file close
+- Secrets Check: Reviewed source, generated report and added records contain simulated inventory data; no secrets or private data found
+- Files Changed: exercises/module_02/friday_review_10_purrnest_category_inventory_report_writer.py, purrnest_category_inventory_report.txt, progress.md, learning_log.md
+- Generated File: purrnest_category_inventory_report.txt at repository root; final file toy/1/15/RM118.50 retains Test 7 output
+- Codex Review: Passed final source and actual file inspection, functions/inputs/local variables/returns, fresh-input validation, category filter, counters/accumulators, correct file structure and values, confirmation, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Manual execution evidence supplied by student; no automated Python execution claimed
+- Git Status: Student explicitly authorized Friday Review 10 commit and push; execution follows this record update
+- Suggested Git Commit: Complete Friday Review 10 file writing integration
+- Module 2 Lesson 16: NOT STARTED
+- Next Confirmed Task: Do not start Lesson 16 or another lesson today; wait for the Daily Learning Supervisor
