@@ -1,4 +1,4 @@
 PurrNest Inventory Summary
-Product Count: 3
-Total Stock: 45
-Total Inventory Value: RM610.50
+Product Count: 56
+Total Stock: 77
+Total Inventory Value: RM6199
