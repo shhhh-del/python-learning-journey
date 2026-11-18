@@ -28,11 +28,12 @@
 - [x] Module 2 Lesson 14: Basic String Normalization - Passed (2026-11-04)
 - [x] Module 2 Lesson 15: Basic File Writing - Passed (2026-11-05)
 - [x] Friday Review #10: PurrNest Category Inventory Report Writer - Passed (2026-11-06)
-- Current topic: Basic text-file reading - Passed (2026-11-15)
+- [x] Module 2 Lesson 17: Basic Exception Handling - Passed (2026-11-18)
+- Current topic: Specific missing-file handling with try/except - Passed (2026-11-18)
 - [x] Module 2 Lesson 16: Basic File Reading - Passed (2026-11-15)
 - [x] Module 2 Lesson 12: Functions with Multiple Parameters - Passed (2026-10-28)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 17; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Module 2 Lesson 18; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1709,3 +1710,42 @@ Verified skills:
 - Suggested Git Commit: Complete Module 2 Lesson 16 basic file reading
 - Git Commit/Push Status: Student explicitly authorized Lesson 16 commit and push; execution follows this record update
 - Next Confirmed Task: Do not start Lesson 17; wait for the Daily Learning Supervisor
+
+## 2026-11-18 - Module 2 Lesson 17: Basic Exception Handling
+
+### Standardized Lesson Summary
+
+- Date: 2026-11-18
+- Day: Wednesday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 17 - Basic try / except for FileNotFoundError
+- Exercise: PurrNest Safe Inventory Report Reader
+- Final status: Passed
+- Code Personally Written: Yes; student wrote try, file open/read, receiving variable, success output and specific handler. Student manually renamed/restored fixture, changed test content and tested filename changes. Codex created instructions, reviewed, guided and documented; no student implementation or report modified by Codex
+- New Concept: Basic exception handling for one expected missing-file exception
+- Verified skills: try/except alignment, specific FileNotFoundError, read mode, with lifetime, success-only output, controlled failure message, exception specificity
+- Knowledge Check: Passed after correcting except from prediction to handling an exception that already occurred and clarifying validation versus exception handling. Success/failure predictions correct. No initial numeric score assigned
+- Manual Tests: 7 / 7 passed based on student actual-output reports and source review. Test 1 existing file -> full 56/77/RM6199 report and success, no missing prompt. Test 2 renamed file -> title and Report file not found., no success. Test 3 restored filename -> normal report/success. Test 4 manually changed stock 77 to 88 -> updated report/success without reader changes. Test 5 predicted nonexistent missing_inventory_report.txt -> FileNotFoundError, missing message only; actual matched and correct filename restored. Test 6 conceptual undefined-variable example -> student initially said caught, then corrected that NameError is not handled by FileNotFoundError. Test 7 student selected existing purrnest_inventory_summary.txt and predicted report 56/88/RM6199 plus success; complete actual output matched
+- Student-Designed Test: Student chose existing safe fixture, predicted try success, no FileNotFoundError, Saved Report/content/success; supplied filename and full report before execution, then verified full actual success output
+- try Verification: Passed; potentially failing file open/read and all success output in try
+- except Verification: Passed; one except FileNotFoundError aligned with try, no bare or broad handler
+- FileNotFoundError Verification: Passed; student understood absent requested file triggers handler, not every programming error
+- Success-Path Verification: Passed existing/restored/modified/custom runs; success confirmation after loaded report, skipped on missing file
+- Missing-File Verification: Passed temporary rename and nonexistent code filename runs; no fake content, file creation or write-mode workaround
+- Specific-Exception Verification: Passed after targeted correction; NameError example not caught by this handler, no catch-all added
+- Read-Mode Verification: Passed; r retained, read inside with, actual fixture inspected and correct filename restored, no write operations in reader
+- Debugging Challenge: Passed; student identified success print outside try/except falsely executes after failure, specified affected path, FileNotFoundError handler and correct success/missing messages, placed success message in try
+- Understanding Check: Passed after clarifying w creates an absent file without recovering original report and can overwrite an existing one; student rejected empty-file workaround and selected missing prompt. Understood specific handler does not make all errors impossible
+- Carry-Forward Weakness Observation: Specific exception types needed focused correction during Test 6; except versus predicting errors and validation wording needed clarification. First submitted implementation had correct structure and outputs. Handler body uses valid six-space indentation; four-space consistency suggested, student code preserved. No unrelated remediation or module restart
+- Errors Encountered: except described as predicting exception; initially believed undefined-variable error would be caught as missing file; understanding answer for w initially mentioned overwrite without missing-file creation; debugging first omitted exception type before follow-up
+- Corrections Understood: Exceptions occur during attempted operations; matching handler deals with specified type; missing files differ from undefined variables; successful try skips handler; success output must not run after failure; read failure should not create substitute report
+- Codex Review: Passed final source/fixture inspection, specific handler, r/with/read, variable, both output paths, success placement, no broad catch or write workaround, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Student manual execution evidence; no automated Python execution claimed
+- Files Changed: exercises/module_02/lesson_17_purrnest_safe_inventory_report_reader.py, purrnest_inventory_summary.txt (manual safe stock edit), progress.md, learning_log.md
+- Files Read: purrnest_inventory_summary.txt at repository root, final content 56 products / stock 88 / RM6199
+- Secrets/Private-Data Check: Reviewed reader, fixture and added records contain safe simulated report data; no secrets or private data found
+- Suggested Git Commit: Complete Module 2 Lesson 17 basic exception handling
+- Git Commit/Push Status: Student explicitly authorized Lesson 17 commit and push; execution follows this record update
+- Next Confirmed Task: Do not start Lesson 18; wait for the Daily Learning Supervisor
