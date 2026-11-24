@@ -2201,3 +2201,41 @@
 - Suggested Git Commit: Complete Module 2 Lesson 17 basic exception handling
 - Git Commit/Push Status: Student explicitly authorized Lesson 17 commit and push; execution follows this record update
 - Next Confirmed Task: Do not start Lesson 18; wait for the Daily Learning Supervisor
+
+## 2026-11-24 - Module 2 Lesson 18: Basic Modules and Imports
+
+### Standardized Lesson Summary
+
+- Date: 2026-11-24
+- Day: Tuesday
+- Tracker ID: JR-19
+- Session type: Core Python Learning Day
+- Available time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 18 - Basic Modules and Imports
+- Exercise: PurrNest Inventory Report Timestamp
+- Final status: Passed
+- Code Personally Written: Yes; student wrote import, date call, receiving variable, business variables, terminal output, with/write block and confirmation, performed tests and removed temporary date print. Codex created instructions, explained, reviewed and documented only; no student implementation or generated report edited
+- New Concept: Basic module importing and dot notation with standard-library datetime
+- Verified skills: import datetime, dynamic date acquisition, receiving/reusing date variable, report f-strings, matching terminal/file output, w mode, newlines and money formatting
+- Knowledge Check: Passed after clarifying module as reusable functionality rather than database/template, import availability versus execution, and variable versus Dictionary field. Student understood module name, standard library, date result, no automatic print and no package installation. No numeric score assigned
+- Manual Tests: 7 / 7 passed based on student actual outputs and final source/file inspection. Test 1 import/date call worked. Test 2 date variable printed 2026-11-24. Test 3 source confirmed date from datetime.date.today(), no hard-coded report date. Test 4 original terminal report 3/43/RM551.50 with dynamic date and saved confirmation. Test 5 manually opened file matched terminal five report lines. Test 6 predicted unavailable module name after commenting import; actual NameError for datetime observed; import restored. Test 7 custom values 4/44/RM651.50 and dynamic date matched pre-run five-line prediction in terminal and file
+- Student-Designed Test: Student chose count 4, stock 44, inventory value 651.50, predicted five report lines with date 2026-11-24 before running; terminal/file actual contents matched. Final source retains these safe values, date remains dynamic
+- Module Verification: Passed after correction; module is reusable functionality, not a database
+- Import Verification: Passed; import datetime near top of executable code, no alias/from syntax; missing-import test demonstrated name unavailable
+- Standard-Library Verification: Passed; student understood Python supplies datetime and no extra package installation needed
+- Dot-Notation Verification: Passed after clarification; datetime module -> date provided by module -> today() call; student identified missing parentheses in debugging
+- Dynamic-Date Verification: Passed; report_date stores datetime.date.today() return and is reused in both reports; reported date matches session date. Printed date depends on runtime computer date, not manually supplied literal
+- File-Writing Integration: Passed; actual purrnest_inventory_timestamped_report.txt inspected with exact five lines, date 2026-11-24, count 4, stock 44, RM651.50, newline formatting and correct confirmation after block
+- Debugging Challenge: Passed; student identified today missing parentheses, knew no actual call occurred, named module availability and expected today's date
+- Understanding Check: Passed after repeated terminology clarification; student distinguished import line, actual date call and receiving variable, described module as a group of functions/features and same stored date reused in terminal and file
+- Carry-Forward Weakness Observation: Module versus database/template, import versus call, and variable versus field vocabulary required guidance; runtime code correct in first submission. Temporary bare date print removed by student for exact final output. Parameter/return/local and validation issues did not arise; no unrelated remediation
+- Errors Encountered: Module described as database, import as call, date variable as field; initial debug print added extra terminal date line
+- Corrections Understood: Import makes module available rather than executing date output, call requires parentheses, dot notation selects provided functionality, variable stores result for reuse, standard library avoids reimplementation/install, final report excludes temporary standalone print
+- Codex Review: Passed final source and actual file inspection, import near top, no advanced import syntax, dynamic date call and variable, terminal/file integration, output filename and labels, student ownership, prohibited-concept review, AGENTS.md and scope compliance. Final debug-print removal verified statically. No automated Python execution claimed
+- Files Changed: exercises/module_02/lesson_18_purrnest_inventory_report_timestamp.py, purrnest_inventory_timestamped_report.txt, progress.md, learning_log.md
+- Generated File: purrnest_inventory_timestamped_report.txt at repository root; final safe Test 7 report
+- Secrets/Private-Data Check: Reviewed source, generated report and added records contain simulated inventory data; no secrets or private data found
+- Suggested Git Commit: Complete Module 2 Lesson 18 modules and imports basics
+- Git Commit/Push Status: Student explicitly authorized Lesson 18 commit and push; execution follows this record update
+- Next Confirmed Task: Do not start Lesson 19; wait for the Daily Learning Supervisor

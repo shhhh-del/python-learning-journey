@@ -1,0 +1,5 @@
+PurrNest Inventory Report
+Report Date: 2026-11-24
+Product Count: 4
+Total Stock: 44
+Total Inventory Value: RM651.50
