@@ -2239,3 +2239,45 @@
 - Suggested Git Commit: Complete Module 2 Lesson 18 modules and imports basics
 - Git Commit/Push Status: Student explicitly authorized Lesson 18 commit and push; execution follows this record update
 - Next Confirmed Task: Do not start Lesson 19; wait for the Daily Learning Supervisor
+
+## 2026-11-25 - Module 2 Lesson 19: pip and Virtual Environment Basics
+
+### Standardized Lesson Summary
+
+- Date: 2026-11-25
+- Day: Wednesday
+- Tracker ID: JR-19
+- Session Type: Core Python Learning Day
+- Available Time: 30 minutes (provided budget; elapsed duration not measured)
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 19 - pip and Virtual Environment Basics
+- Exercise: PurrNest Python Environment Verification
+- Final Status: Passed via documented explicit-interpreter alternative; activation/deactivation cycle not verified
+- Code Personally Written: Yes; student wrote datetime/requests imports, dynamic date variable and three output lines, then custom title. Codex created scaffold, reviewed and documented; did not edit implementation
+- Commands Personally Executed: Student supplied outputs for python --version; python -m pip --version; python -m venv .venv (silent completion); activation attempt; explicit .venv Python pip --version, pip install requests, pip show requests, pip list; explicit .venv program runs; and pip show requests after instruction to open a fresh terminal. Codex did read-only repository/environment inspections, not installation or student program execution
+- Initial Knowledge Score: 8 / 8 after student supplied omitted virtual-environment definition, before corrections
+- Knowledge Corrections: No initial corrections required. Later debugging corrected belief that global installation guarantees availability in independent .venv
+- Python Version: 3.14.6, student terminal output and pyvenv.cfg agree
+- Virtual Environment Created or Reused: Student created new repository-root .venv after inspection found none; pyvenv.cfg confirms version and include-system-site-packages = false. No existing environment deleted or recreated
+- Environment Activation Status: Activate.ps1 blocked by PowerShell execution policy with PSSecurityException/UnauthorizedAccess; no policy changes made. Later prompts displayed (.venv), but student reported no additional activation action; cause not established. Do not claim activation or deactivation success
+- Interpreter Verification: Student actual run command explicitly used repository .venv/Scripts/python.exe; accepted instead of relying on prompt indicator
+- pip Verification: pip 26.1.2. Initial pip location was base Python; explicit .venv Python pip --version showed project .venv/Lib/site-packages/pip
+- Installed Package Name: requests
+- Installed Package Version: 2.34.2, actual student installation/show/list outputs
+- Installation Location Verification: requests installed under repository .venv/Lib/site-packages. Normal dependencies certifi 2026.11.20, charset-normalizer 3.5.3, idna 3.20, urllib3 2.8.0 reported by pip list. No extra learning package installed; pip upgrade notice not acted on
+- Import Verification: Student ran written program using explicit environment interpreter; datetime and requests imports succeeded, dynamic Verification Date: 2026-11-25, success message only after imports. No HTTP request code
+- Practical Tests: 7 / 7 completed through allowed equivalent verification. Test 1 Python availability 3.14.6. Test 2 new .venv and config confirmed. Test 3 selected explicit .venv interpreter and pip location. Test 4 requests installed/show/list inside environment. Test 5 student-written program imports and date succeeded. Test 6 custom title matched pre-run prediction without reinstalling. Test 7 reused same explicit interpreter after instruction to create fresh terminal; pip show still found requests 2.34.2 at same location. Terminal replacement itself not independently observed; activation/deactivation not claimed
+- Student-Designed Verification: Student predicted title PurrNest Python Verification, Verification Date: 2026-11-25, Requests package imported successfully. Changed only title, ran explicit .venv Python, actual matched without package reinstall
+- Debugging Challenge: Passed after clarification. Student knew one environment installation is not universal, then learned to compare execution interpreter path and pip installation location; initially believed global install could populate independent environment, corrected that an environment without requests cannot import it. No actual environment damaged
+- Understanding Check: Passed; pip, environment creation, directory purpose, install versus import, location verification, Git exclusion, deactivate not uninstalling, interpreter mismatch and overall flow understood. Omitted directory question answered environment directory on follow-up
+- Gitignore Verification: Existing .gitignore entry .venv already protects directory; no change needed. git check-ignore .venv/Scripts/python.exe matched; git ls-files .venv empty. Environment/package files not tracked
+- Carry-Forward Weakness Observation: Environment-specific installation versus global availability required focused clarification. Activation blocker handled without weakening security settings. Student needed follow-up on omitted knowledge/understanding items. No unrelated remediation; previous learning progress preserved
+- Corrections Understood: Installation belongs to selected interpreter environment; import uses packages available there; explicit environment Python is valid without activation; closing/deactivating does not delete installed files; .venv is not application source
+- Environment or Network Blockers: PowerShell activation blocked. Tool shell initially lacked discoverable python/py, but student terminal successfully verified Python; no guessed paths used. Package installation succeeded, no network blocker reported
+- Codex Review: Passed student ownership, actual operation outputs, explicit interpreter, package version/location, dynamic imports/date, no global package install in this task, no HTTP calls, no unrelated changes, Git exclusion, AGENTS.md and scope compliance. Did not fabricate activation/deactivation evidence
+- Files Changed: exercises/module_02/lesson_19_purrnest_python_environment_verification.py, progress.md, learning_log.md
+- Local Generated Environment: .venv directory created and packages installed by student; ignored and excluded from commit
+- Secrets / Private-Data Check: Reviewed exercise and records contain no credentials, passwords, tokens, API keys or private business data; package author metadata not copied as student private data
+- Suggested Git Commit: Complete Module 2 Lesson 19 pip and virtual environment basics
+- Git Commit / Push Status: Student explicitly authorized Lesson 19 commit and push; execution follows this record update
+- Next Confirmed Task: Do not start Lesson 20; wait for the Daily Learning Supervisor
