@@ -31,11 +31,12 @@
 - [x] Module 2 Lesson 17: Basic Exception Handling - Passed (2026-11-18)
 - [x] Module 2 Lesson 18: Basic Modules and Imports - Passed (2026-11-24)
 - [x] Module 2 Lesson 19: pip and Virtual Environment Basics - Passed (2026-11-25; explicit-interpreter alternative)
-- Current topic: Project environment and package installation verification - Passed (2026-11-25)
+- [x] Module 2 Lesson 20: Introduction to requests - Passed (2026-11-26)
+- Current topic: Basic HTTP Response Checker - Passed (2026-11-26)
 - [x] Module 2 Lesson 16: Basic File Reading - Passed (2026-11-15)
 - [x] Module 2 Lesson 12: Functions with Multiple Parameters - Passed (2026-10-28)
 - Module 1 Final Review initial closed-book recall: 7 / 12
-- Next confirmed task: Do not start Module 2 Lesson 20; wait for the Daily Learning Supervisor
+- Next confirmed task: Do not start Lesson 21 or JR-20; wait for the Daily Learning Supervisor
 
 ### Current Saturday Business Tool
 
@@ -1831,3 +1832,45 @@ Verified skills:
 - Suggested Git Commit: Complete Module 2 Lesson 19 pip and virtual environment basics
 - Git Commit / Push Status: Student explicitly authorized Lesson 19 commit and push; execution follows this record update
 - Next Confirmed Task: Do not start Lesson 20; wait for the Daily Learning Supervisor
+
+## 2026-11-26 - Module 2 Lesson 20: Introduction to requests
+
+### Standardized Lesson Summary
+
+- Date: 2026-11-26
+- Day: Thursday
+- Session Type: Core Python Learning Day
+- Available Time: 30 minutes (provided budget; elapsed duration not measured)
+- Tracker ID: JR-19
+- Module: Module 2 - Structured Data & Reusable Python
+- Lesson: Module 2 Lesson 20 - Introduction to requests
+- Exercise: Basic HTTP Response Checker
+- Final Status: Passed
+- Lesson 19 Prerequisite Verification: Existing progress and learning log formally mark Lesson 19 Passed via explicit-interpreter alternative; no repeated installation or environment creation. Prior activation/deactivation was not independently verified and is not claimed here
+- Code Personally Written: Student wrote import, URL, title, GET with timeout, response receiving variable, status-code variable and f-string outputs. Codex created instructions and blank area only; student renamed request to response and changed title personally. No implementation edits by Codex
+- Initial Knowledge Score: 8 / 8; timeout answer interpreted as preventing infinite waiting. Later implementation discussion revealed response-object versus status-code confusion, corrected before execution
+- Knowledge Corrections: response stores the whole Response Object, code stores its status_code; attribute access does not send another request; status_code is an existing attribute rather than a function; server receives request and returns response; installation is not required each run
+- Python Interpreter Verification: Read-only inspection using explicit repository .venv/Scripts/python.exe printed that same executable path. Student instructed to run both tests using explicit interpreter command; reported outputs supplied, execution command itself not included in pasted outputs
+- Virtual Environment Verification: Reused existing .venv; requests module file and pip location both inside project .venv/Lib/site-packages. Tool sandbox initially denied access to base interpreter; approved read-only retry succeeded. No environment recreation or policy weakening
+- requests Import Verification: Explicit environment import succeeded in tool inspection; requests 2.34.2 confirmed by pip show. Student program actual outputs show execution progressed beyond import and GET
+- Authorized Test Endpoint: https://example.com only; ordinary single GET per program execution, two student-reported executions
+- GET Request Verification: Source has exactly one requests.get(url, timeout=10); student reported actual outputs for original title and title-only variation. Codex did not send extra HTTP requests
+- Response Object Verification: Source assigns GET return to response and accesses status_code; actual student output 200 supports successful response. Student corrected initial belief that response held only status code
+- Actual HTTP Status Code: 200 in both student-reported actual runs; no hard-coded status and no fabricated result
+- Status-Code Attribute Verification: code = response.status_code without parentheses; student explained existing attribute versus executing function after focused guidance
+- Timeout Verification: Actual call contains timeout=10; student explained preventing infinite waiting. Explained that this is not necessarily a total wall-clock deadline. No deliberate prolonged failure test
+- Practical Tests: 6 / 6 passed. Test 1 explicit .venv interpreter and installed package location verified. Test 2 import succeeds without reinstall. Test 3 designated GET returned actual reported status 200. Test 4 source obtains actual status_code without parentheses or literal 200. Test 5 timeout=10 source check and student explanation passed. Test 6 student title-only variation prediction and actual output matched
+- Student-Designed Verification: Student chose Basic HTTP Response title, predicted three lines, identified title/URL as fixed and status as server-dependent. Actual reported output used new title, same URL and status 200. Final source retains this intentional title variation; original required title was verified in first run. Student understood status cannot be guaranteed because it depends on actual server response
+- Debugging Challenge: Passed exactly one fictional example code = response.status_code(); student identified parentheses, predicted error and removed them. No actual environment damage
+- Understanding Check: Passed after follow-up on attribute versus call, server request/response direction and no repeated installation. Student identified response as response receiver and code as status receiver, explained import availability, destination, GET, response, dynamic code and timeout
+- HTTP Evidence Limitation Understanding: Student twice stated successful HTTP status cannot prove whole website security; no vulnerability assessment claimed
+- Carry-Forward Weakness Observation: Response Object versus numeric status and explaining attribute syntax required focused guidance; request/response direction required clarification. Future recall should revisit these only when relevant
+- Errors Encountered: Initial response-object misunderstanding; initial variable name request was valid but less clear; initial attribute explanation was memorized syntax. No runtime error reported
+- Corrections Understood: Existing attribute requires no call; response and code have different contents; GET function executes a request; server returns a response; actual status is not guaranteed
+- Environment or Network Blockers: Initial tool sandbox interpreter access denied; authorized read-only retry succeeded. Student reported two successful HTTP runs; no network failure reported
+- Codex Review: Passed final source inspection, student ownership, expected URL, one GET/run, timeout, stored Response Object and status, correct f-strings, no hard-coded success, no prohibited concepts, no credentials, no TLS disabling, no scanning, AGENTS.md compliance and no unrelated modifications. Student title variation retained deliberately
+- Files Changed: exercises/module_02/lesson_20_basic_http_response_checker.py, progress.md, learning_log.md
+- Secrets / Private-Data Check: Source and new records contain public demonstration URL and learning evidence only; no credentials, tokens, cookies or private business data. git check-ignore matches .venv/Scripts/python.exe; git ls-files .venv empty
+- Suggested Git Commit: Complete Module 2 Lesson 20 requests fundamentals
+- Git Commit / Push Status: Student explicitly authorized Lesson 20 commit and push; execution follows this record update
+- Next Confirmed Task: Do not start Lesson 21 or JR-20; wait for the Daily Learning Supervisor
