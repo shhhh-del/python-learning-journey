@@ -1,0 +1,5 @@
+HTTP Response Report
+Report Date: 2026-11-27
+Target URL: https://example.com
+HTTP Status Code: 200
+This status code alone does not establish website security.
